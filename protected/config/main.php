@@ -25,14 +25,18 @@ return array(
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
-		/*
+		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'Enter Your Password Here',
+			'password'=>'root',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
+			 'generatorPaths'=>array(
+		                'bootstrap.gii',
+
+         ),
 		),
-		*/
+		
 	),
 
 	// application components
@@ -97,14 +101,7 @@ return array(
 		 
 		
 		    'theme'=>'bootstrap', // requires you to copy the theme under your themes directory
-		    'modules'=>array(
-		        'gii'=>array(
-		            'generatorPaths'=>array(
-		                'bootstrap.gii',
 
-         ),
-		        ),
-		    ),
 		    'components'=>array(
 		        'bootstrap'=>array(
 		            'class'=>'bootstrap.components.Bootstrap',
