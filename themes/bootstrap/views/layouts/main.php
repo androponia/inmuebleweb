@@ -26,17 +26,16 @@
                  	array('label'=>'Barrio', 'url'=>array('/barrio/index')),
 					array('label'=>'Ciudad', 'url'=>array('/ciudad/index')),
 					array('label'=>'Cliente', 'url'=>array('/cliente/index')),
-					array('label'=>'Departamento', 'url'=>array('/departamento/index')),
 					array('label'=>'Destacado', 'url'=>array('/destacado/index')),
 					array('label'=>'Empleado', 'url'=>array('/empleado/index')),
 					array('label'=>'Imagen', 'url'=>array('/imagen/index')),
 					array('label'=>'Pais', 'url'=>array('/pais/index')),
 					array('label'=>'Propiedad', 'url'=>array('/propiedad/index')),
 					array('label'=>'Requerida', 'url'=>array('/requerida/index')),
-					array('label'=>'TipoUsuario', 'url'=>array('/tipousuario/index')),
 					array('label'=>'Ubicacion', 'url'=>array('/ubicacion/index')),
 					array('label'=>'Usuario', 'url'=>array('/usuario/index')),
 					array('label'=>'Visita', 'url'=>array('/visita/index')),
+					
 
                 array('label'=>'Acerca de ', 'url'=>array('/site/page', 'view'=>'about')),
                 array('label'=>'Contacto', 'url'=>array('/site/contact')),

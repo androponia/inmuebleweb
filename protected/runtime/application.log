@@ -287,3 +287,163 @@ Stack trace:
 REQUEST_URI=/inmuebleweb/index.php?r=site/barrio
 HTTP_REFERER=http://localhost/inmuebleweb/index.php?r=site/index
 ---
+2014/06/06 18:35:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbinmweb.departamento' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `departamento`.
+in /var/www/inmuebleweb/protected/views/departamento/index.php (20)
+in /var/www/inmuebleweb/protected/controllers/DepartamentoController.php (128)
+in /var/www/inmuebleweb/index.php (15)
+2014/06/06 18:35:46 [error] [exception.CDbException] exception 'CDbException' with message 'The table "departamento" for active record class "Departamento" cannot be found in the database.' in /var/www/yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Departamento))
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1601): CActiveRecord->getTableSchema()
+#3 /var/www/yii/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 /var/www/yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 /var/www/yii/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 /var/www/yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#8 /var/www/yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#9 /var/www/yii/framework/web/CBaseController.php(147): CListView->init()
+#10 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 /var/www/inmuebleweb/protected/views/departamento/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/inmueb...')
+#13 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#15 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#16 /var/www/inmuebleweb/protected/controllers/DepartamentoController.php(128): CController->render('index', Array)
+#17 /var/www/yii/framework/web/actions/CInlineAction.php(49): DepartamentoController->actionIndex()
+#18 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#27 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('departamento/in...')
+#28 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#29 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#30 {main}
+REQUEST_URI=/inmuebleweb/index.php?r=departamento/index
+HTTP_REFERER=http://localhost/inmuebleweb/
+---
+2014/06/06 18:45:57 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbinmweb.departamento' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `departamento`.
+in /var/www/inmuebleweb/protected/views/departamento/index.php (20)
+in /var/www/inmuebleweb/protected/controllers/DepartamentoController.php (128)
+in /var/www/inmuebleweb/index.php (15)
+2014/06/06 18:45:57 [error] [exception.CDbException] exception 'CDbException' with message 'The table "departamento" for active record class "Departamento" cannot be found in the database.' in /var/www/yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Departamento))
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1601): CActiveRecord->getTableSchema()
+#3 /var/www/yii/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 /var/www/yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 /var/www/yii/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 /var/www/yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#8 /var/www/yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#9 /var/www/yii/framework/web/CBaseController.php(147): CListView->init()
+#10 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 /var/www/inmuebleweb/protected/views/departamento/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/inmueb...')
+#13 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#15 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#16 /var/www/inmuebleweb/protected/controllers/DepartamentoController.php(128): CController->render('index', Array)
+#17 /var/www/yii/framework/web/actions/CInlineAction.php(49): DepartamentoController->actionIndex()
+#18 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#27 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('departamento/in...')
+#28 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#29 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#30 {main}
+REQUEST_URI=/inmuebleweb/index.php?r=departamento/index
+HTTP_REFERER=http://localhost/inmuebleweb/index.php?r=cliente/index
+---
+2014/06/06 18:46:21 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbinmweb.visita' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `visita`.
+in /var/www/inmuebleweb/protected/views/visita/index.php (20)
+in /var/www/inmuebleweb/protected/controllers/VisitaController.php (128)
+in /var/www/inmuebleweb/index.php (15)
+2014/06/06 18:46:21 [error] [exception.CDbException] exception 'CDbException' with message 'The table "visita" for active record class "Visita" cannot be found in the database.' in /var/www/yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Visita))
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1601): CActiveRecord->getTableSchema()
+#3 /var/www/yii/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 /var/www/yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 /var/www/yii/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 /var/www/yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#8 /var/www/yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#9 /var/www/yii/framework/web/CBaseController.php(147): CListView->init()
+#10 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 /var/www/inmuebleweb/protected/views/visita/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/inmueb...')
+#13 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#15 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#16 /var/www/inmuebleweb/protected/controllers/VisitaController.php(128): CController->render('index', Array)
+#17 /var/www/yii/framework/web/actions/CInlineAction.php(49): VisitaController->actionIndex()
+#18 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#27 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('visita/index')
+#28 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#29 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#30 {main}
+REQUEST_URI=/inmuebleweb/index.php?r=visita/index
+HTTP_REFERER=http://localhost/inmuebleweb/index.php?r=usuario/index
+---
+2014/06/06 18:50:59 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbinmweb.departamento' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `departamento`.
+in /var/www/inmuebleweb/protected/views/departamento/index.php (20)
+in /var/www/inmuebleweb/protected/controllers/DepartamentoController.php (128)
+in /var/www/inmuebleweb/index.php (15)
+2014/06/06 18:50:59 [error] [exception.CDbException] exception 'CDbException' with message 'The table "departamento" for active record class "Departamento" cannot be found in the database.' in /var/www/yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Departamento))
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1601): CActiveRecord->getTableSchema()
+#3 /var/www/yii/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 /var/www/yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 /var/www/yii/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 /var/www/yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#8 /var/www/yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#9 /var/www/yii/framework/web/CBaseController.php(147): CListView->init()
+#10 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 /var/www/inmuebleweb/protected/views/departamento/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/inmueb...')
+#13 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#15 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#16 /var/www/inmuebleweb/protected/controllers/DepartamentoController.php(128): CController->render('index', Array)
+#17 /var/www/yii/framework/web/actions/CInlineAction.php(49): DepartamentoController->actionIndex()
+#18 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#27 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('departamento/in...')
+#28 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#29 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#30 {main}
+REQUEST_URI=/inmuebleweb/index.php?r=departamento/index
+HTTP_REFERER=http://localhost/inmuebleweb/index.php?r=site/login
+---
