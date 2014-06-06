@@ -19,7 +19,7 @@
         array(
             'class'=>'bootstrap.widgets.TbMenu',
             'items'=>array(
-                array('label'=>'Casa', 'url'=>array('/site/index')),
+                array('label'=>'Home', 'url'=>array('/site/index')),
                 	
                 	//para ir viendo he ir probando 
                 //obviamente no se necesitan todas las solapas
