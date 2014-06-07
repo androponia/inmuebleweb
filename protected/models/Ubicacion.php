@@ -57,10 +57,10 @@ class Ubicacion extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idubicacion' => 'Idubicacion',
+			'idubicacion' => 'Codigo',
 			'direccion' => 'Direccion',
-			'latitudlongitud' => 'Latitudlongitud',
-			'barrioid' => 'Barrioid',
+			'latitudlongitud' => 'Latitud / Longitud',
+			'barrioid' => 'Barrio',
 		);
 	}
 

@@ -54,8 +54,8 @@ class Pais extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idpais' => 'Idpais',
-			'nombre' => 'Nombre',
+			'idpais' => 'Codigo',
+			'nombre' => 'Pais',
 		);
 	}
 

@@ -6,11 +6,11 @@
  * The followings are the available columns in table 'ciudad':
  * @property integer $idciudad
  * @property string $nombre
- * @property integer $dptoid
+ * @property integer $paisid
  *
  * The followings are the available model relations:
  * @property Barrio[] $barrios
- * @property Departamento $dpto
+ * @property Pais $pais
  */
 class Ciudad extends CActiveRecord
 {
@@ -30,12 +30,12 @@ class Ciudad extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, dptoid', 'required'),
-			array('dptoid', 'numerical', 'integerOnly'=>true),
+			array('nombre, paisid', 'required'),
+			array('paisid', 'numerical', 'integerOnly'=>true),
 			array('nombre', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idciudad, nombre, dptoid', 'safe', 'on'=>'search'),
+			array('idciudad, nombre, paisid', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -48,7 +48,7 @@ class Ciudad extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'barrios' => array(self::HAS_MANY, 'Barrio', 'ciudadid'),
-			'dpto' => array(self::BELONGS_TO, 'Departamento', 'dptoid'),
+			'pais' => array(self::BELONGS_TO, 'Pais', 'paisid'),
 		);
 	}
 
@@ -58,9 +58,9 @@ class Ciudad extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idciudad' => 'Idciudad',
-			'nombre' => 'Nombre',
-			'dptoid' => 'Dptoid',
+			'idciudad' => 'Codigo',
+			'nombre' => 'Ciudad',
+			'paisid' => 'Pais',
 		);
 	}
 
@@ -84,7 +84,7 @@ class Ciudad extends CActiveRecord
 
 		$criteria->compare('idciudad',$this->idciudad);
 		$criteria->compare('nombre',$this->nombre,true);
-		$criteria->compare('dptoid',$this->dptoid);
+		$criteria->compare('paisid',$this->paisid);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

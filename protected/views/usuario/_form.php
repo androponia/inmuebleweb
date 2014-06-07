@@ -1,70 +1,32 @@
-<?php
-/* @var $this UsuarioController */
-/* @var $model Usuario */
-/* @var $form CActiveForm */
-?>
-
-<div class="form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'id'=>'usuario-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'nombre'); ?>
-		<?php echo $form->textField($model,'nombre',array('size'=>60,'maxlength'=>60)); ?>
-		<?php echo $form->error($model,'nombre'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'nombre',array('class'=>'span5','maxlength'=>60)); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'apellido'); ?>
-		<?php echo $form->textField($model,'apellido',array('size'=>60,'maxlength'=>60)); ?>
-		<?php echo $form->error($model,'apellido'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'apellido',array('class'=>'span5','maxlength'=>60)); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>60)); ?>
-		<?php echo $form->error($model,'email'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'email',array('class'=>'span5','maxlength'=>60)); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>60)); ?>
-		<?php echo $form->error($model,'password'); ?>
-	</div>
+	<?php echo $form->passwordFieldRow($model,'password',array('class'=>'span5','maxlength'=>60)); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'telefono'); ?>
-		<?php echo $form->textField($model,'telefono',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'telefono'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'telefono',array('class'=>'span5','maxlength'=>45)); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'celular'); ?>
-		<?php echo $form->textField($model,'celular',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'celular'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'celular',array('class'=>'span5','maxlength'=>45)); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'tipousuarioid'); ?>
-		<?php echo $form->textField($model,'tipousuarioid'); ?>
-		<?php echo $form->error($model,'tipousuarioid'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'tipousuario',array('class'=>'span5','maxlength'=>1)); ?>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<div class="form-actions">
+		<?php $this->widget('bootstrap.widgets.TbButton', array(
+			'buttonType'=>'submit',
+			'type'=>'primary',
+			'label'=>$model->isNewRecord ? 'Create' : 'Save',
+		)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
-
-</div><!-- form -->

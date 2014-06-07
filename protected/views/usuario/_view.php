@@ -1,12 +1,7 @@
-<?php
-/* @var $this UsuarioController */
-/* @var $data Usuario */
-?>
-
 <div class="view">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('idusuario')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->idusuario), array('view', 'id'=>$data->idusuario)); ?>
+	<?php echo CHtml::link(CHtml::encode($data->idusuario),array('view','id'=>$data->idusuario)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nombre')); ?>:</b>
@@ -34,8 +29,8 @@
 	<br />
 
 	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('tipousuarioid')); ?>:</b>
-	<?php echo CHtml::encode($data->tipousuarioid); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('tipousuario')); ?>:</b>
+	<?php echo CHtml::encode($data->tipousuario); ?>
 	<br />
 
 	*/ ?>

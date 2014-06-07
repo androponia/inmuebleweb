@@ -56,10 +56,10 @@ class Destacado extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'iddestacado' => 'Iddestacado',
-			'fechainicio' => 'Fechainicio',
-			'fechafin' => 'Fechafin',
-			'idpropiedad' => 'Idpropiedad',
+			'iddestacado' => 'Codigo',
+			'fechainicio' => 'Fecha de Inicio',
+			'fechafin' => 'Fecha de Fin',
+			'idpropiedad' => 'Propiedad',
 		);
 	}
 

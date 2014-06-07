@@ -60,12 +60,12 @@ class Requerida extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idrequerida' => 'Idrequerida',
+			'idrequerida' => 'Codigo',
 			'nombre' => 'Nombre',
 			'apellido' => 'Apellido',
-			'email' => 'Email',
+			'email' => 'E-mail',
 			'descripcion' => 'Descripcion',
-			'barrioid' => 'Barrioid',
+			'barrioid' => 'Barrio',
 		);
 	}
 

@@ -56,9 +56,9 @@ class Imagen extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idimagen' => 'Idimagen',
-			'archivo' => 'Archivo',
-			'propiedadid' => 'Propiedadid',
+			'idimagen' => 'Codigo',
+			'archivo' => 'Archivo de Imagen',
+			'propiedadid' => 'Propiedad',
 		);
 	}
 

@@ -74,17 +74,17 @@ class Propiedad extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idpropiedad' => 'Idpropiedad',
-			'canthab' => 'Canthab',
-			'cantbano' => 'Cantbano',
-			'terreno' => 'Terreno',
-			'construido' => 'Construido',
+			'idpropiedad' => 'Codigo',
+			'canthab' => 'Cantidad de Habitaciones',
+			'cantbano' => 'Cantidad de Baños',
+			'terreno' => 'Metros del Terreno',
+			'construido' => 'Metros Construidos',
 			'precio' => 'Precio',
 			'descripcion' => 'Descripcion',
 			'ingreso' => 'Ingreso',
 			'egreso' => 'Egreso',
-			'clienteid' => 'Clienteid',
-			'empleadoid' => 'Empleadoid',
+			'clienteid' => 'Cliente',
+			'empleadoid' => 'Empleado',
 		);
 	}
 

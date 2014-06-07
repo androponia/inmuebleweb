@@ -14,7 +14,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('ciudadid')); ?>:</b>
-	<?php echo CHtml::encode($data->ciudadid); ?>
+	<?php echo CHtml::encode($data->ciudad->nombre); ?>
 	<br />
 
 

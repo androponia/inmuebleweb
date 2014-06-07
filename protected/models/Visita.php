@@ -55,9 +55,9 @@ class Visita extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idvisita' => 'Idvisita',
-			'idpropiedad' => 'Idpropiedad',
-			'fecha' => 'Fecha',
+			'idvisita' => 'Codigo',
+			'idpropiedad' => 'Propiedad',
+			'fecha' => 'Fecha / Hora',
 		);
 	}
 

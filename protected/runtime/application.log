@@ -447,3 +447,76 @@ Stack trace:
 REQUEST_URI=/inmuebleweb/index.php?r=departamento/index
 HTTP_REFERER=http://localhost/inmuebleweb/index.php?r=site/login
 ---
+2014/06/06 19:14:16 [error] [exception.CException] exception 'CException' with message 'Property "Ciudad.dptoid" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('dptoid')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('dptoid')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(Ciudad), 'dptoid')
+#3 /var/www/yii/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(Ciudad), 'dptoid', Array)
+#4 /var/www/yii/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(Ciudad), 'dptoid', Array)
+#5 /var/www/inmuebleweb/protected/views/ciudad/_form.php(30): CActiveForm->textField(Object(Ciudad), 'dptoid')
+#6 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/inmueb...')
+#7 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#9 /var/www/inmuebleweb/protected/views/ciudad/create.php(18): CController->renderPartial('_form', Array)
+#10 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/inmueb...')
+#11 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#12 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#13 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#14 /var/www/inmuebleweb/protected/controllers/CiudadController.php(79): CController->render('create', Array)
+#15 /var/www/yii/framework/web/actions/CInlineAction.php(49): CiudadController->actionCreate()
+#16 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#25 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ciudad/create')
+#26 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#28 {main}
+REQUEST_URI=/inmuebleweb/index.php?r=ciudad/create
+HTTP_REFERER=http://localhost/inmuebleweb/index.php?r=ciudad/index
+---
+2014/06/06 20:59:12 [error] [exception.CException] exception 'CException' with message 'Property "Usuario.tipousuarioid" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('tipousuarioid')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('tipousuarioid')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(Usuario), 'tipousuarioid')
+#3 /var/www/yii/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(Usuario), 'tipousuarioid', Array)
+#4 /var/www/yii/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(Usuario), 'tipousuarioid', Array)
+#5 /var/www/inmuebleweb/protected/extensions/bootstrap/widgets/input/TbInputVertical.php(142): CActiveForm->textField(Object(Usuario), 'tipousuarioid', Array)
+#6 /var/www/inmuebleweb/protected/extensions/bootstrap/widgets/input/TbInput.php(230): TbInputVertical->textField()
+#7 /var/www/yii/framework/web/CBaseController.php(173): TbInput->run()
+#8 /var/www/inmuebleweb/protected/extensions/bootstrap/widgets/TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#9 /var/www/inmuebleweb/protected/extensions/bootstrap/widgets/TbActiveForm.php(186): TbActiveForm->inputRow('text', Object(Usuario), 'tipousuarioid', NULL, Array)
+#10 /var/www/inmuebleweb/protected/views/usuario/_form.php(22): TbActiveForm->textFieldRow(Object(Usuario), 'tipousuarioid', Array)
+#11 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/inmueb...')
+#12 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#13 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#14 /var/www/inmuebleweb/protected/views/usuario/create.php(15): CController->renderPartial('_form', Array)
+#15 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/inmueb...')
+#16 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#17 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#18 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#19 /var/www/inmuebleweb/protected/controllers/UsuarioController.php(78): CController->render('create', Array)
+#20 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionCreate()
+#21 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#22 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#24 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#28 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#30 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#31 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#32 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#33 {main}
+REQUEST_URI=/inmuebleweb/index.php?r=usuario/create
+HTTP_REFERER=http://localhost/inmuebleweb/index.php?r=usuario/index
+---

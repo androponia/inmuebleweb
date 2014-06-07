@@ -11,12 +11,11 @@
  * @property string $password
  * @property string $telefono
  * @property string $celular
- * @property integer $tipousuarioid
+ * @property string $tipousuario
  *
  * The followings are the available model relations:
  * @property Cliente $cliente
  * @property Empleado $empleado
- * @property Tipousuario $tipousuario
  */
 class Usuario extends CActiveRecord
 {
@@ -36,13 +35,13 @@ class Usuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, apellido, email, password, telefono, celular, tipousuarioid', 'required'),
-			array('tipousuarioid', 'numerical', 'integerOnly'=>true),
+			array('nombre, apellido, email, password, telefono, celular, tipousuario', 'required'),
 			array('nombre, apellido, email, password', 'length', 'max'=>60),
 			array('telefono, celular', 'length', 'max'=>45),
+			array('tipousuario', 'length', 'max'=>1),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idusuario, nombre, apellido, email, password, telefono, celular, tipousuarioid', 'safe', 'on'=>'search'),
+			array('idusuario, nombre, apellido, email, password, telefono, celular, tipousuario', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,7 +55,6 @@ class Usuario extends CActiveRecord
 		return array(
 			'cliente' => array(self::HAS_ONE, 'Cliente', 'idusuario'),
 			'empleado' => array(self::HAS_ONE, 'Empleado', 'idusuario'),
-			'tipousuario' => array(self::BELONGS_TO, 'Tipousuario', 'tipousuarioid'),
 		);
 	}
 
@@ -66,14 +64,14 @@ class Usuario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idusuario' => 'Idusuario',
+			'idusuario' => 'Codigo',
 			'nombre' => 'Nombre',
 			'apellido' => 'Apellido',
-			'email' => 'Email',
+			'email' => 'E-mail',
 			'password' => 'Password',
 			'telefono' => 'Telefono',
 			'celular' => 'Celular',
-			'tipousuarioid' => 'Tipousuarioid',
+			'tipousuario' => 'Tipo de Usuario',
 		);
 	}
 
@@ -102,7 +100,7 @@ class Usuario extends CActiveRecord
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('telefono',$this->telefono,true);
 		$criteria->compare('celular',$this->celular,true);
-		$criteria->compare('tipousuarioid',$this->tipousuarioid);
+		$criteria->compare('tipousuario',$this->tipousuario,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
