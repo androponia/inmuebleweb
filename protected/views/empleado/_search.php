@@ -1,35 +1,20 @@
-<?php
-/* @var $this EmpleadoController */
-/* @var $model Empleado */
-/* @var $form CActiveForm */
-?>
-
-<div class="wide form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'idusuario'); ?>
-		<?php echo $form->textField($model,'idusuario'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'idusuario',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'numero'); ?>
-		<?php echo $form->textField($model,'numero'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'numero',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'sueldo'); ?>
-		<?php echo $form->textArea($model,'sueldo',array('rows'=>6, 'cols'=>50)); ?>
-	</div>
+	<?php echo $form->textAreaRow($model,'sueldo',array('rows'=>6, 'cols'=>50, 'class'=>'span8')); ?>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+	<div class="form-actions">
+		<?php $this->widget('bootstrap.widgets.TbButton', array(
+			'buttonType'=>'submit',
+			'type'=>'primary',
+			'label'=>'Search',
+		)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
-
-</div><!-- search-form -->

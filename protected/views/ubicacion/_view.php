@@ -18,7 +18,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('barrioid')); ?>:</b>
-	<?php echo CHtml::encode($data->barrioid); ?>
+	<?php echo CHtml::encode($data->barrio->nombre); ?>
 	<br />
 
 

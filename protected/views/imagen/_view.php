@@ -14,7 +14,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('propiedadid')); ?>:</b>
-	<?php echo CHtml::encode($data->propiedadid); ?>
+	<?php echo CHtml::encode($data->propiedad->descrpcion); ?>
 	<br />
 
 

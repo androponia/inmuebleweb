@@ -57,8 +57,8 @@ class Empleado extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idusuario' => 'Codigo',
-			'numero' => 'Numero de Empleado',
+			'idusuario' => 'Idusuario',
+			'numero' => 'Numero',
 			'sueldo' => 'Sueldo',
 		);
 	}
