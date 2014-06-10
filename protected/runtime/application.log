@@ -611,3 +611,31 @@ REQUEST_URI=/inmuebleweb/index.php?r=usuario/index
 in /var/www/inmuebleweb/protected/models/Usuario.php (125)
 in /var/www/inmuebleweb/protected/views/usuario/index.php (17)
 in /var/www/inmuebleweb/protected/controllers/UsuarioController.php (133)
+2014/06/08 22:16:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'dbinmweb'' in /var/www/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /var/www/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /var/www/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /var/www/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /var/www/yii/framework/db/ar/CActiveRecord.php(615): CApplication->getDb()
+#5 /var/www/yii/framework/db/ar/CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 /var/www/yii/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Barrio))
+#7 /var/www/yii/framework/web/CActiveDataProvider.php(75): CActiveRecord::model('Barrio')
+#8 /var/www/inmuebleweb/protected/controllers/BarrioController.php(125): CActiveDataProvider->__construct('Barrio')
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): BarrioController->actionIndex()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#17 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /var/www/yii/framework/web/CWebApplication.php(276): CController->run('index')
+#19 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('barrio/index')
+#20 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#22 {main}
+REQUEST_URI=/inmuebleweb/index.php?r=barrio/index
+HTTP_REFERER=http://localhost/inmuebleweb/
+---
