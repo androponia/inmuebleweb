@@ -1,21 +1,17 @@
 <?php
-/* @var $this ClienteController */
-/* @var $model Cliente */
-
 $this->breadcrumbs=array(
 	'Clientes'=>array('index'),
-	$model->idusuario=>array('view','id'=>$model->idusuario),
+	$modelc->idusuario=>array('view','id'=>$modelc->idusuario),
 	'Update',
 );
 
 $this->menu=array(
-	array('label'=>'List Cliente', 'url'=>array('index')),
-	array('label'=>'Create Cliente', 'url'=>array('create')),
-	array('label'=>'View Cliente', 'url'=>array('view', 'id'=>$model->idusuario)),
-	array('label'=>'Manage Cliente', 'url'=>array('admin')),
+	array('label'=>'Crear Cliente','url'=>array('create')),
+	array('label'=>'Ver Cliente','url'=>array('view','id'=>$modelc->idusuario)),
+	array('label'=>'Administrar Cliente','url'=>array('admin')),
 );
 ?>
 
-<h1>Update Cliente <?php echo $model->idusuario; ?></h1>
+<h1>Actualizar Cliente <?php echo $modelc->idusuario; ?></h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form',array('modelc'=>$modelc, 'modelu'=>$modelu)); ?>

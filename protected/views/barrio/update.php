@@ -1,7 +1,4 @@
 <?php
-/* @var $this BarrioController */
-/* @var $model Barrio */
-
 $this->breadcrumbs=array(
 	'Barrios'=>array('index'),
 	$model->idbarrio=>array('view','id'=>$model->idbarrio),
@@ -9,13 +6,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Barrio', 'url'=>array('index')),
-	array('label'=>'Create Barrio', 'url'=>array('create')),
-	array('label'=>'View Barrio', 'url'=>array('view', 'id'=>$model->idbarrio)),
-	array('label'=>'Manage Barrio', 'url'=>array('admin')),
+	array('label'=>'List Barrio','url'=>array('index')),
+	array('label'=>'Create Barrio','url'=>array('create')),
+	array('label'=>'View Barrio','url'=>array('view','id'=>$model->idbarrio)),
+	array('label'=>'Manage Barrio','url'=>array('admin')),
 );
 ?>
 
 <h1>Update Barrio <?php echo $model->idbarrio; ?></h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

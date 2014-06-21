@@ -1,12 +1,7 @@
-<?php
-/* @var $this RequeridaController */
-/* @var $data Requerida */
-?>
-
 <div class="view">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('idrequerida')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->idrequerida), array('view', 'id'=>$data->idrequerida)); ?>
+	<?php echo CHtml::link(CHtml::encode($data->idrequerida),array('view','id'=>$data->idrequerida)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nombre')); ?>:</b>
@@ -26,7 +21,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('barrioid')); ?>:</b>
-	<?php echo CHtml::encode($data->barrio->nombre); ?>
+	<?php echo CHtml::encode($data->barrioid); ?>
 	<br />
 
 

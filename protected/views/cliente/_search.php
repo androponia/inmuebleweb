@@ -1,25 +1,24 @@
-<?php
-/* @var $this ClienteController */
-/* @var $model Cliente */
-/* @var $form CActiveForm */
-?>
-
-<div class="wide form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'idusuario'); ?>
-		<?php echo $form->textField($model,'idusuario'); ?>
-	</div>
+	<?php echo $form->textFieldRow($modelu,'idusuario',array('class'=>'span5')); ?>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+	<?php echo $form->textFieldRow($modelu,'nombre',array('class'=>'span5')); ?>
+
+	<?php echo $form->textFieldRow($modelu,'apellido',array('class'=>'span5')); ?>
+
+	<?php echo $form->textFieldRow($modelu,'email',array('class'=>'span5','maxlength'=>128)); ?>
+
+	<?php echo $form->textFieldRow($modelu,'telefono',array('class'=>'span5','maxlength'=>128)); ?>
+
+	<div class="form-actions">
+		<?php $this->widget('bootstrap.widgets.TbButton', array(
+			'buttonType'=>'submit',
+			'type'=>'primary',
+			'label'=>'Search',
+		)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
-
-</div><!-- search-form -->

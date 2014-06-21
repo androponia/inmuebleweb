@@ -5,11 +5,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Empleado','url'=>array('index')),
-	array('label'=>'Manage Empleado','url'=>array('admin')),
+	array('label'=>'Administrar Empleado','url'=>array('admin')),
 );
 ?>
 
-<h1>Create Empleado</h1>
+<h1>Crear Empleado</h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('modele'=>$modele, 'modelu'=>$modelu)); ?>

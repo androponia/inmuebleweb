@@ -1,15 +1,12 @@
 <?php
-/* @var $this PropiedadController */
-/* @var $model Propiedad */
-
 $this->breadcrumbs=array(
 	'Propiedads'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List Propiedad', 'url'=>array('index')),
-	array('label'=>'Create Propiedad', 'url'=>array('create')),
+	array('label'=>'List Propiedad','url'=>array('index')),
+	array('label'=>'Create Propiedad','url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -18,7 +15,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#propiedad-grid').yiiGridView('update', {
+	$.fn.yiiGridView.update('propiedad-grid', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -33,14 +30,14 @@ You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&g
 or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
 </p>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button btn')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('bootstrap.widgets.TbGridView',array(
 	'id'=>'propiedad-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
@@ -50,16 +47,23 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'cantbano',
 		'terreno',
 		'construido',
-		'precio',
+		'garage',
 		/*
+		'jardin',
+		'fondo',
+		'precio',
 		'descripcion',
 		'ingreso',
 		'egreso',
 		'clienteid',
 		'empleadoid',
+		'created_date',
+		'modified_date',
+		'created_by',
+		'modified_by',
 		*/
 		array(
-			'class'=>'CButtonColumn',
+			'class'=>'bootstrap.widgets.TbButtonColumn',
 		),
 	),
 )); ?>

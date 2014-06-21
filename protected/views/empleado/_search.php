@@ -3,11 +3,15 @@
 	'method'=>'get',
 )); ?>
 
-	<?php echo $form->textFieldRow($model,'idusuario',array('class'=>'span5')); ?>
+	<?php echo $form->textFieldRow($modelu,'idusuario',array('class'=>'span5')); ?>
 
-	<?php echo $form->textFieldRow($model,'numero',array('class'=>'span5')); ?>
+	<?php echo $form->textFieldRow($modelu,'nombre',array('class'=>'span5')); ?>
 
-	<?php echo $form->textAreaRow($model,'sueldo',array('rows'=>6, 'cols'=>50, 'class'=>'span8')); ?>
+	<?php echo $form->textFieldRow($modelu,'apellido',array('class'=>'span5')); ?>
+
+	<?php echo $form->textFieldRow($modelu,'email',array('class'=>'span5','maxlength'=>128)); ?>
+
+	<?php echo $form->textFieldRow($modelu,'telefono',array('class'=>'span5','maxlength'=>128)); ?>
 
 	<div class="form-actions">
 		<?php $this->widget('bootstrap.widgets.TbButton', array(

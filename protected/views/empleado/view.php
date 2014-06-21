@@ -5,21 +5,24 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Empleado','url'=>array('index')),
-	array('label'=>'Create Empleado','url'=>array('create')),
-	array('label'=>'Update Empleado','url'=>array('update','id'=>$model->idusuario)),
-	array('label'=>'Delete Empleado','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->idusuario),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Empleado','url'=>array('admin')),
+	array('label'=>'Crear Empleado','url'=>array('create')),
+	array('label'=>'Actualizar Empleado','url'=>array('update','id'=>$modele->idusuario)),
+	array('label'=>'Eliminar Empleado','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$modele->idusuario),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Administrar Empleado','url'=>array('admin')),
 );
 ?>
 
-<h1>View Empleado #<?php echo $model->idusuario; ?></h1>
+<h1>Ver Empleado #<?php echo $model->idusuario; ?></h1>
 
 <?php $this->widget('bootstrap.widgets.TbDetailView',array(
-	'data'=>$model,
+	'data'=>$modelu,
 	'attributes'=>array(
 		'idusuario',
-		'numero',
-		'sueldo',
+		'idusuario',
+		'nombre',
+		'apellido',
+		'email',
+		'telefono',
+		'celular',
 	),
 )); ?>

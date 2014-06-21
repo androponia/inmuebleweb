@@ -23,18 +23,16 @@
                 	
                 	//para ir viendo he ir probando 
                 //obviamente no se necesitan todas las solapas
-                 	array('label'=>'Barrio', 'url'=>array('/barrio/index')),
-					array('label'=>'Ciudad', 'url'=>array('/ciudad/index')),
-					array('label'=>'Cliente', 'url'=>array('/cliente/index')),
-					array('label'=>'Destacado', 'url'=>array('/destacado/index')),
-					array('label'=>'Empleado', 'url'=>array('/empleado/index')),
-					array('label'=>'Imagen', 'url'=>array('/imagen/index')),
-					array('label'=>'Pais', 'url'=>array('/pais/index')),
-					array('label'=>'Propiedad', 'url'=>array('/propiedad/index')),
-					array('label'=>'Requerida', 'url'=>array('/requerida/index')),
-					array('label'=>'Ubicacion', 'url'=>array('/ubicacion/index')),
-					array('label'=>'Usuario', 'url'=>array('/usuario/index')),
-					array('label'=>'Visita', 'url'=>array('/visita/index')),
+                 	array('label'=>'Barrio', 'url'=>array('/barrio/admin')),
+					array('label'=>'Cliente', 'url'=>array('/cliente/admin')),
+					array('label'=>'Destacado', 'url'=>array('/destacado/admin')),
+					array('label'=>'Empleado', 'url'=>array('/empleado/admin')),
+					array('label'=>'Imagen', 'url'=>array('/imagen/admin')),
+					array('label'=>'Propiedad', 'url'=>array('/propiedad/admin')),
+					array('label'=>'Requerida', 'url'=>array('/requerida/admin')),
+					array('label'=>'Ubicacion', 'url'=>array('/ubicacion/admin')),
+					array('label'=>'Usuario', 'url'=>array('/usuario/admin')),
+					array('label'=>'Visitas', 'url'=>array('/visitas/admin')),
 					
 
                 array('label'=>'Acerca de ', 'url'=>array('/site/page', 'view'=>'about')),
@@ -61,7 +59,7 @@
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
+		Copyright &copy; <?php echo date('Y'); ?> by Grupo IV - PHP.<br/>
 		All Rights Reserved.<br/>
 		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->

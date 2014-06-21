@@ -1,40 +1,32 @@
-<?php
-/* @var $this UbicacionController */
-/* @var $model Ubicacion */
-/* @var $form CActiveForm */
-?>
-
-<div class="wide form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'idubicacion'); ?>
-		<?php echo $form->textField($model,'idubicacion'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'idubicacion',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'direccion'); ?>
-		<?php echo $form->textField($model,'direccion',array('size'=>60,'maxlength'=>100)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'direccion',array('class'=>'span5','maxlength'=>100)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'latitudlongitud'); ?>
-		<?php echo $form->textField($model,'latitudlongitud',array('size'=>60,'maxlength'=>100)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'latitudlongitud',array('class'=>'span5','maxlength'=>100)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'barrioid'); ?>
-		<?php echo $form->textField($model,'barrioid'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'barrioid',array('class'=>'span5')); ?>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+	<?php echo $form->textFieldRow($model,'propiedadid',array('class'=>'span5')); ?>
+
+	<?php echo $form->textFieldRow($model,'created_date',array('class'=>'span5')); ?>
+
+	<?php echo $form->textFieldRow($model,'modified_date',array('class'=>'span5')); ?>
+
+	<?php echo $form->textFieldRow($model,'created_by',array('class'=>'span5','maxlength'=>128)); ?>
+
+	<?php echo $form->textFieldRow($model,'modified_by',array('class'=>'span5','maxlength'=>128)); ?>
+
+	<div class="form-actions">
+		<?php $this->widget('bootstrap.widgets.TbButton', array(
+			'buttonType'=>'submit',
+			'type'=>'primary',
+			'label'=>'Search',
+		)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
-
-</div><!-- search-form -->

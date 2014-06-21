@@ -29,8 +29,8 @@
 	<br />
 
 	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('tipousuario')); ?>:</b>
-	<?php echo CHtml::encode($data->tipousuario); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('rol')); ?>:</b>
+	<?php echo CHtml::encode($data->rol); ?>
 	<br />
 
 	*/ ?>

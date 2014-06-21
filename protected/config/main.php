@@ -13,8 +13,10 @@ Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Inmueble Web',
+	'language'=>'es',
+    'sourceLanguage'=>'es',
+    'charset'=>'utf-8',
 
-	// preloading 'log' component
 	'preload'=>array('log'),
 
 	// autoloading model and component classes
@@ -50,16 +52,16 @@ return array(
 		            'class'=>'bootstrap.components.Bootstrap',
 		        ),
 		// uncomment the following to enable URLs in path-format
-		/*
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+			'showScriptName'=>false,
+     		'caseSensitive'=>false,
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		*/
 		/*'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),*/

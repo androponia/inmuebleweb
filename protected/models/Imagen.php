@@ -6,13 +6,28 @@
  * The followings are the available columns in table 'imagen':
  * @property integer $idimagen
  * @property string $archivo
+ * @property integer $orden
  * @property integer $propiedadid
+ * @property string $created_date
+ * @property string $modified_date
+ * @property string $created_by
+ * @property string $modified_by
  *
  * The followings are the available model relations:
  * @property Propiedad $propiedad
  */
 class Imagen extends CActiveRecord
 {
+	/**
+	 * Returns the static model of the specified AR class.
+	 * @param string $className active record class name.
+	 * @return Imagen the static model class
+	 */
+	public static function model($className=__CLASS__)
+	{
+		return parent::model($className);
+	}
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -29,12 +44,14 @@ class Imagen extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('archivo, propiedadid', 'required'),
-			array('propiedadid', 'numerical', 'integerOnly'=>true),
+			array('archivo, orden, propiedadid', 'required'),
+			array('orden, propiedadid', 'numerical', 'integerOnly'=>true),
 			array('archivo', 'length', 'max'=>100),
+			array('created_by, modified_by', 'length', 'max'=>128),
+			array('created_date, modified_date', 'safe'),
 			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
-			array('idimagen, archivo, propiedadid', 'safe', 'on'=>'search'),
+			// Please remove those attributes that should not be searched.
+			array('idimagen, archivo, orden, propiedadid, created_date, modified_date, created_by, modified_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,47 +73,57 @@ class Imagen extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idimagen' => 'Codigo',
-			'archivo' => 'Archivo de Imagen',
-			'propiedadid' => 'Propiedad',
+			'idimagen' => 'Idimagen',
+			'archivo' => 'Archivo',
+			'orden' => 'Orden',
+			'propiedadid' => 'Propiedadid',
+			'created_date' => 'Created Date',
+			'modified_date' => 'Modified Date',
+			'created_by' => 'Created By',
+			'modified_by' => 'Modified By',
 		);
 	}
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
-	 *
-	 * Typical usecase:
-	 * - Initialize the model fields with values from filter form.
-	 * - Execute this method to get CActiveDataProvider instance which will filter
-	 * models according to data in model fields.
-	 * - Pass data provider to CGridView, CListView or any similar widget.
-	 *
-	 * @return CActiveDataProvider the data provider that can return the models
-	 * based on the search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
 	public function search()
 	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
 
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('idimagen',$this->idimagen);
 		$criteria->compare('archivo',$this->archivo,true);
+		$criteria->compare('orden',$this->orden);
 		$criteria->compare('propiedadid',$this->propiedadid);
+		$criteria->compare('created_date',$this->created_date,true);
+		$criteria->compare('modified_date',$this->modified_date,true);
+		$criteria->compare('created_by',$this->created_by,true);
+		$criteria->compare('modified_by',$this->modified_by,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
 
-	/**
-	 * Returns the static model of the specified AR class.
-	 * Please note that you should have this exact method in all your CActiveRecord descendants!
-	 * @param string $className active record class name.
-	 * @return Imagen the static model class
-	 */
-	public static function model($className=__CLASS__)
+	public function behaviors()
 	{
-		return parent::model($className);
+		return array(
+			'CTimestampBehavior' => array(
+			'class' => 'zii.behaviors.CTimestampBehavior',
+			'createAttribute' => 'created_date',
+			'updateAttribute' => 'modified_date',
+			'setUpdateOnCreate' => true,
+		),
+			'BlameableBehavior' => array(
+			'class' => 'application.components.behaviors.BlameableBehavior',
+			'createdByColumn' => 'created_by',
+			'updatedByColumn' => 'modified_by',
+			),
+		);
 	}
+	
 }

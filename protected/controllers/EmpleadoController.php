@@ -50,8 +50,13 @@ class EmpleadoController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$modele=$this->loadModel($id);
+		$modelu = new Usuario;
+    	$modelu=Usuario::model()->findByPk($id);
+
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+        'modele'=>$modele,
+        'modelu'=>$modelu,
 		));
 	}
 
@@ -61,21 +66,31 @@ class EmpleadoController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Empleado;
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Empleado']))
-		{
-			$model->attributes=$_POST['Empleado'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idusuario));
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
+	    $modelu = new Usuario;
+	    $modele = new Empleado;
+	    if(isset($_POST['Empleado'], $_POST['Usuario']))
+	    {
+	        $modelu->attributes=$_POST['Usuario'];
+	 
+	        // valida usuario
+	        $modelu->rol= 'Empleado';
+	        $valid=$modelu->validate();
+	        if($valid)
+	        {
+	            if ($modelu->save(false)) {
+	                $modele->attributes = $_POST['Empleado'];
+	                $modele->idusuario = $modelu->idusuario;
+	                if ($modele->save(false)) {
+	                	$this->redirect(array('view','id'=>$modele->idusuario));
+	                }
+	            }
+            }
+        }
+    	$this->render('create', array(
+    		'modele'=>$modele,
+        	'modelu'=>$modelu,
+    	));
 	}
 
 	/**
@@ -85,21 +100,20 @@ class EmpleadoController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Empleado']))
-		{
-			$model->attributes=$_POST['Empleado'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idusuario));
-		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
+		$modele=$this->loadModel($id);
+		$modelu = new Usuario;
+    	$modelu=Usuario::model()->findByPk($id);
+        if(isset($_POST['Empleado'], $_POST['Usuario']))
+        {
+        	$modele->attributes=$_POST['Empleado'];
+            $modelu->attributes=$_POST['Usuario'];
+            if($modele->save() && $modelu->save())
+            	$this->redirect(array('admin'));
+        }
+        $this->render('update',array(
+        'modele'=>$modele,
+        'modelu'=>$modelu,
+        ));
 	}
 
 	/**
@@ -138,13 +152,22 @@ class EmpleadoController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Empleado('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Empleado']))
-			$model->attributes=$_GET['Empleado'];
+		$modele=new Empleado('search');
+		$modele->unsetAttributes();  // clear any default values
 
+		$modelu=Usuario::model()->find(array(
+		    'condition'=>'rol=:ts',
+    		'params'=>array(':ts'=>'Empleado'),
+		));
+
+		if(isset($_GET['Empleado']) && isset($_GET['Usuario']))
+		{
+			$modele->attributes=$_GET['Empleado'];
+			$modele->attributes=$_GET['Usuario'];
+		}
 		$this->render('admin',array(
-			'model'=>$model,
+			'modele'=>$modele,
+			'modelu'=>$modelu,
 		));
 	}
 

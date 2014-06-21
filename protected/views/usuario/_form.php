@@ -19,7 +19,7 @@
 
 	<?php echo $form->textFieldRow($model,'celular',array('class'=>'span5','maxlength'=>45)); ?>
 
-	<?php echo $form->textFieldRow($model,'tipousuario',array('class'=>'span5','maxlength'=>1)); ?>
+	<?php echo $form->textFieldRow($model,'rol',array('class'=>'span5','maxlength'=>128)); ?>
 
 	<div class="form-actions">
 		<?php $this->widget('bootstrap.widgets.TbButton', array(

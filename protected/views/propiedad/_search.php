@@ -1,75 +1,50 @@
-<?php
-/* @var $this PropiedadController */
-/* @var $model Propiedad */
-/* @var $form CActiveForm */
-?>
-
-<div class="wide form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'idpropiedad'); ?>
-		<?php echo $form->textField($model,'idpropiedad'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'idpropiedad',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'canthab'); ?>
-		<?php echo $form->textField($model,'canthab'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'canthab',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'cantbano'); ?>
-		<?php echo $form->textField($model,'cantbano'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'cantbano',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'terreno'); ?>
-		<?php echo $form->textField($model,'terreno'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'terreno',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'construido'); ?>
-		<?php echo $form->textField($model,'construido'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'construido',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'precio'); ?>
-		<?php echo $form->textField($model,'precio'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'garage',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'descripcion'); ?>
-		<?php echo $form->textField($model,'descripcion',array('size'=>60,'maxlength'=>150)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'jardin',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'ingreso'); ?>
-		<?php echo $form->textField($model,'ingreso'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'fondo',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'egreso'); ?>
-		<?php echo $form->textField($model,'egreso'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'precio',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'clienteid'); ?>
-		<?php echo $form->textField($model,'clienteid'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'descripcion',array('class'=>'span5','maxlength'=>150)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'empleadoid'); ?>
-		<?php echo $form->textField($model,'empleadoid'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'ingreso',array('class'=>'span5')); ?>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+	<?php echo $form->textFieldRow($model,'egreso',array('class'=>'span5')); ?>
+
+	<?php echo $form->textFieldRow($model,'clienteid',array('class'=>'span5')); ?>
+
+	<?php echo $form->textFieldRow($model,'empleadoid',array('class'=>'span5')); ?>
+
+	<?php echo $form->textFieldRow($model,'created_date',array('class'=>'span5')); ?>
+
+	<?php echo $form->textFieldRow($model,'modified_date',array('class'=>'span5')); ?>
+
+	<?php echo $form->textFieldRow($model,'created_by',array('class'=>'span5','maxlength'=>128)); ?>
+
+	<?php echo $form->textFieldRow($model,'modified_by',array('class'=>'span5','maxlength'=>128)); ?>
+
+	<div class="form-actions">
+		<?php $this->widget('bootstrap.widgets.TbButton', array(
+			'buttonType'=>'submit',
+			'type'=>'primary',
+			'label'=>'Search',
+		)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
-
-</div><!-- search-form -->

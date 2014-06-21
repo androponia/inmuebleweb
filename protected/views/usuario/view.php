@@ -25,6 +25,6 @@ $this->menu=array(
 		'password',
 		'telefono',
 		'celular',
-		'tipousuario',
+		'rol',
 	),
 )); ?>

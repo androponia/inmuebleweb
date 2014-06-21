@@ -1,35 +1,30 @@
-<?php
-/* @var $this ImagenController */
-/* @var $model Imagen */
-/* @var $form CActiveForm */
-?>
-
-<div class="wide form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'idimagen'); ?>
-		<?php echo $form->textField($model,'idimagen'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'idimagen',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'archivo'); ?>
-		<?php echo $form->textField($model,'archivo',array('size'=>60,'maxlength'=>100)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'archivo',array('class'=>'span5','maxlength'=>100)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'propiedadid'); ?>
-		<?php echo $form->textField($model,'propiedadid'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'orden',array('class'=>'span5')); ?>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+	<?php echo $form->textFieldRow($model,'propiedadid',array('class'=>'span5')); ?>
+
+	<?php echo $form->textFieldRow($model,'created_date',array('class'=>'span5')); ?>
+
+	<?php echo $form->textFieldRow($model,'modified_date',array('class'=>'span5')); ?>
+
+	<?php echo $form->textFieldRow($model,'created_by',array('class'=>'span5','maxlength'=>128)); ?>
+
+	<?php echo $form->textFieldRow($model,'modified_by',array('class'=>'span5','maxlength'=>128)); ?>
+
+	<div class="form-actions">
+		<?php $this->widget('bootstrap.widgets.TbButton', array(
+			'buttonType'=>'submit',
+			'type'=>'primary',
+			'label'=>'Search',
+		)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
-
-</div><!-- search-form -->

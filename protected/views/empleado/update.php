@@ -1,18 +1,17 @@
 <?php
 $this->breadcrumbs=array(
 	'Empleados'=>array('index'),
-	$model->idusuario=>array('view','id'=>$model->idusuario),
+	$modele->idusuario=>array('view','id'=>$modele->idusuario),
 	'Update',
 );
 
 $this->menu=array(
-	array('label'=>'List Empleado','url'=>array('index')),
-	array('label'=>'Create Empleado','url'=>array('create')),
-	array('label'=>'View Empleado','url'=>array('view','id'=>$model->idusuario)),
-	array('label'=>'Manage Empleado','url'=>array('admin')),
+	array('label'=>'Crear Empleado','url'=>array('create')),
+	array('label'=>'Ver Empleado','url'=>array('view','id'=>$modele->idusuario)),
+	array('label'=>'Administrar Empleado','url'=>array('admin')),
 );
 ?>
 
-<h1>Update Empleado <?php echo $model->idusuario; ?></h1>
+<h1>Actualizar Empleado <?php echo $modele->idusuario; ?></h1>
 
-<?php echo $this->renderPartial('_form',array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form',array('modele'=>$modele, 'modelu'=>$modelu)); ?>

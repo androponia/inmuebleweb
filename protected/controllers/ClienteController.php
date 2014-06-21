@@ -15,7 +15,6 @@ class ClienteController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -51,9 +50,14 @@ class ClienteController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$modelc=$this->loadModel($id);
+		$modelu = new Usuario;
+    	$modelu=Usuario::model()->findByPk($id);
+
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));
+        'modelc'=>$modelc,
+        'modelu'=>$modelu,
+        ));
 	}
 
 	/**
@@ -62,22 +66,32 @@ class ClienteController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Cliente;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Cliente']))
-		{
-			$model->attributes=$_POST['Cliente'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idusuario));
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
+	    $modelu = new Usuario;
+	    $modelc = new Cliente;
+	    if(isset($_POST['Cliente'], $_POST['Usuario']))
+	    {
+	        $modelu->attributes=$_POST['Usuario'];
+	 
+	        // valida usuario
+	        $modelu->rol= 'Cliente';
+	        $valid=$modelu->validate();
+	        if($valid)
+	        {
+	            if ($modelu->save(false)) {
+	                $modelc->attributes = $_POST['Cliente'];
+	                $modelc->idusuario = $modelu->idusuario;
+	                if ($modelc->save(false)) {
+	                	$this->redirect(array('view','id'=>$modelc->idusuario));
+	                }
+	            }
+            }
+        }
+    	$this->render('create', array(
+    		'modelc'=>$modelc,
+        	'modelu'=>$modelu,
+    	));
 	}
+
 
 	/**
 	 * Updates a particular model.
@@ -86,21 +100,20 @@ class ClienteController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Cliente']))
-		{
-			$model->attributes=$_POST['Cliente'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idusuario));
-		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
+		$modelc=$this->loadModel($id);
+		$modelu = new Usuario;
+    	$modelu=Usuario::model()->findByPk($id);
+        if(isset($_POST['Cliente'], $_POST['Usuario']))
+        {
+        	$modelc->attributes=$_POST['Cliente'];
+            $modelu->attributes=$_POST['Usuario'];
+            if($modelc->save() && $modelu->save())
+            	$this->redirect(array('admin'));
+        }
+        $this->render('update',array(
+        'modelc'=>$modelc,
+        'modelu'=>$modelu,
+        ));
 	}
 
 	/**
@@ -110,11 +123,16 @@ class ClienteController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
-
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		if(Yii::app()->request->isPostRequest)
+		{
+			// we only allow deletion via POST request
+			$this->loadModel($id)->delete();
+			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+			if(!isset($_GET['ajax']))
+				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		}
+		else
+			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
 	}
 
 	/**
@@ -123,32 +141,37 @@ class ClienteController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Cliente');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
-	}
+        $this->render('index',array(
+                'dataProvider'=>$dataProvider,
+        ));
+    }
 
 	/**
 	 * Manages all models.
 	 */
 	public function actionAdmin()
 	{
-		$model=new Cliente('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Cliente']))
-			$model->attributes=$_GET['Cliente'];
+		$modelc = new Cliente('search');
+		$modelc->unsetAttributes();  // clear any default values
 
+		$modelu = new Usuario('search');
+		$modelu->unsetAttributes();
+
+		if(isset($_GET['Cliente']) && isset($_GET['Usuario']))
+		{
+			$modelc->attributes=$_GET['Cliente'];
+			$modelu->attributes=$_GET['Usuario'];
+		}
 		$this->render('admin',array(
-			'model'=>$model,
+			'modelc'=>$modelc,
+			'modelu'=>$modelu,
 		));
 	}
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
-	 * @param integer $id the ID of the model to be loaded
-	 * @return Cliente the loaded model
-	 * @throws CHttpException
+	 * @param integer the ID of the model to be loaded
 	 */
 	public function loadModel($id)
 	{
@@ -160,7 +183,7 @@ class ClienteController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Cliente $model the model to be validated
+	 * @param CModel the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{

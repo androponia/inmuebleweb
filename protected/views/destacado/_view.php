@@ -1,12 +1,7 @@
-<?php
-/* @var $this DestacadoController */
-/* @var $data Destacado */
-?>
-
 <div class="view">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('iddestacado')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->iddestacado), array('view', 'id'=>$data->iddestacado)); ?>
+	<?php echo CHtml::link(CHtml::encode($data->iddestacado),array('view','id'=>$data->iddestacado)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fechainicio')); ?>:</b>
@@ -18,8 +13,26 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('idpropiedad')); ?>:</b>
-	<?php echo CHtml::encode($data->propiedad->descripcion); ?>
+	<?php echo CHtml::encode($data->idpropiedad); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('created_date')); ?>:</b>
+	<?php echo CHtml::encode($data->created_date); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('modified_date')); ?>:</b>
+	<?php echo CHtml::encode($data->modified_date); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('created_by')); ?>:</b>
+	<?php echo CHtml::encode($data->created_by); ?>
+	<br />
+
+	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('modified_by')); ?>:</b>
+	<?php echo CHtml::encode($data->modified_by); ?>
+	<br />
+
+	*/ ?>
 
 </div>
