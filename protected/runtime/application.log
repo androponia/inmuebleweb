@@ -8738,3 +8738,1721 @@ Stack trace:
 REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
 HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
 ---
+2014/06/20 20:57:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/21 07:57:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/21 09:36:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/21 12:48:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/21 12:48:20 [error] [exception.CException] exception 'CException' with message 'Propiedad "Barrio"."status" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('status')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('status')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(1774): CHtml::resolveValue(Object(Barrio), 'status')
+#3 /var/www/yii/framework/web/helpers/CHtml.php(1205): CHtml::activeInputField('text', Object(Barrio), 'status', Array)
+#4 /var/www/yii/framework/zii/widgets/grid/CDataColumn.php(105): CHtml::activeTextField(Object(Barrio), 'status', Array)
+#5 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(106): CDataColumn->renderFilterCellContent()
+#6 /var/www/yii/framework/zii/widgets/grid/CGridView.php(450): CGridColumn->renderFilterCell()
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(428): CGridView->renderFilter()
+#8 /var/www/yii/framework/zii/widgets/grid/CGridView.php(398): CGridView->renderTableHeader()
+#9 /var/www/yii/framework/zii/widgets/CBaseListView.php(158): CGridView->renderItems()
+#10 [internal function]: CBaseListView->renderSection(Array)
+#11 /var/www/yii/framework/zii/widgets/CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#12 /var/www/yii/framework/zii/widgets/CBaseListView.php(126): CBaseListView->renderContent()
+#13 /var/www/yii/framework/web/CBaseController.php(174): CBaseListView->run()
+#14 /var/www/inmuebleweb/protected/views/barrio/admin.php(66): CBaseController->widget('zii.widgets.gri...', Array)
+#15 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/inmueb...')
+#16 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#17 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#18 /var/www/yii/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#19 /var/www/inmuebleweb/protected/controllers/BarrioController.php(148): CController->render('admin', Array)
+#20 /var/www/yii/framework/web/actions/CInlineAction.php(50): BarrioController->actionAdmin()
+#21 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#22 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#24 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#25 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#26 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#28 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 /var/www/yii/framework/web/CWebApplication.php(276): CController->run('admin')
+#30 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('barrio/admin')
+#31 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#32 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#33 {main}
+REQUEST_URI=/inmuebleweb/barrio/admin
+HTTP_REFERER=http://localhost/inmuebleweb/
+---
+2014/06/21 12:49:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/21 12:49:32 [error] [exception.CException] exception 'CException' with message 'Propiedad "Barrio"."status" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('status')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('status')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(1774): CHtml::resolveValue(Object(Barrio), 'status')
+#3 /var/www/yii/framework/web/helpers/CHtml.php(1205): CHtml::activeInputField('text', Object(Barrio), 'status', Array)
+#4 /var/www/yii/framework/zii/widgets/grid/CDataColumn.php(105): CHtml::activeTextField(Object(Barrio), 'status', Array)
+#5 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(106): CDataColumn->renderFilterCellContent()
+#6 /var/www/yii/framework/zii/widgets/grid/CGridView.php(450): CGridColumn->renderFilterCell()
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(428): CGridView->renderFilter()
+#8 /var/www/yii/framework/zii/widgets/grid/CGridView.php(398): CGridView->renderTableHeader()
+#9 /var/www/yii/framework/zii/widgets/CBaseListView.php(158): CGridView->renderItems()
+#10 [internal function]: CBaseListView->renderSection(Array)
+#11 /var/www/yii/framework/zii/widgets/CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#12 /var/www/yii/framework/zii/widgets/CBaseListView.php(126): CBaseListView->renderContent()
+#13 /var/www/yii/framework/web/CBaseController.php(174): CBaseListView->run()
+#14 /var/www/inmuebleweb/protected/views/barrio/admin.php(66): CBaseController->widget('zii.widgets.gri...', Array)
+#15 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/inmueb...')
+#16 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#17 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#18 /var/www/yii/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#19 /var/www/inmuebleweb/protected/controllers/BarrioController.php(148): CController->render('admin', Array)
+#20 /var/www/yii/framework/web/actions/CInlineAction.php(50): BarrioController->actionAdmin()
+#21 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#22 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#24 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#25 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#26 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#28 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 /var/www/yii/framework/web/CWebApplication.php(276): CController->run('admin')
+#30 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('barrio/admin')
+#31 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#32 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#33 {main}
+REQUEST_URI=/inmuebleweb/barrio/admin
+HTTP_REFERER=http://localhost/inmuebleweb/
+---
+2014/06/21 12:50:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/21 12:50:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/21 12:52:56 [error] [exception.CException] exception 'CException' with message 'Propiedad "Barrio"."Prueba" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('Prueba')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('Prueba')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(1774): CHtml::resolveValue(Object(Barrio), 'Prueba')
+#3 /var/www/yii/framework/web/helpers/CHtml.php(1205): CHtml::activeInputField('text', Object(Barrio), 'Prueba', Array)
+#4 /var/www/yii/framework/zii/widgets/grid/CDataColumn.php(105): CHtml::activeTextField(Object(Barrio), 'Prueba', Array)
+#5 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(106): CDataColumn->renderFilterCellContent()
+#6 /var/www/yii/framework/zii/widgets/grid/CGridView.php(450): CGridColumn->renderFilterCell()
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(428): CGridView->renderFilter()
+#8 /var/www/yii/framework/zii/widgets/grid/CGridView.php(398): CGridView->renderTableHeader()
+#9 /var/www/yii/framework/zii/widgets/CBaseListView.php(158): CGridView->renderItems()
+#10 [internal function]: CBaseListView->renderSection(Array)
+#11 /var/www/yii/framework/zii/widgets/CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#12 /var/www/yii/framework/zii/widgets/CBaseListView.php(126): CBaseListView->renderContent()
+#13 /var/www/yii/framework/web/CBaseController.php(174): CBaseListView->run()
+#14 /var/www/inmuebleweb/protected/views/barrio/admin.php(66): CBaseController->widget('zii.widgets.gri...', Array)
+#15 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/inmueb...')
+#16 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#17 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#18 /var/www/yii/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#19 /var/www/inmuebleweb/protected/controllers/BarrioController.php(148): CController->render('admin', Array)
+#20 /var/www/yii/framework/web/actions/CInlineAction.php(50): BarrioController->actionAdmin()
+#21 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#22 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#24 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#25 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#26 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#28 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 /var/www/yii/framework/web/CWebApplication.php(276): CController->run('admin')
+#30 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('barrio/admin')
+#31 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#32 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#33 {main}
+REQUEST_URI=/inmuebleweb/barrio/admin
+HTTP_REFERER=http://localhost/inmuebleweb/
+---
+2014/06/21 12:53:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/21 12:54:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/21 12:55:31 [error] [exception.CException] exception 'CException' with message 'Propiedad "Barrio"."id" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('id')
+#1 /var/www/yii/framework/base/CComponent.php(607) : eval()'d code(1): CActiveRecord->__get('id')
+#2 /var/www/yii/framework/base/CComponent.php(607): eval()
+#3 /var/www/yii/framework/zii/widgets/grid/CDataColumn.php(139): CComponent->evaluateExpression('$data->id + $da...', Array)
+#4 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(138): CDataColumn->renderDataCellContent(0, Object(Barrio))
+#5 /var/www/yii/framework/zii/widgets/grid/CGridView.php(517): CGridColumn->renderDataCell(0)
+#6 /var/www/yii/framework/zii/widgets/grid/CGridView.php(490): CGridView->renderTableRow(0)
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(400): CGridView->renderTableBody()
+#8 /var/www/yii/framework/zii/widgets/CBaseListView.php(158): CGridView->renderItems()
+#9 [internal function]: CBaseListView->renderSection(Array)
+#10 /var/www/yii/framework/zii/widgets/CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#11 /var/www/yii/framework/zii/widgets/CBaseListView.php(126): CBaseListView->renderContent()
+#12 /var/www/yii/framework/web/CBaseController.php(174): CBaseListView->run()
+#13 /var/www/inmuebleweb/protected/views/barrio/admin.php(66): CBaseController->widget('zii.widgets.gri...', Array)
+#14 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/inmueb...')
+#15 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#16 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#17 /var/www/yii/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#18 /var/www/inmuebleweb/protected/controllers/BarrioController.php(148): CController->render('admin', Array)
+#19 /var/www/yii/framework/web/actions/CInlineAction.php(50): BarrioController->actionAdmin()
+#20 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#21 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#22 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#23 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#24 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#25 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#26 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#27 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#28 /var/www/yii/framework/web/CWebApplication.php(276): CController->run('admin')
+#29 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('barrio/admin')
+#30 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#31 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#32 {main}
+REQUEST_URI=/inmuebleweb/barrio/admin
+HTTP_REFERER=http://localhost/inmuebleweb/
+---
+2014/06/21 12:56:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/21 12:56:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/21 12:56:42 [error] [php] call_user_func_array() expects parameter 1 to be a valid callback, no array or string given (/var/www/yii/framework/base/CComponent.php:612)
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(138): CDataColumn->renderDataCellContent()
+#1 /var/www/yii/framework/zii/widgets/grid/CGridView.php(517): CDataColumn->renderDataCell()
+#2 /var/www/yii/framework/zii/widgets/grid/CGridView.php(490): CGridView->renderTableRow()
+#3 /var/www/yii/framework/zii/widgets/grid/CGridView.php(400): CGridView->renderTableBody()
+#4 /var/www/yii/framework/zii/widgets/CBaseListView.php(158): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(141): preg_replace_callback()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(126): CGridView->renderContent()
+#8 /var/www/yii/framework/web/CBaseController.php(174): CGridView->run()
+#9 /var/www/inmuebleweb/protected/views/barrio/admin.php(66): BarrioController->widget()
+#10 /var/www/yii/framework/web/CBaseController.php(127): require()
+#11 /var/www/yii/framework/web/CBaseController.php(96): BarrioController->renderInternal()
+#12 /var/www/yii/framework/web/CController.php(870): BarrioController->renderFile()
+#13 /var/www/yii/framework/web/CController.php(783): BarrioController->renderPartial()
+#14 /var/www/inmuebleweb/protected/controllers/BarrioController.php(148): BarrioController->render()
+#15 /var/www/yii/framework/web/actions/CInlineAction.php(50): BarrioController->actionAdmin()
+#16 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(134): BarrioController->runAction()
+#18 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#20 /var/www/yii/framework/web/filters/CInlineFilter.php(59): BarrioController->filterAccessControl()
+#21 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#22 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#23 /var/www/yii/framework/web/CController.php(266): BarrioController->runActionWithFilters()
+#24 /var/www/yii/framework/web/CWebApplication.php(276): BarrioController->run()
+#25 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#26 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#27 /var/www/inmuebleweb/index.php(15): CWebApplication->run()
+REQUEST_URI=/inmuebleweb/barrio/admin
+in /var/www/inmuebleweb/protected/views/barrio/admin.php (66)
+in /var/www/inmuebleweb/protected/controllers/BarrioController.php (148)
+in /var/www/inmuebleweb/index.php (15)
+2014/06/21 12:56:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/22 18:39:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/22 18:40:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/22 18:40:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/22 18:40:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/22 18:40:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/22 18:40:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/22 22:03:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 08:30:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 09:07:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 09:07:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 10:07:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 10:07:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 18:10:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 18:20:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 18:22:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 18:23:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 18:23:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 19:08:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 19:24:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 19:24:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 19:24:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 20:11:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 20:11:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 20:11:09 [error] [php] include(EGMap.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:418)
+Stack trace:
+#0 /var/www/inmuebleweb/protected/views/ubicacion/_form.php(44): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(127): require()
+#2 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#4 /var/www/inmuebleweb/protected/views/ubicacion/create.php(15): UbicacionController->renderPartial()
+#5 /var/www/yii/framework/web/CBaseController.php(127): require()
+#6 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#7 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#8 /var/www/yii/framework/web/CController.php(783): UbicacionController->renderPartial()
+#9 /var/www/inmuebleweb/protected/controllers/UbicacionController.php(78): UbicacionController->render()
+#10 /var/www/yii/framework/web/actions/CInlineAction.php(50): UbicacionController->actionCreate()
+#11 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(134): UbicacionController->runAction()
+#13 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /var/www/yii/framework/web/filters/CInlineFilter.php(59): UbicacionController->filterAccessControl()
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(266): UbicacionController->runActionWithFilters()
+#19 /var/www/yii/framework/web/CWebApplication.php(276): UbicacionController->run()
+#20 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#21 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /var/www/inmuebleweb/index.php(15): CWebApplication->run()
+REQUEST_URI=/inmuebleweb/ubicacion/create
+in /var/www/inmuebleweb/protected/views/ubicacion/_form.php (44)
+in /var/www/inmuebleweb/protected/views/ubicacion/create.php (15)
+in /var/www/inmuebleweb/protected/controllers/UbicacionController.php (78)
+2014/06/23 20:16:20 [error] [php] include(EGMap.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:418)
+Stack trace:
+#0 /var/www/inmuebleweb/protected/views/ubicacion/_form.php(44): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(127): require()
+#2 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#4 /var/www/inmuebleweb/protected/views/ubicacion/create.php(15): UbicacionController->renderPartial()
+#5 /var/www/yii/framework/web/CBaseController.php(127): require()
+#6 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#7 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#8 /var/www/yii/framework/web/CController.php(783): UbicacionController->renderPartial()
+#9 /var/www/inmuebleweb/protected/controllers/UbicacionController.php(78): UbicacionController->render()
+#10 /var/www/yii/framework/web/actions/CInlineAction.php(50): UbicacionController->actionCreate()
+#11 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(134): UbicacionController->runAction()
+#13 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /var/www/yii/framework/web/filters/CInlineFilter.php(59): UbicacionController->filterAccessControl()
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(266): UbicacionController->runActionWithFilters()
+#19 /var/www/yii/framework/web/CWebApplication.php(276): UbicacionController->run()
+#20 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#21 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /var/www/inmuebleweb/index.php(15): CWebApplication->run()
+REQUEST_URI=/inmuebleweb/ubicacion/create
+in /var/www/inmuebleweb/protected/views/ubicacion/_form.php (44)
+in /var/www/inmuebleweb/protected/views/ubicacion/create.php (15)
+in /var/www/inmuebleweb/protected/controllers/UbicacionController.php (78)
+2014/06/23 21:25:31 [error] [php] include(EGMap.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:418)
+Stack trace:
+#0 /var/www/inmuebleweb/protected/views/ubicacion/_form.php(44): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(127): require()
+#2 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#4 /var/www/inmuebleweb/protected/views/ubicacion/create.php(15): UbicacionController->renderPartial()
+#5 /var/www/yii/framework/web/CBaseController.php(127): require()
+#6 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#7 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#8 /var/www/yii/framework/web/CController.php(783): UbicacionController->renderPartial()
+#9 /var/www/inmuebleweb/protected/controllers/UbicacionController.php(78): UbicacionController->render()
+#10 /var/www/yii/framework/web/actions/CInlineAction.php(50): UbicacionController->actionCreate()
+#11 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(134): UbicacionController->runAction()
+#13 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /var/www/yii/framework/web/filters/CInlineFilter.php(59): UbicacionController->filterAccessControl()
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(266): UbicacionController->runActionWithFilters()
+#19 /var/www/yii/framework/web/CWebApplication.php(276): UbicacionController->run()
+#20 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#21 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /var/www/inmuebleweb/index.php(15): CWebApplication->run()
+REQUEST_URI=/inmuebleweb/ubicacion/create
+in /var/www/inmuebleweb/protected/views/ubicacion/_form.php (44)
+in /var/www/inmuebleweb/protected/views/ubicacion/create.php (15)
+in /var/www/inmuebleweb/protected/controllers/UbicacionController.php (78)
+2014/06/23 21:30:13 [error] [php] include(EGMap.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:418)
+Stack trace:
+#0 /var/www/inmuebleweb/protected/views/ubicacion/_form.php(44): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(127): require()
+#2 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#4 /var/www/inmuebleweb/protected/views/ubicacion/create.php(15): UbicacionController->renderPartial()
+#5 /var/www/yii/framework/web/CBaseController.php(127): require()
+#6 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#7 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#8 /var/www/yii/framework/web/CController.php(783): UbicacionController->renderPartial()
+#9 /var/www/inmuebleweb/protected/controllers/UbicacionController.php(78): UbicacionController->render()
+#10 /var/www/yii/framework/web/actions/CInlineAction.php(50): UbicacionController->actionCreate()
+#11 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(134): UbicacionController->runAction()
+#13 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /var/www/yii/framework/web/filters/CInlineFilter.php(59): UbicacionController->filterAccessControl()
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(266): UbicacionController->runActionWithFilters()
+#19 /var/www/yii/framework/web/CWebApplication.php(276): UbicacionController->run()
+#20 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#21 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /var/www/inmuebleweb/index.php(15): CWebApplication->run()
+REQUEST_URI=/inmuebleweb/ubicacion/create
+in /var/www/inmuebleweb/protected/views/ubicacion/_form.php (44)
+in /var/www/inmuebleweb/protected/views/ubicacion/create.php (15)
+in /var/www/inmuebleweb/protected/controllers/UbicacionController.php (78)
+2014/06/23 21:37:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 21:37:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 21:37:35 [error] [php] include(EGMap.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:418)
+Stack trace:
+#0 /var/www/inmuebleweb/protected/views/ubicacion/_form.php(44): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(127): require()
+#2 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#4 /var/www/inmuebleweb/protected/views/ubicacion/create.php(15): UbicacionController->renderPartial()
+#5 /var/www/yii/framework/web/CBaseController.php(127): require()
+#6 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#7 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#8 /var/www/yii/framework/web/CController.php(783): UbicacionController->renderPartial()
+#9 /var/www/inmuebleweb/protected/controllers/UbicacionController.php(78): UbicacionController->render()
+#10 /var/www/yii/framework/web/actions/CInlineAction.php(50): UbicacionController->actionCreate()
+#11 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(134): UbicacionController->runAction()
+#13 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /var/www/yii/framework/web/filters/CInlineFilter.php(59): UbicacionController->filterAccessControl()
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(266): UbicacionController->runActionWithFilters()
+#19 /var/www/yii/framework/web/CWebApplication.php(276): UbicacionController->run()
+#20 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#21 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /var/www/inmuebleweb/index.php(15): CWebApplication->run()
+REQUEST_URI=/inmuebleweb/ubicacion/create
+in /var/www/inmuebleweb/protected/views/ubicacion/_form.php (44)
+in /var/www/inmuebleweb/protected/views/ubicacion/create.php (15)
+in /var/www/inmuebleweb/protected/controllers/UbicacionController.php (78)
+2014/06/23 21:39:08 [error] [php] include(EGMap.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:418)
+Stack trace:
+#0 /var/www/inmuebleweb/protected/views/ubicacion/_form.php(44): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(127): require()
+#2 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#4 /var/www/inmuebleweb/protected/views/ubicacion/create.php(15): UbicacionController->renderPartial()
+#5 /var/www/yii/framework/web/CBaseController.php(127): require()
+#6 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#7 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#8 /var/www/yii/framework/web/CController.php(783): UbicacionController->renderPartial()
+#9 /var/www/inmuebleweb/protected/controllers/UbicacionController.php(78): UbicacionController->render()
+#10 /var/www/yii/framework/web/actions/CInlineAction.php(50): UbicacionController->actionCreate()
+#11 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(134): UbicacionController->runAction()
+#13 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /var/www/yii/framework/web/filters/CInlineFilter.php(59): UbicacionController->filterAccessControl()
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(266): UbicacionController->runActionWithFilters()
+#19 /var/www/yii/framework/web/CWebApplication.php(276): UbicacionController->run()
+#20 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#21 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /var/www/inmuebleweb/index.php(15): CWebApplication->run()
+REQUEST_URI=/inmuebleweb/ubicacion/create
+in /var/www/inmuebleweb/protected/views/ubicacion/_form.php (44)
+in /var/www/inmuebleweb/protected/views/ubicacion/create.php (15)
+in /var/www/inmuebleweb/protected/controllers/UbicacionController.php (78)
+2014/06/23 21:41:23 [error] [php] include(EGMap.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:418)
+Stack trace:
+#0 /var/www/inmuebleweb/protected/views/ubicacion/_form.php(44): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(127): require()
+#2 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#4 /var/www/inmuebleweb/protected/views/ubicacion/create.php(15): UbicacionController->renderPartial()
+#5 /var/www/yii/framework/web/CBaseController.php(127): require()
+#6 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#7 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#8 /var/www/yii/framework/web/CController.php(783): UbicacionController->renderPartial()
+#9 /var/www/inmuebleweb/protected/controllers/UbicacionController.php(78): UbicacionController->render()
+#10 /var/www/yii/framework/web/actions/CInlineAction.php(50): UbicacionController->actionCreate()
+#11 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(134): UbicacionController->runAction()
+#13 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /var/www/yii/framework/web/filters/CInlineFilter.php(59): UbicacionController->filterAccessControl()
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(266): UbicacionController->runActionWithFilters()
+#19 /var/www/yii/framework/web/CWebApplication.php(276): UbicacionController->run()
+#20 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#21 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /var/www/inmuebleweb/index.php(15): CWebApplication->run()
+REQUEST_URI=/inmuebleweb/ubicacion/create
+in /var/www/inmuebleweb/protected/views/ubicacion/_form.php (44)
+in /var/www/inmuebleweb/protected/views/ubicacion/create.php (15)
+in /var/www/inmuebleweb/protected/controllers/UbicacionController.php (78)
+2014/06/23 21:42:39 [error] [php] include(EGMap.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:418)
+Stack trace:
+#0 /var/www/inmuebleweb/protected/views/ubicacion/_form.php(44): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(127): require()
+#2 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#4 /var/www/inmuebleweb/protected/views/ubicacion/create.php(15): UbicacionController->renderPartial()
+#5 /var/www/yii/framework/web/CBaseController.php(127): require()
+#6 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#7 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#8 /var/www/yii/framework/web/CController.php(783): UbicacionController->renderPartial()
+#9 /var/www/inmuebleweb/protected/controllers/UbicacionController.php(78): UbicacionController->render()
+#10 /var/www/yii/framework/web/actions/CInlineAction.php(50): UbicacionController->actionCreate()
+#11 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(134): UbicacionController->runAction()
+#13 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /var/www/yii/framework/web/filters/CInlineFilter.php(59): UbicacionController->filterAccessControl()
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(266): UbicacionController->runActionWithFilters()
+#19 /var/www/yii/framework/web/CWebApplication.php(276): UbicacionController->run()
+#20 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#21 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /var/www/inmuebleweb/index.php(15): CWebApplication->run()
+REQUEST_URI=/inmuebleweb/ubicacion/create
+in /var/www/inmuebleweb/protected/views/ubicacion/_form.php (44)
+in /var/www/inmuebleweb/protected/views/ubicacion/create.php (15)
+in /var/www/inmuebleweb/protected/controllers/UbicacionController.php (78)
+2014/06/23 21:42:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 21:45:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 21:46:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 21:47:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 21:47:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 21:47:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 21:47:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 21:49:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 21:49:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 21:51:04 [error] [php] include(EGMap.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:418)
+Stack trace:
+#0 /var/www/inmuebleweb/protected/views/ubicacion/_form.php(44): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(127): require()
+#2 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#4 /var/www/inmuebleweb/protected/views/ubicacion/create.php(15): UbicacionController->renderPartial()
+#5 /var/www/yii/framework/web/CBaseController.php(127): require()
+#6 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#7 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#8 /var/www/yii/framework/web/CController.php(783): UbicacionController->renderPartial()
+#9 /var/www/inmuebleweb/protected/controllers/UbicacionController.php(78): UbicacionController->render()
+#10 /var/www/yii/framework/web/actions/CInlineAction.php(50): UbicacionController->actionCreate()
+#11 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(134): UbicacionController->runAction()
+#13 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /var/www/yii/framework/web/filters/CInlineFilter.php(59): UbicacionController->filterAccessControl()
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(266): UbicacionController->runActionWithFilters()
+#19 /var/www/yii/framework/web/CWebApplication.php(276): UbicacionController->run()
+#20 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#21 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /var/www/inmuebleweb/index.php(15): CWebApplication->run()
+REQUEST_URI=/inmuebleweb/ubicacion/create
+in /var/www/inmuebleweb/protected/views/ubicacion/_form.php (44)
+in /var/www/inmuebleweb/protected/views/ubicacion/create.php (15)
+in /var/www/inmuebleweb/protected/controllers/UbicacionController.php (78)
+2014/06/23 21:51:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 21:54:49 [error] [php] include(EGMap.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:418)
+Stack trace:
+#0 /var/www/inmuebleweb/protected/views/ubicacion/_form.php(44): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(127): require()
+#2 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#4 /var/www/inmuebleweb/protected/views/ubicacion/create.php(15): UbicacionController->renderPartial()
+#5 /var/www/yii/framework/web/CBaseController.php(127): require()
+#6 /var/www/yii/framework/web/CBaseController.php(96): UbicacionController->renderInternal()
+#7 /var/www/yii/framework/web/CController.php(870): UbicacionController->renderFile()
+#8 /var/www/yii/framework/web/CController.php(783): UbicacionController->renderPartial()
+#9 /var/www/inmuebleweb/protected/controllers/UbicacionController.php(78): UbicacionController->render()
+#10 /var/www/yii/framework/web/actions/CInlineAction.php(50): UbicacionController->actionCreate()
+#11 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(134): UbicacionController->runAction()
+#13 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /var/www/yii/framework/web/filters/CInlineFilter.php(59): UbicacionController->filterAccessControl()
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(266): UbicacionController->runActionWithFilters()
+#19 /var/www/yii/framework/web/CWebApplication.php(276): UbicacionController->run()
+#20 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#21 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /var/www/inmuebleweb/index.php(15): CWebApplication->run()
+REQUEST_URI=/inmuebleweb/ubicacion/create
+in /var/www/inmuebleweb/protected/views/ubicacion/_form.php (44)
+in /var/www/inmuebleweb/protected/views/ubicacion/create.php (15)
+in /var/www/inmuebleweb/protected/controllers/UbicacionController.php (78)
+2014/06/23 21:56:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 21:56:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 22:00:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 22:01:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/23 22:22:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 06:41:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 06:44:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 06:44:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 06:44:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 06:44:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 06:45:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 06:46:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 06:48:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 06:48:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 06:48:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 06:48:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 06:51:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 06:51:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 07:10:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 07:11:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 07:11:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 07:21:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 07:22:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 07:26:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 07:29:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 07:49:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 08:23:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 08:23:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 08:25:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 08:26:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 08:32:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 15:08:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 15:08:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 15:08:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 15:17:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 15:27:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 15:27:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 15:30:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 17:11:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 17:11:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 17:11:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 17:13:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 17:16:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 17:16:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 17:17:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 17:27:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/
+---
+2014/06/24 17:59:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 17:59:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 18:17:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 18:17:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 18:24:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 18:24:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/calendar.png"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('images/calendar...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/images/calendar.png
+HTTP_REFERER=http://localhost/inmuebleweb/propiedad/create
+---
+2014/06/24 18:28:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 18:28:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/calendar.png"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('images/calendar...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/images/calendar.png
+HTTP_REFERER=http://localhost/inmuebleweb/propiedad/create
+---
+2014/06/24 18:29:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 18:29:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/calendar.png"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('images/calendar...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/images/calendar.png
+HTTP_REFERER=http://localhost/inmuebleweb/propiedad/create
+---
+2014/06/24 18:34:19 [error] [exception.CException] exception 'CException' with message 'Propiedad "Propiedad"."fechaingreso" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('fechaingreso')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('fechaingreso')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(1774): CHtml::resolveValue(Object(Propiedad), 'fechaingreso')
+#3 /var/www/yii/framework/web/helpers/CHtml.php(1205): CHtml::activeInputField('text', Object(Propiedad), 'fechaingreso', Array)
+#4 /var/www/yii/framework/zii/widgets/jui/CJuiDatePicker.php(89): CHtml::activeTextField(Object(Propiedad), 'fechaingreso', Array)
+#5 /var/www/yii/framework/web/CBaseController.php(174): CJuiDatePicker->run()
+#6 /var/www/inmuebleweb/protected/views/propiedad/_form.php(45): CBaseController->widget('zii.widgets.jui...', Array)
+#7 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/inmueb...')
+#8 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#10 /var/www/inmuebleweb/protected/views/propiedad/create.php(15): CController->renderPartial('_form', Array)
+#11 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/inmueb...')
+#12 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#13 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#15 /var/www/inmuebleweb/protected/controllers/PropiedadController.php(78): CController->render('create', Array)
+#16 /var/www/yii/framework/web/actions/CInlineAction.php(50): PropiedadController->actionCreate()
+#17 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#20 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#24 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /var/www/yii/framework/web/CWebApplication.php(276): CController->run('create')
+#26 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('propiedad/creat...')
+#27 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#28 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#29 {main}
+REQUEST_URI=/inmuebleweb/propiedad/create
+HTTP_REFERER=http://localhost/inmuebleweb/propiedad/admin
+---
+2014/06/24 18:34:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 18:39:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 18:39:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 18:40:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 18:41:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 18:49:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 18:50:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 18:50:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 18:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 18:55:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 18:56:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 18:56:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 19:24:45 [error] [exception.CException] exception 'CException' with message 'Propiedad "Cliente"."nombre" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('nombre')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(1696): CActiveRecord->__get('nombre')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(1660): CHtml::value(Object(Cliente), 'nombre')
+#3 /var/www/inmuebleweb/protected/views/propiedad/_form.php(62): CHtml::listData(Array, 'idusuario', 'nombre')
+#4 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/inmueb...')
+#5 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#7 /var/www/inmuebleweb/protected/views/propiedad/create.php(15): CController->renderPartial('_form', Array)
+#8 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/inmueb...')
+#9 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#10 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#11 /var/www/yii/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#12 /var/www/inmuebleweb/protected/controllers/PropiedadController.php(78): CController->render('create', Array)
+#13 /var/www/yii/framework/web/actions/CInlineAction.php(50): PropiedadController->actionCreate()
+#14 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#15 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /var/www/yii/framework/web/CWebApplication.php(276): CController->run('create')
+#23 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('propiedad/creat...')
+#24 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#26 {main}
+REQUEST_URI=/inmuebleweb/propiedad/create
+HTTP_REFERER=http://localhost/inmuebleweb/propiedad/admin
+---
+2014/06/24 19:25:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 19:25:33 [error] [exception.CException] exception 'CException' with message 'Propiedad "Propiedad"."nombre" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('nombre')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('nombre')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(Propiedad), 'nombre')
+#3 /var/www/yii/framework/web/widgets/CActiveForm.php(674): CHtml::activeDropDownList(Object(Propiedad), 'nombre', Array, Array)
+#4 /var/www/inmuebleweb/protected/views/propiedad/_form.php(62): CActiveForm->dropDownList(Object(Propiedad), 'nombre', Array)
+#5 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/inmueb...')
+#6 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#8 /var/www/inmuebleweb/protected/views/propiedad/create.php(15): CController->renderPartial('_form', Array)
+#9 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/inmueb...')
+#10 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#11 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#12 /var/www/yii/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#13 /var/www/inmuebleweb/protected/controllers/PropiedadController.php(78): CController->render('create', Array)
+#14 /var/www/yii/framework/web/actions/CInlineAction.php(50): PropiedadController->actionCreate()
+#15 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#22 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /var/www/yii/framework/web/CWebApplication.php(276): CController->run('create')
+#24 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('propiedad/creat...')
+#25 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#26 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#27 {main}
+REQUEST_URI=/inmuebleweb/propiedad/create
+HTTP_REFERER=http://localhost/inmuebleweb/propiedad/admin
+---
+2014/06/24 19:26:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 19:26:47 [error] [exception.CException] exception 'CException' with message 'Propiedad "Cliente"."nombre" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('nombre')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(1696): CActiveRecord->__get('nombre')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(1660): CHtml::value(Object(Cliente), 'nombre')
+#3 /var/www/inmuebleweb/protected/views/propiedad/_form.php(62): CHtml::listData(Array, 'idusuario', 'nombre')
+#4 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/inmueb...')
+#5 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#7 /var/www/inmuebleweb/protected/views/propiedad/create.php(15): CController->renderPartial('_form', Array)
+#8 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/inmueb...')
+#9 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/inmueb...', Array, true)
+#10 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/inmueb...', Array, true)
+#11 /var/www/yii/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#12 /var/www/inmuebleweb/protected/controllers/PropiedadController.php(78): CController->render('create', Array)
+#13 /var/www/yii/framework/web/actions/CInlineAction.php(50): PropiedadController->actionCreate()
+#14 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#15 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /var/www/yii/framework/web/CWebApplication.php(276): CController->run('create')
+#23 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('propiedad/creat...')
+#24 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#26 {main}
+REQUEST_URI=/inmuebleweb/propiedad/create
+HTTP_REFERER=http://localhost/inmuebleweb/propiedad/admin
+---
+2014/06/24 19:27:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 19:27:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 19:29:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/24 19:32:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/25 07:09:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---
+2014/06/25 16:16:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/lib/bootstrap/less/mixins.less"' in /var/www/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/8e105baf/css/yii.css
+---

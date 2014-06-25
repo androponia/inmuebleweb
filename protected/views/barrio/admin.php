@@ -37,19 +37,31 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('bootstrap.widgets.TbGridView',array(
-	'id'=>'barrio-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'idbarrio',
+
+<?php
+$this->widget('zii.widgets.grid.CGridView', array(
+    'id'=>'barrio-grid',
+    'dataProvider'=>$model->search(),
+    'filter'=>$model,
+    'rowCssClassExpression' => '
+        ( $row%2 ? $this->rowCssClass[1] : $this->rowCssClass[0] ) .
+        ( $data->nombre ? null : " disabled" )
+    ',
+    'columns'=>array(
+        'idbarrio',
 		'nombre',
 		'created_date',
 		'modified_date',
 		'created_by',
 		'modified_by',
-		array(
-			'class'=>'bootstrap.widgets.TbButtonColumn',
-		),
-	),
-)); ?>
+        array(
+            'name' => 'nombre',
+            'value' => '$data->nombre',
+        ),
+        array(
+            'class'=>'CButtonColumn',
+            'header' => Yii::t( 'app', 'Tools' ),
+        ),
+    ),
+));
+?>

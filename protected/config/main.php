@@ -8,6 +8,7 @@
 
 
 Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
+Yii::setPathOfAlias('ext', dirname(__FILE__).'/../extensions/');
 
 
 return array(
@@ -102,12 +103,5 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
 	),
-
-		
-		 
-		
-		    'theme'=>'bootstrap', // requires you to copy the theme under your themes directory
-
-		   
-		    
+    'theme'=>'bootstrap', // requires you to copy the theme under your themes directory
 );
