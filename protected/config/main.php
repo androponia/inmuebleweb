@@ -8,7 +8,7 @@
 
 
 Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
-Yii::setPathOfAlias('ext', dirname(__FILE__).'/../extensions/');
+
 
 
 return array(
@@ -17,7 +17,7 @@ return array(
 	'language'=>'es',
     'sourceLanguage'=>'es',
     'charset'=>'utf-8',
-
+    'theme'=>'bootstrap', // requires you to copy the theme under your themes directory
 	'preload'=>array('log'),
 
 	// autoloading model and component classes
@@ -103,5 +103,5 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
 	),
-    'theme'=>'bootstrap', // requires you to copy the theme under your themes directory
+    
 );
