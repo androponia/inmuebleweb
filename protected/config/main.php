@@ -10,15 +10,13 @@
 Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
 
 
-
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Inmueble Web',
-	'language'=>'es',
-    'sourceLanguage'=>'es',
-    'charset'=>'utf-8',
-    'theme'=>'bootstrap', // requires you to copy the theme under your themes directory
+	'name'=>'inmuebleWeb',
+	//'language'=>'en',
+	// preloading 'log' component
 	'preload'=>array('log'),
+	 'theme'=>'bootstrap', // requires you to copy the theme under your themes directory
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -48,21 +46,26 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+		//para el manejo de Roles, a parte se agregan unas tablas a la base.
+		'authManager'=>array(
+            'class'=>'CDbAuthManager',
+            'connectionID'=>'db',
+        ),
 
 		'bootstrap'=>array(
 		            'class'=>'bootstrap.components.Bootstrap',
 		        ),
 		// uncomment the following to enable URLs in path-format
+		/*
 		'urlManager'=>array(
 			'urlFormat'=>'path',
-			'showScriptName'=>false,
-     		'caseSensitive'=>false,
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
+		*/
 		/*'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),*/
@@ -95,7 +98,9 @@ return array(
 				*/
 			),
 		),
-	),
+
+	
+),
 
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
@@ -103,5 +108,9 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
 	),
-    
+
+		
+		   
+		   
+		    
 );
