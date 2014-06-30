@@ -49,8 +49,8 @@
                     array('label'=>'Usuario', 'url'=>array('/usuario/index'), 'visible'=>!Yii::app()->user->isGuest),
                    // array('label'=>'Visita', 'url'=>array('/visita/index'), 'visible'=>!Yii::app()->user->isGuest),
                     array('label'=>'Visita', 'url'=>array('/visita/index'), 'visible'=>!Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id)),
-                    array('label'=>'Visita', 'url'=>array('/visita/index'), 'visible'=>Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id)),
                     array('label'=>'Contact', 'url'=>array('/site/contact')),
+                   // array('label'=>'Manage', 'url'=>array('/propiedad/admin')),
                 ),
             )); ?>
         </div><!-- menuLateral -->
