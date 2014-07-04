@@ -1,96 +1,39 @@
-#page
-{
-	width: 100%;
-  height: 600px;
-
-	margin-right: 0px;
-	margin-left: 0px;
-
-  background-color: rgb(255,255,255);
-}
-
-.header
-{
-	
-}
-
-.mainCont
-{
-	width: 100%;
-	height: 100%;
-
-  margin-top: 0px;
-	float:left;
- 
-}
-
-.menuLateral
-{
-	width: 200px;
-	
-  margin-top: 150px;
-  float:left;
-
-	background-color: white;
-	/*background-color: #f15a29;*/
-}
-
-.carousel
-{
-	max-width: 600px;
-  height: auto;
-
-  margin-top: 75px;
-	margin-left: 30px;
-	float:left;
-}
-
-.mainFooter
-{
-  width: 100%;
-  height: auto;
-
-  float: left;
-  background-color: rgba(120,120,120, .8);
-
-}
-
-.mainFooter p
-{
-  width: 92%;
-  margin: 10px auto;
-  color: #FFF;
-  text-shadow: 1px 1px 1px black;
-}
-
-.mainFooter a
-{
-  color: #f45a29;
-  text-shadow: 1px 1px 1px black;
-
-}
-
-.mainFooter a:hover
-{
-  color: white;
-}
-
-
   /*******************************/
  /**Redifiniciones de bootstrap**/
 /*******************************/
 
-.menuLateral a:hover
+
+#yw1
 {
-  color: #f15a29;
+  margin-top: 0px;
+}
+#contLayout
+{
+  margin-right: 0px; 
+  margin-left: 0px; 
+ padding-left: 0px; 
+  padding-right: 0px; 
 }
 
-.menuLateral a
+.container-fluid
 {
-  color: black;
+margin-right: 0px;
+margin-left: 0px; 
+padding-left: 0px;
+padding-right: 15px;
 }
 
-#yw2 .active a
+#buscador
 {
-  background-color: #f15a29;
+  margin-left: 175px;
+}
+
+#buscador, #btnBuscar
+{
+  margin-top: -10px;
+}
+
+#btnBuscar
+{
+  margin-left: 3px;
 }

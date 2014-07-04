@@ -1,13 +1,95 @@
 <?php
 /* @var $this SiteController */
-
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<?php $this->widget('bootstrap.widgets.TbCarousel', array(
-    			'items'=>array(
-        			array('image'=>'http://placehold.it/770x400&text=First+thumbnail', 'label'=>'First Thumbnail label', 'caption'=>'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'),
-        			array('image'=>'http://placehold.it/770x400&text=Second+thumbnail', 'label'=>'Second Thumbnail label', 'caption'=>'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'),
-        			array('image'=>'http://placehold.it/770x400&text=Third+thumbnail', 'label'=>'Third Thumbnail label', 'caption'=>'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'),
-    			),
-			)); ?>
+<div class="row">
+	<div class="col-md-4">
+		<div class="contDestacada">
+			<div class="carouselDestacada">
+				<?php $this->widget('bootstrap.widgets.TbCarousel', array(
+					'items'=>array(
+							array('image'=>'http://placehold.it/770x400&text=First+thumbnail', 'label'=>''),
+							array('image'=>'http://placehold.it/770x400&text=Second+thumbnail', 'label'=>''),
+							array('image'=>'http://placehold.it/770x400&text=Third+thumbnail', 'label'=>''),
+					),
+				)); ?>
+			</div>
+			<div class="infoDestacada"></div>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="contDestacada">
+			<div class="carouselDestacada">
+				<?php $this->widget('bootstrap.widgets.TbCarousel', array(
+					'items'=>array(
+							array('image'=>'http://placehold.it/770x400&text=First+thumbnail', 'label'=>''),
+							array('image'=>'http://placehold.it/770x400&text=Second+thumbnail', 'label'=>''),
+							array('image'=>'http://placehold.it/770x400&text=Third+thumbnail', 'label'=>''),
+					),
+				)); ?>
+			</div>
+			<div class="infoDestacada"></div>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="contDestacada">
+			<div class="carouselDestacada">
+				<?php $this->widget('bootstrap.widgets.TbCarousel', array(
+					'items'=>array(
+							array('image'=>'http://placehold.it/770x400&text=First+thumbnail', 'label'=>''),
+							array('image'=>'http://placehold.it/770x400&text=Second+thumbnail', 'label'=>''),
+							array('image'=>'http://placehold.it/770x400&text=Third+thumbnail', 'label'=>''),
+					),
+				)); ?>
+			</div>
+			<div class="infoDestacada"></div>
+		</div>
+	</div>
+</div>
+
+
+<div class="row" style="margin-top: 15px;">
+	<div class="col-md-4">
+		<div class="contDestacada">
+			<div class="carouselDestacada">
+				<?php $this->widget('bootstrap.widgets.TbCarousel', array(
+					'items'=>array(
+							array('image'=>'http://placehold.it/770x400&text=First+thumbnail', 'label'=>''),
+							array('image'=>'http://placehold.it/770x400&text=Second+thumbnail', 'label'=>''),
+							array('image'=>'http://placehold.it/770x400&text=Third+thumbnail', 'label'=>''),
+					),
+				)); ?>
+			</div>
+			<div class="infoDestacada"></div>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="contDestacada">
+			<div class="carouselDestacada">
+				<?php $this->widget('bootstrap.widgets.TbCarousel', array(
+					'items'=>array(
+							array('image'=>'http://placehold.it/770x400&text=First+thumbnail', 'label'=>''),
+							array('image'=>'http://placehold.it/770x400&text=Second+thumbnail', 'label'=>''),
+							array('image'=>'http://placehold.it/770x400&text=Third+thumbnail', 'label'=>''),
+					),
+				)); ?>
+			</div>
+			<div class="infoDestacada"></div>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="contDestacada">
+			<div class="carouselDestacada">
+				<?php $this->widget('bootstrap.widgets.TbCarousel', array(
+					'items'=>array(
+							array('image'=>'http://placehold.it/770x400&text=First+thumbnail', 'label'=>''),
+							array('image'=>'http://placehold.it/770x400&text=Second+thumbnail', 'label'=>''),
+							array('image'=>'http://placehold.it/770x400&text=Third+thumbnail', 'label'=>''),
+					),
+				)); ?>
+			</div>
+			<div class="infoDestacada"></div>
+		</div>
+	</div>
+</div>
