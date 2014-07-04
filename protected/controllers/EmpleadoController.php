@@ -27,16 +27,19 @@ class EmpleadoController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'actions'=>array('admin','view'),
+				//'users'=>array('*'),
+				'roles'=>array('director'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
-				'users'=>array('@'),
+				//'users'=>array('@'),
+				'roles'=>array('director'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				//'users'=>array('admin'),
+				'roles'=>array('director'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -57,7 +60,7 @@ class EmpleadoController extends Controller
 		$this->render('view',array(
         'modele'=>$modele,
         'modelu'=>$modelu,
-		));
+        ));
 	}
 
 	/**
@@ -66,18 +69,35 @@ class EmpleadoController extends Controller
 	 */
 	public function actionCreate()
 	{
-
 	    $modelu = new Usuario;
 	    $modele = new Empleado;
 	    if(isset($_POST['Empleado'], $_POST['Usuario']))
 	    {
 	        $modelu->attributes=$_POST['Usuario'];
 	 
-	        // valida usuario
-	        $modelu->rol= 'Empleado';
+
+
+// foreach($_SESSION as $valor)
+// {
+// echo $valor.',';
+// }
+
+	        // if ($modelu->tipousuarioid == 1)
+	        // {
+	        // 	var_dump($_POST);
+
+	        // 	echo (Yii::app()->user->id);
+
+
+	        // 	echo ('.Yii::app()->user->name.');
+	        // }
+
+
+	       // valida usuario
 	        $valid=$modelu->validate();
 	        if($valid)
 	        {
+	        	$modelu->password = sha1($modelu['password']);
 	            if ($modelu->save(false)) {
 	                $modele->attributes = $_POST['Empleado'];
 	                $modele->idusuario = $modelu->idusuario;
@@ -105,9 +125,9 @@ class EmpleadoController extends Controller
     	$modelu=Usuario::model()->findByPk($id);
         if(isset($_POST['Empleado'], $_POST['Usuario']))
         {
-        	$modele->attributes=$_POST['Empleado'];
+        	$modelc->attributes=$_POST['Empleado'];
             $modelu->attributes=$_POST['Usuario'];
-            if($modele->save() && $modelu->save())
+            if($modelc->save() && $modelu->save())
             	$this->redirect(array('admin'));
         }
         $this->render('update',array(
@@ -127,6 +147,10 @@ class EmpleadoController extends Controller
 		{
 			// we only allow deletion via POST request
 			$this->loadModel($id)->delete();
+
+			$modelu = new Usuario;
+	    	$modelu = Usuario::model()->findByPk($id);
+	    	$modelu->delete();
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))
@@ -152,18 +176,17 @@ class EmpleadoController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$modele=new Empleado('search');
+		$modele = new Empleado('search');
 		$modele->unsetAttributes();  // clear any default values
 
-		$modelu=Usuario::model()->find(array(
-		    'condition'=>'rol=:ts',
-    		'params'=>array(':ts'=>'Empleado'),
-		));
+		$modelu = new Usuario('search');
+		$modelu->unsetAttributes();
+		$modelu->tipousuarioid = array(1,2,3);
 
 		if(isset($_GET['Empleado']) && isset($_GET['Usuario']))
 		{
 			$modele->attributes=$_GET['Empleado'];
-			$modele->attributes=$_GET['Usuario'];
+			$modelu->attributes=$_GET['Usuario'];
 		}
 		$this->render('admin',array(
 			'modele'=>$modele,

@@ -11,23 +11,9 @@
  * @property string $modified_date
  * @property string $created_by
  * @property string $modified_by
- *
- * The followings are the available model relations:
- * @property Usuario $idusuario0
- * @property Propiedad[] $propiedads
  */
 class Empleado extends CActiveRecord
 {
-	/**
-	 * Returns the static model of the specified AR class.
-	 * @param string $className active record class name.
-	 * @return Empleado the static model class
-	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
-	}
-
 	/**
 	 * @return string the associated database table name
 	 */
@@ -49,7 +35,7 @@ class Empleado extends CActiveRecord
 			array('created_by, modified_by', 'length', 'max'=>128),
 			array('created_date, modified_date', 'safe'),
 			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
+			// @todo Please remove those attributes that should not be searched.
 			array('idusuario, numero, sueldo, created_date, modified_date, created_by, modified_by', 'safe', 'on'=>'search'),
 		);
 	}
@@ -62,8 +48,6 @@ class Empleado extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idusuario0' => array(self::BELONGS_TO, 'Usuario', 'idusuario'),
-			'propiedads' => array(self::HAS_MANY, 'Propiedad', 'empleadoid'),
 		);
 	}
 
@@ -85,12 +69,19 @@ class Empleado extends CActiveRecord
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 *
+	 * Typical usecase:
+	 * - Initialize the model fields with values from filter form.
+	 * - Execute this method to get CActiveDataProvider instance which will filter
+	 * models according to data in model fields.
+	 * - Pass data provider to CGridView, CListView or any similar widget.
+	 *
+	 * @return CActiveDataProvider the data provider that can return the models
+	 * based on the search/filter conditions.
 	 */
 	public function search()
 	{
-		// Warning: Please modify the following code to remove attributes that
-		// should not be searched.
+		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
 
@@ -106,6 +97,18 @@ class Empleado extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	/**
+	 * Returns the static model of the specified AR class.
+	 * Please note that you should have this exact method in all your CActiveRecord descendants!
+	 * @param string $className active record class name.
+	 * @return Empleado the static model class
+	 */
+	public static function model($className=__CLASS__)
+	{
+		return parent::model($className);
+	}
+
 
 	public function behaviors()
 	{
@@ -123,5 +126,4 @@ class Empleado extends CActiveRecord
 			),
 		);
 	}
-	
 }
