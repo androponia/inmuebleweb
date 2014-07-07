@@ -1,3 +1,4 @@
+<div style="margin-top: -90px">
 <?php
 $this->breadcrumbs=array(
 	'Usuarios',
@@ -15,3 +16,4 @@ $this->menu=array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
 )); ?>
+</div>

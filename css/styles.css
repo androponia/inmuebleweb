@@ -1,3 +1,23 @@
+  .contDestacada:hover
+{
+  box-shadow: 2px 2px 2px 2px rgb(200,200,200);
+  background-color: rgb(250,250,250);
+
+}
+
+.infoDestacada
+{
+  color: white;
+}
+
+.contDestacada:hover .infoDestacada
+{
+  color: black;
+}
+
+
+
+
   /*******************************/
  /**Redifiniciones de bootstrap**/
 /*******************************/
@@ -37,3 +57,4 @@ padding-right: 15px;
 {
   margin-left: 3px;
 }
+

@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 	'Contact',
 );
 ?>
-
-<h1>Contact Us</h1>
+<div style="margin-top: -90px">
+<h2>Contact Us</h2>
 
 <?php if(Yii::app()->user->hasFlash('contact')): ?>
 
@@ -18,10 +18,6 @@ $this->breadcrumbs=array(
 </div>
 
 <?php else: ?>
-
-<p>
-If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
-</p>
 
 <div class="form">
 
@@ -83,3 +79,4 @@ If you have business inquiries or other questions, please fill out the following
 </div><!-- form -->
 
 <?php endif; ?>
+</div>
