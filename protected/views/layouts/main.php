@@ -42,9 +42,9 @@
 
     
 
-    <div class="container" id="contLayout" style="margin-top: 180px;">
+    <div class="container" id="contLayout">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <?php $this->widget('bootstrap.widgets.TbMenu', array(
                     'type'=>'list', // '', 'tabs', 'pills' (or 'list')
                     'stacked'=>false, // whether this is a stacked menu
@@ -62,7 +62,7 @@
                     ),
                 )); ?>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-10">
                 <div class="mainCont">
                     <?php echo $content; ?>
                 </div><!-- carousel -->

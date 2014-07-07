@@ -1,4 +1,4 @@
-<div style="margin-top: -90px">
+<div class="divMontado">
 <?php
 $this->breadcrumbs=array(
 	'Usuarios',

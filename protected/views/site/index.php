@@ -3,8 +3,8 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<div class="row" style="margin-top: -20px">
-	<div class="col-md-4 col-xs-4">
+<div class="row divIndex">
+	<div class="col-md-4 col-xs-12">
 		<a href="#">
 			<div class="contDestacada">
 				<div class="carouselDestacada">
@@ -25,7 +25,7 @@ $this->pageTitle=Yii::app()->name;
 			</div>
 		</a>
 	</div>
-	<div class="col-md-4 col-xs-4">
+	<div class="col-md-4 col-xs-12">
 		<a href="#">
 			<div class="contDestacada">
 				<div class="carouselDestacada">
@@ -46,7 +46,7 @@ $this->pageTitle=Yii::app()->name;
 			</div>
 		</a>
 	</div>
-	<div class="col-md-4 col-xs-4">
+	<div class="col-md-4 col-xs-12">
 		<a href="#">
 			<div class="contDestacada">
 				<div class="carouselDestacada">
@@ -71,7 +71,7 @@ $this->pageTitle=Yii::app()->name;
 
 
 <div class="row" style="margin-top: 15px;">
-	<div class="col-md-4 col-xs-4">
+	<div class="col-md-4 col-xs-12">
 		<a href="#">
 			<div class="contDestacada">
 				<div class="carouselDestacada">
@@ -92,7 +92,7 @@ $this->pageTitle=Yii::app()->name;
 			</div>
 		</a>
 	</div>
-	<div class="col-md-4 col-xs-4">
+	<div class="col-md-4 col-xs-12">
 		<a href="#">
 			<div class="contDestacada">
 				<div class="carouselDestacada">
@@ -113,7 +113,7 @@ $this->pageTitle=Yii::app()->name;
 			</div>
 		</a>
 	</div>
-	<div class="col-md-4 col-xs-4">
+	<div class="col-md-4 col-xs-12">
 		<a href="#">
 			<div class="contDestacada">
 				<div class="carouselDestacada">

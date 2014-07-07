@@ -15,6 +15,16 @@
   color: black;
 }
 
+.divMontado
+{
+  margin-top: -90px;
+}
+
+.divIndex
+{
+  margin-top: -20px;
+}
+
 
 
 
@@ -29,6 +39,7 @@
 }
 #contLayout
 {
+  margin-top: 180px;
   margin-right: 0px; 
   margin-left: 0px; 
  padding-left: 0px; 
@@ -56,5 +67,22 @@ padding-right: 15px;
 #btnBuscar
 {
   margin-left: 3px;
+}
+
+@media only screen and (min-width:150px) and (max-width:900px){
+  #contLayout
+  {
+    margin-top: 0px;
+  }
+
+  .divMontado, .divIndex
+  {
+    margin-top: 0px;
+  }
+
+  #yw2, #yw7, #yw1, #yw5 /*Este es el id que toma el ul del menu, hay que ver porque es variable y puede afectar otros elementos de otras vistas*/
+  {
+    text-align: center;
+  }
 }
 

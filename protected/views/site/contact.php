@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 	'Contact',
 );
 ?>
-<div style="margin-top: -90px">
+<div  class="divMontado">
 <h2>Contact Us</h2>
 
 <?php if(Yii::app()->user->hasFlash('contact')): ?>
