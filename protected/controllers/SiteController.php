@@ -29,6 +29,20 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
+		/*$iddestacados=Destacado::model()->findAll();
+		$cont=0;
+		$resul=array();
+		foreach ($iddestacados as $des) {
+				if ($cont<7) {
+					$resul=$resul+$des;
+					$cont++;
+				}
+		};
+
+		foreach ($resul as $r) {
+			$ima=Imagen::model()->findAll($propiedad,r->idpropiedad;);
+
+		}*/
 		$this->render('index');
 	}
 
@@ -63,9 +77,51 @@ class SiteController extends Controller
 					"Reply-To: {$model->email}\r\n".
 					"MIME-Version: 1.0\r\n".
 					"Content-Type: text/plain; charset=UTF-8";
+///////////////////////////ENVIAR CORREO
+			//con index funciona
+			/*$dataProvider= new CActiveDataProvider('ContactForm');
+			$text=$this->renderPartial('contact',	
+						array('dataProvider'=>$dataProvider),
+							true);*/
+			/*$this->render('index',array(
+					'dataProvider'=>$dataProvider,));*/
+///////////////////////////////////////
+			 $mailer = Yii::createComponent('application.extensions.mailer.EMailer');
+		     $mailer->IsSMTP();
+		     $mailer->IsHTML(true);
+		     $mailer->SMTPAuth = true;
+		     $mailer->SMTPSecure = "ssl";
+		     $mailer->Host = "smtp.gmail.com";
+		     $mailer->Port = 465;
+		     $mailer->Username = "inmuebleweb@gmail.com";
+		     $mailer->Password = "ceroundostres";
+		     //$mailer->Username = $model->email;
+		     //$mailer->Password = $model->password;
+		     $mailer->From = $model->email;
+		     $mailer->FromName = $model->name;
 
+		     $mailer->AddAddress("inmuebleweb@gmail.com");
+
+		     $mailer->Subject = $model->name.$model->subject;
+
+		     //asigno un archivo adjunto al mensaje
+			 //$mailer­>AddAttachment("ruta/archivo_adjunto.gif");
+		     //$mailer->Body = "ESTo es lo que necesito";
+
+		     $mailer->MsgHTML($model->name.$model->body.$model->email);
+		     //$mailer->MsgHTML($text);
+
+		     if($mailer->Send()) {
+		          echo "Mensaje enviado con Exito!";
+		     }
+		     else {
+		     	//$mailer­>ErrorInfo
+		          echo "Error: Mensaje no enviado";
+     		};
+///////////////////////////////FIN ENVIAR COOREO
 				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
+				Yii::app()->user->setFlash('contact','Gracias por contactarnos, tendra noticias nuestras pronto.
+											InmoviliariaWeb');
 				$this->refresh();
 			}
 		}
