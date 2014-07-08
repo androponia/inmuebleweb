@@ -27,12 +27,4 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_by')); ?>:</b>
 	<?php echo CHtml::encode($data->created_by); ?>
 	<br />
-
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('modified_by')); ?>:</b>
-	<?php echo CHtml::encode($data->modified_by); ?>
-	<br />
-
-	*/ ?>
-
 </div>

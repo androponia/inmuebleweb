@@ -27,16 +27,19 @@ class ImagenController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'actions'=>array('admin','view'),
+				//'users'=>array('*'),
+				'roles'=>array('director'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
-				'users'=>array('@'),
+				//'users'=>array('@'),
+				'roles'=>array('director'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				//'users'=>array('admin'),
+				'roles'=>array('director'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -59,23 +62,38 @@ class ImagenController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($idpropiedad, $orden)
 	{
-		$model=new Imagen;
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+        $model=new Imagen;
+        //$modelp = new Propiedad;
+    	//$modelp=Propiedad::model()->findByPk($idpropiedad]);
 
-		if(isset($_POST['Imagen']))
-		{
-			$model->attributes=$_POST['Imagen'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idimagen));
-		}
 
-		$this->render('create',array(
-			'model'=>$model,
-		));
+        $model->orden = $orden;
+        $model->propiedadid = $idpropiedad;
+
+
+
+        if(isset($_POST['Imagen']))
+        {
+            $rnd = rand(0,9999);  // genera numero randomico entre 0-9999
+            $model->attributes=$_POST['Imagen'];
+ 
+            $uploadedFile=CUploadedFile::getInstance($model,'archivo');
+            $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
+            $model->archivo = $fileName;
+ 
+            if($model->save())
+            {
+                $uploadedFile->saveAs(Yii::app()->basePath.'/images/'.$fileName);  // image will uplode to rootDirectory/banner/
+//                $this->redirect(array('propiedad'));
+                $this->redirect(array('propiedad/view','id'=>$model->propiedadid));
+            }
+        }
+        $this->render('create',array(
+            'model'=>$model,
+        ));
 	}
 
 	/**
@@ -85,21 +103,30 @@ class ImagenController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+
 		$model=$this->loadModel($id);
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Imagen']))
-		{
-			$model->attributes=$_POST['Imagen'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idimagen));
-		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
+ 
+        if(isset($_POST['Imagen']))
+        {
+            $_POST['Imagen']['archivo'] = $model->archivo;
+            $model->attributes=$_POST['Imagen'];
+ 
+            $uploadedFile=CUploadedFile::getInstance($model,'archivo');
+ 
+            if($model->save())
+            {
+                if(!empty($uploadedFile))  // check if uploaded file is set or not
+                {
+                    $uploadedFile->saveAs(Yii::app()->basePath.'/images/'.$model->archivo);
+                }
+                $this->redirect(array('admin'));
+            }
+ 
+        }
+ 
+        $this->render('update',array(
+            'model'=>$model,
+        ));
 	}
 
 	/**

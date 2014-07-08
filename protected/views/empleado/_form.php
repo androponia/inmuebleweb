@@ -29,7 +29,7 @@
 
 	<?php echo $form->textFieldRow($modelu,'celular',array('class'=>'span5','maxlength'=>45)); ?>
 
-	<?php echo $form->dropDownList($modelu,'rol',array("Empleado"=>"Empleado"),array('empty'=>'Seleccione Rol')); ?>
+	<?php echo $form->dropDownList($modelu,'tipousuarioid',array("Empleado"=>"Empleado"),array('empty'=>'Seleccione Rol')); ?>
 
 	<div class="form-actions">
 		<?php $this->widget('bootstrap.widgets.TbButton', array(

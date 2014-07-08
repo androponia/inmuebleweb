@@ -5,11 +5,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Imagen','url'=>array('index')),
-	array('label'=>'Manage Imagen','url'=>array('admin')),
+	array('label'=>'Administrar Imagenes','url'=>array('admin')),
 );
 ?>
 
-<h1>Create Imagen</h1>
+<h1>Crear Imagen</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

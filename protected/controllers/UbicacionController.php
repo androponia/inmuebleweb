@@ -27,16 +27,19 @@ class UbicacionController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'actions'=>array('admin','view'),
+				//'users'=>array('*'),
+				'roles'=>array('director'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
-				'users'=>array('@'),
+				//'users'=>array('@'),
+				'roles'=>array('director'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				//'users'=>array('admin'),
+				'roles'=>array('director'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -59,9 +62,11 @@ class UbicacionController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($idpropiedad)
 	{
 		$model=new Ubicacion;
+
+		$model->propiedadid = $idpropiedad;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -70,7 +75,8 @@ class UbicacionController extends Controller
 		{
 			$model->attributes=$_POST['Ubicacion'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idubicacion));
+//				$this->redirect(array('view','id'=>$model->idubicacion));
+				$this->redirect(array('propiedad/view','id'=>$model->propiedadid));
 		}
 
 		$this->render('create',array(

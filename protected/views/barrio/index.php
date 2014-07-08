@@ -4,8 +4,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Barrio','url'=>array('create')),
-	array('label'=>'Manage Barrio','url'=>array('admin')),
+	array('label'=>'Crear Barrio','url'=>array('create')),
+	array('label'=>'Administrar Barrios','url'=>array('admin')),
 );
 ?>
 

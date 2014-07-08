@@ -6,13 +6,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Imagen','url'=>array('index')),
-	array('label'=>'Create Imagen','url'=>array('create')),
-	array('label'=>'View Imagen','url'=>array('view','id'=>$model->idimagen)),
-	array('label'=>'Manage Imagen','url'=>array('admin')),
+	array('label'=>'Crear Imagen','url'=>array('create')),
+	array('label'=>'Ver Imagen','url'=>array('view','id'=>$model->idimagen)),
+	array('label'=>'Administrar Imagenes','url'=>array('admin')),
 );
 ?>
 
-<h1>Update Imagen <?php echo $model->idimagen; ?></h1>
+<h1>Actualizar Imagen <?php echo $model->idimagen; ?></h1>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

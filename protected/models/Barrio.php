@@ -72,7 +72,7 @@ class Barrio extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idbarrio' => 'Idbarrio',
+			'idbarrio' => 'Codigo',
 			'nombre' => 'Nombre',
 			'created_date' => 'Created Date',
 			'modified_date' => 'Modified Date',

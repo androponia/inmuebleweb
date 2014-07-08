@@ -5,11 +5,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Barrio','url'=>array('index')),
-	array('label'=>'Create Barrio','url'=>array('create')),
-	array('label'=>'Update Barrio','url'=>array('update','id'=>$model->idbarrio)),
-	array('label'=>'Delete Barrio','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->idbarrio),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Barrio','url'=>array('admin')),
+	array('label'=>'Crear Barrio','url'=>array('create')),
+	array('label'=>'Actualizar Barrio','url'=>array('update','id'=>$model->idbarrio)),
+	array('label'=>'Eliminar Barrio','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->idbarrio),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Administrar Barrios','url'=>array('admin')),
 );
 ?>
 

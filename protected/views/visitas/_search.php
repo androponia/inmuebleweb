@@ -5,11 +5,21 @@
 
 	<?php echo $form->textFieldRow($model,'idvisitas',array('class'=>'span5')); ?>
 
-	<?php echo $form->textFieldRow($model,'idpropiedad',array('class'=>'span5')); ?>
-
 	<?php echo $form->textFieldRow($model,'fecha',array('class'=>'span5')); ?>
 
-	<?php echo $form->textFieldRow($model,'hora',array('class'=>'span5')); ?>
+	<?php echo $form->textFieldRow($model,'hora',array('class'=>'span5','maxlength'=>5)); ?>
+
+	<?php echo $form->textFieldRow($model,'nombrecompleto',array('class'=>'span5','maxlength'=>60)); ?>
+
+	<?php echo $form->textFieldRow($model,'telefono',array('class'=>'span5','maxlength'=>45)); ?>
+
+	<?php echo $form->textFieldRow($model,'celular',array('class'=>'span5','maxlength'=>45)); ?>
+
+	<?php echo $form->textFieldRow($model,'email',array('class'=>'span5','maxlength'=>60)); ?>
+
+	<?php echo $form->textFieldRow($model,'idpropiedad',array('class'=>'span5')); ?>
+
+	<?php echo $form->textFieldRow($model,'idempleado',array('class'=>'span5')); ?>
 
 	<?php echo $form->textFieldRow($model,'created_date',array('class'=>'span5')); ?>
 

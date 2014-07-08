@@ -5,11 +5,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Destacado','url'=>array('index')),
-	array('label'=>'Manage Destacado','url'=>array('admin')),
+	array('label'=>'Administrar Destacados','url'=>array('admin')),
 );
 ?>
 
-<h1>Create Destacado</h1>
+<h1>Crear Destacado</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

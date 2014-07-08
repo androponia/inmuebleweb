@@ -5,8 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Destacado','url'=>array('index')),
-	array('label'=>'Create Destacado','url'=>array('create')),
+	array('label'=>'Crear Destacado','url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -23,12 +22,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Destacados</h1>
-
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+<h1>Administrar Destacados</h1>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button btn')); ?>
 <div class="search-form" style="display:none">
@@ -46,12 +40,6 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'fechainicio',
 		'fechafin',
 		'idpropiedad',
-		'created_date',
-		'modified_date',
-		/*
-		'created_by',
-		'modified_by',
-		*/
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 		),

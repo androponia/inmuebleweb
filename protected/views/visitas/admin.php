@@ -5,8 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Visitas','url'=>array('index')),
-	array('label'=>'Create Visitas','url'=>array('create')),
+	array('label'=>'Crear Visita','url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -23,12 +22,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Visitases</h1>
-
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+<h1>Administrar Visitas</h1>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button btn')); ?>
 <div class="search-form" style="display:none">
@@ -43,12 +37,17 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'filter'=>$model,
 	'columns'=>array(
 		'idvisitas',
-		'idpropiedad',
 		'fecha',
 		'hora',
+		'nombrecompleto',
+		'telefono',
+		'celular',
+		/*
+		'email',
+		'idpropiedad',
+		'idempleado',
 		'created_date',
 		'modified_date',
-		/*
 		'created_by',
 		'modified_by',
 		*/

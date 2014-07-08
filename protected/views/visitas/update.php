@@ -6,13 +6,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Visitas','url'=>array('index')),
-	array('label'=>'Create Visitas','url'=>array('create')),
-	array('label'=>'View Visitas','url'=>array('view','id'=>$model->idvisitas)),
-	array('label'=>'Manage Visitas','url'=>array('admin')),
+	array('label'=>'Crear Visita','url'=>array('create')),
+	array('label'=>'Ver Visita','url'=>array('view','id'=>$model->idvisitas)),
+	array('label'=>'Administrar Visitas','url'=>array('admin')),
 );
 ?>
 
-<h1>Update Visitas <?php echo $model->idvisitas; ?></h1>
+<h1>Actualizar Visita <?php echo $model->idvisitas; ?></h1>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

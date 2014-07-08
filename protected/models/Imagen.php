@@ -52,6 +52,7 @@ class Imagen extends CActiveRecord
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('idimagen, archivo, orden, propiedadid, created_date, modified_date, created_by, modified_by', 'safe', 'on'=>'search'),
+array('archivo', 'file','types'=>'jpg, gif, png', 'allowEmpty'=>true, 'on'=>'update'),			
 		);
 	}
 
@@ -73,10 +74,10 @@ class Imagen extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idimagen' => 'Idimagen',
+			'idimagen' => 'Codigo',
 			'archivo' => 'Archivo',
 			'orden' => 'Orden',
-			'propiedadid' => 'Propiedadid',
+			'propiedadid' => 'Cod. Prop.',
 			'created_date' => 'Created Date',
 			'modified_date' => 'Modified Date',
 			'created_by' => 'Created By',

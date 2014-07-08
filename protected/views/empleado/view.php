@@ -18,7 +18,6 @@ $this->menu=array(
 	'data'=>$modelu,
 	'attributes'=>array(
 		'idusuario',
-		'idusuario',
 		'nombre',
 		'apellido',
 		'email',

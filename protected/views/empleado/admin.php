@@ -22,7 +22,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Administrar Empleado</h1>
+<h1>Administrar Empleados</h1>
 
 <?php echo CHtml::link('Busqueda Avanzada','#',array('class'=>'search-button btn')); ?>
 <div class="search-form" style="display:none">
@@ -43,7 +43,6 @@ $('.search-form form').submit(function(){
 		'email',
 		'telefono',
 		'celular',
-		'empleado.sueldo',
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 		),

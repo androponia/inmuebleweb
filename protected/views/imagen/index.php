@@ -4,8 +4,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Imagen','url'=>array('create')),
-	array('label'=>'Manage Imagen','url'=>array('admin')),
+	array('label'=>'Crear Imagen','url'=>array('create')),
+	array('label'=>'Administrar Imagenes','url'=>array('admin')),
 );
 ?>
 

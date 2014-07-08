@@ -23,12 +23,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Barrios</h1>
-
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+<h1>Administrar Barrios</h1>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button btn')); ?>
 <div class="search-form" style="display:none">
@@ -37,31 +32,15 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-
-<?php
-$this->widget('zii.widgets.grid.CGridView', array(
-    'id'=>'barrio-grid',
-    'dataProvider'=>$model->search(),
-    'filter'=>$model,
-    'rowCssClassExpression' => '
-        ( $row%2 ? $this->rowCssClass[1] : $this->rowCssClass[0] ) .
-        ( $data->nombre ? null : " disabled" )
-    ',
-    'columns'=>array(
-        'idbarrio',
+<?php $this->widget('bootstrap.widgets.TbGridView',array(
+	'id'=>'barrio-grid',
+	'dataProvider'=>$model->search(),
+	'filter'=>$model,
+	'columns'=>array(
+		'idbarrio',
 		'nombre',
-		'created_date',
-		'modified_date',
-		'created_by',
-		'modified_by',
-        array(
-            'name' => 'nombre',
-            'value' => '$data->nombre',
-        ),
-        array(
-            'class'=>'CButtonColumn',
-            'header' => Yii::t( 'app', 'Tools' ),
-        ),
-    ),
-));
-?>
+		array(
+			'class'=>'bootstrap.widgets.TbButtonColumn',
+		),
+	),
+)); ?>

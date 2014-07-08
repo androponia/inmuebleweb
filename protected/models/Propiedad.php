@@ -94,9 +94,9 @@ class Propiedad extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idpropiedad' => 'Idpropiedad',
-			'canthab' => 'Canthab',
-			'cantbano' => 'Cantbano',
+			'idpropiedad' => 'Codigo',
+			'canthab' => 'Habitaciones',
+			'cantbano' => 'Banos',
 			'terreno' => 'Terreno',
 			'construido' => 'Construido',
 			'garage' => 'Garage',

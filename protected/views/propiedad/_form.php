@@ -79,5 +79,5 @@
 			'label'=>$model->isNewRecord ? 'Create' : 'Save',
 		)); ?>
 	</div>
-
 <?php $this->endWidget(); ?>
+

@@ -9,11 +9,11 @@
 
 	<?php echo $form->textFieldRow($model,'direccion',array('class'=>'span4','maxlength'=>100)); ?>
 
-	<?php echo $form->textFieldRow($model,'latitudlongitud',array('class'=>'span4','maxlength'=>100)); ?>
+	<?php echo $form->hiddenField($model,'latitudlongitud',array('class'=>'span4','maxlength'=>100)); ?>
 
-	<?php echo $form->textFieldRow($model,'barrioid',array('class'=>'span4')); ?>
+	<?php echo $form->dropDownList($model,'barrioid', CHtml::listData(Barrio::model()->findAll(), 'idbarrio', 'nombre')); ?>
 
-	<?php echo $form->textFieldRow($model,'propiedadid',array('class'=>'span4')); ?>
+	<?php echo $form->hiddenField($model,'propiedadid',array('class'=>'span4')); ?>
 
 	<?php echo $form->hiddenField($model,'created_date',array('class'=>'span5')); ?>
 

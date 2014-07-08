@@ -4,8 +4,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Destacado','url'=>array('create')),
-	array('label'=>'Manage Destacado','url'=>array('admin')),
+	array('label'=>'Crear Destacado','url'=>array('create')),
+	array('label'=>'Administrar Destacados','url'=>array('admin')),
 );
 ?>
 

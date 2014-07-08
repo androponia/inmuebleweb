@@ -50,12 +50,11 @@
                     'stacked'=>false, // whether this is a stacked menu
                     'items'=>array(
                         array('label'=>'Home', 'url'=>array('/site/index'), 'active'=>true),
-                        array('label'=>'Destacado', 'url'=>array('/destacado/index'), 'visible'=>!Yii::app()->user->isGuest),
-                        array('label'=>'Propiedad', 'url'=>array('/propiedad/index'), 'visible'=>!Yii::app()->user->isGuest),
-                        array('label'=>'Requerida', 'url'=>array('/requerida/index'), 'visible'=>!Yii::app()->user->isGuest),
-                        array('label'=>'Usuario', 'url'=>array('/usuario/index'), 'visible'=>!Yii::app()->user->isGuest),
-                        // array('label'=>'Visita', 'url'=>array('/visita/index'), 'visible'=>!Yii::app()->user->isGuest),
-                        array('label'=>'Visita', 'url'=>array('/visita/index'), 'visible'=>!Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id)),
+                        array('label'=>'Destacado', 'url'=>array('/destacado/admin'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'Propiedad', 'url'=>array('/propiedad/admin'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'Empleado', 'url'=>array('/empleado/admin'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'Cliente', 'url'=>array('/cliente/admin'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'Visitas', 'url'=>array('/visitas/admin'), 'visible'=>!Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id)),
                         array('label'=>'Contact', 'url'=>array('/site/contact')),
 
                         // array('label'=>'Manage', 'url'=>array('/propiedad/admin')),

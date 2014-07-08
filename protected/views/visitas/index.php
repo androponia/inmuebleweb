@@ -4,12 +4,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Visitas','url'=>array('create')),
-	array('label'=>'Manage Visitas','url'=>array('admin')),
+	array('label'=>'Crear Visita','url'=>array('create')),
+	array('label'=>'Administrar Visitas','url'=>array('admin')),
 );
 ?>
 
-<h1>Visitases</h1>
+<h1>Visitas</h1>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,

@@ -81,7 +81,7 @@ class Usuario extends CActiveRecord
 			'password' => 'Password',
 			'telefono' => 'Telefono',
 			'celular' => 'Celular',
-			'rol' => 'Rol',
+			'tipusuarioid' => 'Rol',
 		);
 	}
 
@@ -103,7 +103,7 @@ class Usuario extends CActiveRecord
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('telefono',$this->telefono,true);
 		$criteria->compare('celular',$this->celular,true);
-		$criteria->compare('rol',$this->rol,true);
+		$criteria->compare('tipousuarioid',$this->tipousuarioid,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -5,8 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Propiedad','url'=>array('index')),
-	array('label'=>'Create Propiedad','url'=>array('create')),
+	array('label'=>'Crear Propiedad','url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -23,12 +22,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Propiedads</h1>
-
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+<h1>Administrar Propiedades</h1>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button btn')); ?>
 <div class="search-form" style="display:none">
@@ -57,10 +51,6 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'egreso',
 		'clienteid',
 		'empleadoid',
-		'created_date',
-		'modified_date',
-		'created_by',
-		'modified_by',
 		*/
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',

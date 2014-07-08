@@ -5,8 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Barrio','url'=>array('index')),
-	array('label'=>'Manage Barrio','url'=>array('admin')),
+	array('label'=>'Administrar Barrios','url'=>array('admin')),
 );
 ?>
 

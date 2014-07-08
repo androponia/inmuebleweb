@@ -74,25 +74,6 @@ class EmpleadoController extends Controller
 	    if(isset($_POST['Empleado'], $_POST['Usuario']))
 	    {
 	        $modelu->attributes=$_POST['Usuario'];
-	 
-
-
-// foreach($_SESSION as $valor)
-// {
-// echo $valor.',';
-// }
-
-	        // if ($modelu->tipousuarioid == 1)
-	        // {
-	        // 	var_dump($_POST);
-
-	        // 	echo (Yii::app()->user->id);
-
-
-	        // 	echo ('.Yii::app()->user->name.');
-	        // }
-
-
 	       // valida usuario
 	        $valid=$modelu->validate();
 	        if($valid)
