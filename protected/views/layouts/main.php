@@ -26,8 +26,9 @@
     'items'=>array(
 
     '<form class="navbar-form navbar-left">
-      <input type="text" id="buscador" class="form-control" placeholder="Buscar Propiedades"><input type="submit" class="btn btn-default" id="btnBuscar" value="Buscar">
-    </form>',
+      <input type="text" id="buscador" class="form-control" placeholder="Buscar Propiedades">
+      <input type="submit" class="btn btn-default" id="btnBuscar" onclick="busqueda()" value="Buscar">
+     </form>',
     array(
           'class'=>'bootstrap.widgets.TbMenu',
           'htmlOptions'=>array('class'=>'nav navbar-nav navbar-right'),
@@ -49,7 +50,7 @@
                     'type'=>'list', // '', 'tabs', 'pills' (or 'list')
                     'stacked'=>false, // whether this is a stacked menu
                     'items'=>array(
-                        array('label'=>'Home', 'url'=>array('/site/index'), 'active'=>true),
+                        array('label'=>'Home', 'url'=>array('/site/index')),
                         array('label'=>'Destacado', 'url'=>array('/destacado/admin'), 'visible'=>!Yii::app()->user->isGuest),
                         array('label'=>'Propiedad', 'url'=>array('/propiedad/admin'), 'visible'=>!Yii::app()->user->isGuest),
                         array('label'=>'Empleado', 'url'=>array('/empleado/admin'), 'visible'=>!Yii::app()->user->isGuest),
@@ -74,5 +75,11 @@
         <center> <p style="margin-top: 8px;">CopyRight &copy; 2013 <a style="color: white" href="#">inmuebleweb.com</p> </center>
     </div>
 
+    <script type="text/javascript">
+        var x = $(document);
+        x.ready(function(){
+            
+        });
+    </script>
 </body>
 </html>

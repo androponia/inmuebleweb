@@ -1,6 +1,9 @@
 <?php
 /* @var $this SiteController */
 $this->pageTitle=Yii::app()->name;
+
+//echo '<pre>', print_r($arrayUrl),'</pre>';//$val->idpropiedad
+//Yii::app()->basePath.'/images/'.$fileName;
 ?>
 
 <div class="row divIndex">

@@ -25,6 +25,16 @@
   margin-top: -20px;
 }
 
+.active
+{
+  background-color: rgba(100,100,100, .4);
+}
+
+.active:hover
+{
+  background-color: rgba(100,100,100, .6);
+}
+
 
 
 
@@ -80,9 +90,31 @@ padding-right: 15px;
     margin-top: 0px;
   }
 
-  #yw2, #yw7, #yw1, #yw5 /*Este es el id que toma el ul del menu, hay que ver porque es variable y puede afectar otros elementos de otras vistas*/
+  #yw2, #yw7, #yw1, #yw5, #yw3 /*Este es el id que toma el ul del menu, hay que ver porque es variable y puede afectar otros elementos de otras vistas*/
   {
     text-align: center;
+  }
+
+  .btn-navbar
+  {
+    width: 60px;
+    height: 40px;
+    background-color: white;
+    float: right;
+    margin-top: 5px;
+    color: black;
+  }
+
+  #buscador
+  {
+    margin-left:0px;
+    margin-top: 5px;
+    width: 70%;
+  }
+
+  #btnBuscar
+  {
+    margin-top: 5px;
   }
 }
 
