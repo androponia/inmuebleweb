@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Crear Cliente','url'=>array('create')),
 	array('label'=>'Ver Cliente','url'=>array('view','id'=>$modelc->idusuario)),
-	array('label'=>'Administrar Cliente','url'=>array('admin')),
+	array('label'=>'Administrar Clientes','url'=>array('admin')),
 );
 ?>
 

@@ -8,7 +8,7 @@ $this->menu=array(
 	array('label'=>'Crear Cliente','url'=>array('create')),
 	array('label'=>'Actualizar Cliente','url'=>array('update','id'=>$modelc->idusuario)),
 	array('label'=>'Eliminar Cliente','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$modelc->idusuario),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Administrar Cliente','url'=>array('admin')),
+	array('label'=>'Administrar Clientes','url'=>array('admin')),
 );
 ?>
 

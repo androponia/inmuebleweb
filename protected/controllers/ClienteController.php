@@ -76,7 +76,7 @@ class ClienteController extends Controller
 	        $modelu->attributes=$_POST['Usuario'];
 	 
 	        // valida usuario
-	        $modelu->rol= 'Cliente';
+	        //$modelu->rol= 'Cliente';
 	        $valid=$modelu->validate();
 	        if($valid)
 	        {
