@@ -26,9 +26,8 @@
     'items'=>array(
 
     '<form class="navbar-form navbar-left">
-      <input type="text" id="buscador" class="form-control" placeholder="Buscar Propiedades">
-      <input type="submit" class="btn btn-default" id="btnBuscar" onclick="busqueda()" value="Buscar">
-     </form>',
+      <input type="text" id="buscador" class="form-control" placeholder="Buscar Propiedades"><input type="submit" class="btn btn-default" id="btnBuscar" value="Buscar">
+    </form>',
     array(
           'class'=>'bootstrap.widgets.TbMenu',
           'htmlOptions'=>array('class'=>'nav navbar-nav navbar-right'),
@@ -50,26 +49,16 @@
                     'type'=>'list', // '', 'tabs', 'pills' (or 'list')
                     'stacked'=>false, // whether this is a stacked menu
                     'items'=>array(
-                         array('label'=>'Home', 'url'=>array('/site/index'), 'active'=>true),
-                  
-                    array('label'=>'Gestion de Inmuebles', 'url'=>array('/propiedad/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('director',Yii::app()->user->id),'active'=>false),
-                    array('label'=>'Gestion de Inmuebles', 'url'=>array('/propiedad/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id),'active'=>false),
+                        array('label'=>'Home', 'url'=>array('/site/index'), 'active'=>true),
+                        array('label'=>'Gestion de Portada', 'url'=>array('/destacado/admin'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'Gestion de Propiedades', 'url'=>array('/propiedad/admin'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'Gestion de Empleados', 'url'=>array('/empleado/admin'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'Gestion de Clientes', 'url'=>array('/cliente/admin'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'Gestion de Visitas', 'url'=>array('/visitas/admin'), 'visible'=>!Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id)),
+                        array('label'=>'Gestion de Propiedades Requeridas', 'url'=>array('/requerida/admin'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'Contact', 'url'=>array('/site/contact')),
 
-                    array('label'=>'Gestion de Portada', 'url'=>array('/destacado/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('director',Yii::app()->user->id),'active'=>false),
-                    array('label'=>'Gestion de Portada', 'url'=>array('/destacado/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id),'active'=>false),
-
-                    array('label'=>'Gestion de Empleado', 'url'=>array('/empleado/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('director',Yii::app()->user->id),'active'=>false),
-                
-                    array('label'=>'Gestion de Clientes', 'url'=>array('/cliente/admin'),'visible'=>Yii::app()->authmanager->checkAccess('director',Yii::app()->user->id),'active'=>false),
-                    array('label'=>'Gestion de Clientes', 'url'=>array('/cliente/admin'),'visible'=>Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id),'active'=>false),
-                   
-                    array('label'=>'Calendario de Visitas', 'url'=>array('/visitas/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('director',Yii::app()->user->id),'active'=>false),
-                    array('label'=>'Calendario de Visitas', 'url'=>array('/visitas/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id),'active'=>false),
-                    array('label'=>'Calendario de Visitas', 'url'=>array('/visitas/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('agente',Yii::app()->user->id),'active'=>false),
-                    
-                    array('label'=>'Calculo de Hipoteca', 'url'=>array('#'),'active'=>false),
-                    array('label'=>'Contact', 'url'=>array('/site/contact'),'active'=>false),
-                       
+                        // array('label'=>'Manage', 'url'=>array('/propiedad/admin')),
                     ),
                 )); ?>
             </div>
@@ -86,11 +75,5 @@
         <center> <p style="margin-top: 8px;">CopyRight &copy; 2013 <a style="color: white" href="#">inmuebleweb.com</p> </center>
     </div>
 
-    <script type="text/javascript">
-        var x = $(document);
-        x.ready(function(){
-            
-        });
-    </script>
 </body>
 </html>

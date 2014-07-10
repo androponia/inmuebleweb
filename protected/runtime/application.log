@@ -12353,3 +12353,160 @@ Stack trace:
 REQUEST_URI=/inmuebleWeb/assets/lib/bootstrap/less/mixins.less
 HTTP_REFERER=http://localhost/inmuebleWeb/assets/7d883f12/css/yii.css
 ---
+2014/07/10 16:36:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/lib/bootstrap/less/mixins.less".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/7d883f12/css/yii.css
+---
+2014/07/10 16:36:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/lib/bootstrap/less/mixins.less".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/7d883f12/css/yii.css
+---
+2014/07/10 16:36:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/lib/bootstrap/less/mixins.less".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/7d883f12/css/yii.css
+---
+2014/07/10 16:36:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/lib/bootstrap/less/mixins.less".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/7d883f12/css/yii.css
+---
+2014/07/10 16:36:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/lib/bootstrap/less/mixins.less".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/7d883f12/css/yii.css
+---
+2014/07/10 16:36:47 [error] [php] Undefined variable: model (/var/www/inmuebleweb/protected/views/empleado/admin.php:16)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): EmpleadoController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): EmpleadoController->renderPartial()
+#2 /var/www/inmuebleweb/protected/controllers/EmpleadoController.php(175): EmpleadoController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): EmpleadoController->actionAdmin()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): EmpleadoController->runAction()
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): EmpleadoController->filterAccessControl()
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): EmpleadoController->runActionWithFilters()
+#12 /var/www/yii/framework/web/CWebApplication.php(282): EmpleadoController->run()
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/inmuebleweb/index.php(15): CWebApplication->run()
+REQUEST_URI=/inmuebleweb/empleado/admin
+in /var/www/inmuebleweb/protected/views/empleado/admin.php (16)
+in /var/www/inmuebleweb/protected/controllers/EmpleadoController.php (175)
+in /var/www/inmuebleweb/index.php (15)
+2014/07/10 16:38:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/lib/bootstrap/less/mixins.less".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/7d883f12/css/yii.css
+---
+2014/07/10 16:38:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/lib/bootstrap/less/mixins.less".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/7d883f12/css/yii.css
+---
+2014/07/10 16:38:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/lib/bootstrap/less/mixins.less".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/7d883f12/css/yii.css
+---
+2014/07/10 16:38:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/lib/bootstrap/less/mixins.less".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/7d883f12/css/yii.css
+---
+2014/07/10 16:38:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/lib/bootstrap/less/mixins.less".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/7d883f12/css/yii.css
+---
+2014/07/10 16:38:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/lib/bootstrap/less/mixins.less".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/7d883f12/css/yii.css
+---
+2014/07/10 16:38:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/lib/bootstrap/less/mixins.less".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/7d883f12/css/yii.css
+---
+2014/07/10 16:39:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/lib/bootstrap/less/mixins.less".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/7d883f12/css/yii.css
+---
+2014/07/10 16:39:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/lib/bootstrap/less/mixins.less".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/7d883f12/css/yii.css
+---
+2014/07/10 16:39:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/lib/bootstrap/less/mixins.less".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/inmuebleweb/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/inmuebleweb/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/inmuebleweb/assets/7d883f12/css/yii.css
+---
