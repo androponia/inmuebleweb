@@ -6,13 +6,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Requerida','url'=>array('index')),
-	array('label'=>'Create Requerida','url'=>array('create')),
-	array('label'=>'View Requerida','url'=>array('view','id'=>$model->idrequerida)),
-	array('label'=>'Manage Requerida','url'=>array('admin')),
+	array('label'=>'Crear Requerida','url'=>array('create')),
+	array('label'=>'Ver Requerida','url'=>array('view','id'=>$model->idrequerida)),
+	array('label'=>'Administrar Requeridas','url'=>array('admin')),
 );
 ?>
 
-<h1>Update Requerida <?php echo $model->idrequerida; ?></h1>
+<h1>Actualizar Propiedad Requerida <?php echo $model->idrequerida; ?></h1>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

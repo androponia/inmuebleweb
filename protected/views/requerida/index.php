@@ -4,8 +4,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Requerida','url'=>array('create')),
-	array('label'=>'Manage Requerida','url'=>array('admin')),
+	array('label'=>'Crear Requerida','url'=>array('create')),
+	array('label'=>'Administrar Requerida','url'=>array('admin')),
 );
 ?>
 
