@@ -71,18 +71,19 @@ class SiteController extends Controller
 			$model->attributes=$_POST['ContactForm'];
 			if($model->validate())
 			{
-				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
+			/*	$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
 				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
 				$headers="From: $name <{$model->email}>\r\n".
 					"Reply-To: {$model->email}\r\n".
 					"MIME-Version: 1.0\r\n".
 					"Content-Type: text/plain; charset=UTF-8";
+			*/		
 ///////////////////////////ENVIAR CORREO
 			//con index funciona
-			/*$dataProvider= new CActiveDataProvider('ContactForm');
-			$text=$this->renderPartial('contact',	
-						array('dataProvider'=>$dataProvider),
-							true);*/
+			$dataProvider= new CActiveDataProvider('ContactForm');
+			$text=$this->renderPartial('/site/contact',	
+						array('dataProvider'=>$dataProvider,'model'=>$model),
+							true);
 			/*$this->render('index',array(
 					'dataProvider'=>$dataProvider,));*/
 ///////////////////////////////////////
@@ -108,18 +109,18 @@ class SiteController extends Controller
 			 //$mailer­>AddAttachment("ruta/archivo_adjunto.gif");
 		     //$mailer->Body = "ESTo es lo que necesito";
 
-		     $mailer->MsgHTML($model->name.$model->body.$model->email);
-		     //$mailer->MsgHTML($text);
-
-		     if($mailer->Send()) {
+		     //$mailer->MsgHTML($model->name.$model->body.$model->email);
+		     $mailer->MsgHTML($text);
+			 $mailer->Send()
+		    /* if($mailer->Send()) {
 		          echo "Mensaje enviado con Exito!";
 		     }
 		     else {
 		     	//$mailer­>ErrorInfo
 		          echo "Error: Mensaje no enviado";
-     		};
+     		};*/
 ///////////////////////////////FIN ENVIAR COOREO
-				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
+				//mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
 				Yii::app()->user->setFlash('contact','Gracias por contactarnos, tendra noticias nuestras pronto.
 											InmoviliariaWeb');
 				$this->refresh();
