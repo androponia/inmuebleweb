@@ -66,17 +66,20 @@ class ImagenController extends Controller
 	{
 
         $model=new Imagen;
-        //$modelp = new Propiedad;
-    	//$modelp=Propiedad::model()->findByPk($idpropiedad]);
+
+//		$idimagen = Imagen::model()->findByAttributes(array('propiedadid'=>$idpropiedad,'orden'=>$orden));
 
 
+if(Imagen::model()->exists('propiedadid = $idpropiedad AND orden = $orden'))
+{
+	echo ('La imagen ya fue creada.');
+	$this->redirect(array('propiedad/view','id'=>$model->propiedadid));
+}
         $model->orden = $orden;
         $model->propiedadid = $idpropiedad;
 
-
-
         if(isset($_POST['Imagen']))
-        {
+        {$usuario = Usuario::model()->findByPk($id);
             $rnd = rand(0,9999);  // genera numero randomico entre 0-9999
             $model->attributes=$_POST['Imagen'];
  
@@ -86,8 +89,7 @@ class ImagenController extends Controller
  
             if($model->save())
             {
-                $uploadedFile->saveAs(Yii::app()->basePath.'/images/'.$fileName);  // image will uplode to rootDirectory/banner/
-//                $this->redirect(array('propiedad'));
+                $uploadedFile->saveAs(Yii::app()->basePath.'/images/'.$fileName);  // imagen cargada al servidor
                 $this->redirect(array('propiedad/view','id'=>$model->propiedadid));
             }
         }
