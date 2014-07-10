@@ -5,8 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Barrio','url'=>array('index')),
-	array('label'=>'Create Barrio','url'=>array('create')),
+	array('label'=>'Crear Barrio','url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -25,13 +24,6 @@ $('.search-form form').submit(function(){
 
 <h1>Administrar Barrios</h1>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button btn')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
 	'id'=>'barrio-grid',
 	'dataProvider'=>$model->search(),
@@ -40,7 +32,9 @@ $('.search-form form').submit(function(){
 		'idbarrio',
 		'nombre',
 		array(
-			'class'=>'bootstrap.widgets.TbButtonColumn',
-		),
+    		'class'=>'CButtonColumn',
+    		'template'=>'{view}{update}{delete}',
+    		'header'=>"Herramientas",
+		)
 	),
 )); ?>

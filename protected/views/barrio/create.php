@@ -5,10 +5,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Administrar Barrios','url'=>array('admin')),
+	array('label'=>'Manage Barrio','url'=>array('admin')),
 );
 ?>
 
-<h1>Create Barrio</h1>
+<h1>Crear Barrio</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

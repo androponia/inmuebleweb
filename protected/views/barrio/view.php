@@ -12,7 +12,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Barrio #<?php echo $model->idbarrio; ?></h1>
+<h1>Ver Barrio #<?php echo $model->idbarrio; ?></h1>
 
 <?php $this->widget('bootstrap.widgets.TbDetailView',array(
 	'data'=>$model,
