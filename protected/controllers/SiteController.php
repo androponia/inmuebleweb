@@ -64,20 +64,20 @@ class SiteController extends Controller
 	 * Displays the contact page
 	 */
 	public function actionContact()
-	{
+	{/*
 		$model=new ContactForm;
 		if(isset($_POST['ContactForm']))
 		{
 			$model->attributes=$_POST['ContactForm'];
 			if($model->validate())
 			{
-			/*	$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
+				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
 				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
 				$headers="From: $name <{$model->email}>\r\n".
 					"Reply-To: {$model->email}\r\n".
 					"MIME-Version: 1.0\r\n".
 					"Content-Type: text/plain; charset=UTF-8";
-			*/		
+					
 ///////////////////////////ENVIAR CORREO
 			//con index funciona
 			$dataProvider= new CActiveDataProvider('ContactForm');
@@ -85,7 +85,7 @@ class SiteController extends Controller
 						array('dataProvider'=>$dataProvider,'model'=>$model),
 							true);
 			/*$this->render('index',array(
-					'dataProvider'=>$dataProvider,));*/
+					'dataProvider'=>$dataProvider,));
 ///////////////////////////////////////
 			 $mailer = Yii::createComponent('application.extensions.mailer.EMailer');
 		     $mailer->IsSMTP();
@@ -118,15 +118,15 @@ class SiteController extends Controller
 		     else {
 		     	//$mailer­>ErrorInfo
 		          echo "Error: Mensaje no enviado";
-     		};*/
+     		};
 ///////////////////////////////FIN ENVIAR COOREO
-				//mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
+				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
 				Yii::app()->user->setFlash('contact','Gracias por contactarnos, tendra noticias nuestras pronto.
 											InmoviliariaWeb');
 				$this->refresh();
 			}
 		}
-		$this->render('contact',array('model'=>$model));
+		$this->render('contact',array('model'=>$model)); */
 	}
 
 	/**
