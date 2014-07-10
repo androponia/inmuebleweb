@@ -17,10 +17,6 @@
  * @property string $modified_date
  * @property string $created_by
  * @property string $modified_by
- *
- * The followings are the available model relations:
- * @property Propiedad $idpropiedad0
- * @property Empleado $idempleado0
  */
 class Visitas extends CActiveRecord
 {
@@ -61,8 +57,6 @@ class Visitas extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idpropiedad0' => array(self::BELONGS_TO, 'Propiedad', 'idpropiedad'),
-			'idempleado0' => array(self::BELONGS_TO, 'Empleado', 'idempleado'),
 		);
 	}
 
@@ -79,12 +73,12 @@ class Visitas extends CActiveRecord
 			'telefono' => 'Telefono',
 			'celular' => 'Celular',
 			'email' => 'Email',
-			'idpropiedad' => 'Idpropiedad',
-			'idempleado' => 'Idempleado',
-			'created_date' => 'Created Date',
-			'modified_date' => 'Modified Date',
-			'created_by' => 'Created By',
-			'modified_by' => 'Modified By',
+			'idpropiedad' => 'Propiedad',
+			'idempleado' => 'Empleado',
+			'created_date' => 'Fecha Creacion',
+			'modified_date' => 'Fecha Modificacion',
+			'created_by' => 'Usuario Creo',
+			'modified_by' => 'Usuario Modifico',
 		);
 	}
 
@@ -134,23 +128,5 @@ class Visitas extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
-	}
-
-
-	public function behaviors()
-	{
-		return array(
-			'CTimestampBehavior' => array(
-			'class' => 'zii.behaviors.CTimestampBehavior',
-			'createAttribute' => 'created_date',
-			'updateAttribute' => 'modified_date',
-			'setUpdateOnCreate' => true,
-		),
-			'BlameableBehavior' => array(
-			'class' => 'application.components.behaviors.BlameableBehavior',
-			'createdByColumn' => 'created_by',
-			'updatedByColumn' => 'modified_by',
-			),
-		);
 	}
 }

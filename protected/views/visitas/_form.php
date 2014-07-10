@@ -3,7 +3,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
+	<p class="help-block">Campos con <span class="required">*</span> son requeridos.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -30,19 +30,43 @@
 			));
 		?>
 
-	<?php echo $form->textFieldRow($model,'nombrecompleto',array('class'=>'span5','maxlength'=>60)); ?>
+	<div class="row">
+		<div class="span2">
+			<?php echo $form->textFieldRow($model,'nombrecompleto',array('class'=>'span5','maxlength'=>60)); ?>
+		</div>
+	</div>
 
-	<?php echo $form->textFieldRow($model,'telefono',array('class'=>'span5','maxlength'=>45)); ?>
+	<div class="row">
+		<div class="span2">
+			<?php echo $form->textFieldRow($model,'telefono',array('class'=>'span5','maxlength'=>45)); ?>
+		</div>
+	</div>
 
-	<?php echo $form->textFieldRow($model,'celular',array('class'=>'span5','maxlength'=>45)); ?>
+	<div class="row">
+		<div class="span2">
+			<?php echo $form->textFieldRow($model,'celular',array('class'=>'span5','maxlength'=>45)); ?>
+		</div>
+	</div>
 
-	<?php echo $form->textFieldRow($model,'email',array('class'=>'span5','maxlength'=>60)); ?>
+	<div class="row">
+		<div class="span2">
+			<?php echo $form->textFieldRow($model,'email',array('class'=>'span5','maxlength'=>60)); ?>
+		</div>
+	</div>
 
-	<?php echo $form->labelEx($model,'idpropiedad'); ?>
-	<?php echo $form->dropDownList($model,'idpropiedad', CHtml::listData(Propiedad::model()->findAll(), 'idpropiedad', 'descripcion'),array('class'=>'span5')); ?>
+	<div class="row">
+		<div class="span2">
+			<?php echo $form->labelEx($model,'idpropiedad'); ?>
+			<?php echo $form->dropDownList($model,'idpropiedad', CHtml::listData(Propiedad::model()->findAll(), 'idpropiedad', 'descripcion'),array('class'=>'span5')); ?>
+		</div>
+	</div>
 
-	<?php echo $form->labelEx($model,'idempleado'); ?>
-	<?php echo $form->dropDownList($model,'idempleado', CHtml::listData(Usuario::model()->findAll(), 'idusuario', 'nombre', 'apellido')); ?>
+	<div class="row">
+		<div class="span2">
+			<?php echo $form->labelEx($model,'idempleado'); ?>
+			<?php echo $form->dropDownList($model,'idempleado', CHtml::listData(Usuario::model()->findAll(), 'idusuario', 'nombre', 'apellido'),array('class'=>'span3', "empty"=>"Seleccione Empleado")); ?>
+		</div>
+	</div>
 
 	<?php echo $form->hiddenField($model,'created_date',array('class'=>'span5')); ?>
 
@@ -59,5 +83,13 @@
 			'label'=>$model->isNewRecord ? 'Create' : 'Save',
 		)); ?>
 	</div>
+
+	<?php echo $form->hiddenField($model,'created_date',array('class'=>'span5')); ?>
+
+	<?php echo $form->hiddenField($model,'modified_date',array('class'=>'span5')); ?>
+
+	<?php echo $form->hiddenField($model,'created_by',array('class'=>'span5','maxlength'=>128)); ?>
+
+	<?php echo $form->hiddenField($model,'modified_by',array('class'=>'span5','maxlength'=>128)); ?>
 
 <?php $this->endWidget(); ?>

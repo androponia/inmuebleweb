@@ -24,7 +24,5 @@ $this->menu=array(
 		'telefono',
 		'celular',
 		'email',
-		'idpropiedad',
-		'idempleado',
 	),
 )); ?>
