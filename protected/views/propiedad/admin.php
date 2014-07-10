@@ -24,13 +24,6 @@ $('.search-form form').submit(function(){
 
 <h1>Administrar Propiedades</h1>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button btn')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
 	'id'=>'propiedad-grid',
 	'dataProvider'=>$model->search(),
@@ -42,18 +35,10 @@ $('.search-form form').submit(function(){
 		'terreno',
 		'construido',
 		'garage',
-		/*
-		'jardin',
-		'fondo',
-		'precio',
-		'descripcion',
-		'ingreso',
-		'egreso',
-		'clienteid',
-		'empleadoid',
-		*/
 		array(
-			'class'=>'bootstrap.widgets.TbButtonColumn',
-		),
+    		'class'=>'CButtonColumn',
+    		'template'=>'{view}{update}{delete}',
+    		'header'=>"Herramientas",
+		)
 	),
 )); ?>

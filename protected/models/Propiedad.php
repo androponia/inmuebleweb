@@ -22,27 +22,9 @@
  * @property string $modified_date
  * @property string $created_by
  * @property string $modified_by
- *
- * The followings are the available model relations:
- * @property Destacado[] $destacados
- * @property Imagen[] $imagens
- * @property Empleado $empleado
- * @property Cliente $cliente
- * @property Ubicacion[] $ubicacions
- * @property Visitas[] $visitases
  */
 class Propiedad extends CActiveRecord
 {
-	/**
-	 * Returns the static model of the specified AR class.
-	 * @param string $className active record class name.
-	 * @return Propiedad the static model class
-	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
-	}
-
 	/**
 	 * @return string the associated database table name
 	 */
@@ -59,14 +41,14 @@ class Propiedad extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('canthab, cantbano, precio, descripcion, ingreso, clienteid, empleadoid', 'required'),
+			array('canthab, cantbano, precio, descripcion, ingreso, clienteid', 'required'),
 			array('canthab, cantbano, terreno, construido, garage, jardin, fondo, clienteid, empleadoid', 'numerical', 'integerOnly'=>true),
 			array('precio', 'numerical'),
 			array('descripcion', 'length', 'max'=>150),
 			array('created_by, modified_by', 'length', 'max'=>128),
 			array('egreso, created_date, modified_date', 'safe'),
 			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
+			// @todo Please remove those attributes that should not be searched.
 			array('idpropiedad, canthab, cantbano, terreno, construido, garage, jardin, fondo, precio, descripcion, ingreso, egreso, clienteid, empleadoid, created_date, modified_date, created_by, modified_by', 'safe', 'on'=>'search'),
 		);
 	}
@@ -79,12 +61,6 @@ class Propiedad extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'destacados' => array(self::HAS_MANY, 'Destacado', 'idpropiedad'),
-			'imagens' => array(self::HAS_MANY, 'Imagen', 'propiedadid'),
-			'empleado' => array(self::BELONGS_TO, 'Empleado', 'empleadoid'),
-			'cliente' => array(self::BELONGS_TO, 'Cliente', 'clienteid'),
-			'ubicacions' => array(self::HAS_MANY, 'Ubicacion', 'propiedadid'),
-			'visitases' => array(self::HAS_MANY, 'Visitas', 'idpropiedad'),
 		);
 	}
 
@@ -95,34 +71,41 @@ class Propiedad extends CActiveRecord
 	{
 		return array(
 			'idpropiedad' => 'Codigo',
-			'canthab' => 'Habitaciones',
-			'cantbano' => 'Banos',
-			'terreno' => 'Terreno',
-			'construido' => 'Construido',
-			'garage' => 'Garage',
-			'jardin' => 'Jardin',
-			'fondo' => 'Fondo',
-			'precio' => 'Precio',
-			'descripcion' => 'Descripcion',
-			'ingreso' => 'Ingreso',
-			'egreso' => 'Egreso',
-			'clienteid' => 'Clienteid',
-			'empleadoid' => 'Empleadoid',
-			'created_date' => 'Created Date',
-			'modified_date' => 'Modified Date',
-			'created_by' => 'Created By',
-			'modified_by' => 'Modified By',
+			'canthab' => 'Cantidad de Habitaciones',
+			'cantbano' => 'Cantidad de Baños',
+			'terreno' => 'Terreno Total',
+			'construido' => 'Terreno Construido',
+			'garage' => 'Tiene Garage',
+			'jardin' => 'Tiene Jardin',
+			'fondo' => 'Tiene Fondo',
+			'precio' => 'Precio (U$S)',
+			'descripcion' => 'Descripcion de la Propiedad',
+			'ingreso' => 'Fecha de Ingreso',
+			'egreso' => 'Fecha de Egreso',
+			'clienteid' => 'Propietario del Inmueble',
+			'empleadoid' => 'Empleado del Inmueble',
+			'created_date' => 'Fecha Creacion',
+			'modified_date' => 'Fecha Modificacion',
+			'created_by' => 'Usuario creo',
+			'modified_by' => 'Usuario modifico',
 		);
 	}
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 *
+	 * Typical usecase:
+	 * - Initialize the model fields with values from filter form.
+	 * - Execute this method to get CActiveDataProvider instance which will filter
+	 * models according to data in model fields.
+	 * - Pass data provider to CGridView, CListView or any similar widget.
+	 *
+	 * @return CActiveDataProvider the data provider that can return the models
+	 * based on the search/filter conditions.
 	 */
 	public function search()
 	{
-		// Warning: Please modify the following code to remove attributes that
-		// should not be searched.
+		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
 
@@ -150,21 +133,14 @@ class Propiedad extends CActiveRecord
 		));
 	}
 
-	public function behaviors()
+	/**
+	 * Returns the static model of the specified AR class.
+	 * Please note that you should have this exact method in all your CActiveRecord descendants!
+	 * @param string $className active record class name.
+	 * @return Propiedad the static model class
+	 */
+	public static function model($className=__CLASS__)
 	{
-		return array(
-			'CTimestampBehavior' => array(
-			'class' => 'zii.behaviors.CTimestampBehavior',
-			'createAttribute' => 'created_date',
-			'updateAttribute' => 'modified_date',
-			'setUpdateOnCreate' => true,
-		),
-			'BlameableBehavior' => array(
-			'class' => 'application.components.behaviors.BlameableBehavior',
-			'createdByColumn' => 'created_by',
-			'updatedByColumn' => 'modified_by',
-			),
-		);
+		return parent::model($className);
 	}
-	
 }

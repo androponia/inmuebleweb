@@ -17,19 +17,53 @@
 
 	<?php echo $form->hiddenField($modele,'modified_by',array('class'=>'span5','maxlength'=>128)); ?>
 
-	<?php echo $form->textFieldRow($modelu,'nombre',array('class'=>'span5','maxlength'=>60)); ?>
+	<div class="row">
+		<div class="span4">
+			<?php echo $form->textFieldRow($modelu,'nombre',array('class'=>'span5','maxlength'=>60)); ?>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="span4">
+			<?php echo $form->textFieldRow($modelu,'apellido',array('class'=>'span5','maxlength'=>60)); ?>
+		</div>
+	</div>
 
-	<?php echo $form->textFieldRow($modelu,'apellido',array('class'=>'span5','maxlength'=>60)); ?>
+	<div class="row">
+		<div class="span4">
+			<?php echo $form->textFieldRow($modelu,'email',array('class'=>'span5','maxlength'=>60)); ?>
+		</div>
+	</div>
 
-	<?php echo $form->textFieldRow($modelu,'email',array('class'=>'span5','maxlength'=>60)); ?>
+	<div class="row">
+		<div class="span4">
+			<?php echo $form->passwordFieldRow($modelu,'password',array('class'=>'span5','maxlength'=>60)); ?>
+		</div>
+	</div>
 
-	<?php echo $form->passwordFieldRow($modelu,'password',array('class'=>'span5','maxlength'=>60)); ?>
+	<div class="row">
+		<div class="span4">
+			<?php echo $form->textFieldRow($modelu,'telefono',array('class'=>'span5','maxlength'=>45)); ?>
+		</div>
+	</div>
 
-	<?php echo $form->textFieldRow($modelu,'telefono',array('class'=>'span5','maxlength'=>45)); ?>
+	<div class="row">
+		<div class="span4">
+			<?php echo $form->textFieldRow($modelu,'celular',array('class'=>'span5','maxlength'=>45)); ?>
+		</div>
+	</div>
 
-	<?php echo $form->textFieldRow($modelu,'celular',array('class'=>'span5','maxlength'=>45)); ?>
+	<div class="row">
+		<div class="span2">
+			<?php echo $form->labelEx($modelu,'tipousuarioid'); ?>
+		</div>
+	</div>
 
-	<?php echo $form->dropDownList($modelu,'tipousuarioid',array("Empleado"=>"Empleado"),array('empty'=>'Seleccione Rol')); ?>
+	<div class="row">
+		<div class="span4">
+			<?php echo $form->dropDownList($modelu,'tipousuarioid',array(1=>"Administrativo",2=>"Agente"),array('empty'=>'Seleccione Tipo de Usuario','class'=>'span5')); ?>
+		</div>
+	</div><br>
 
 	<div class="form-actions">
 		<?php $this->widget('bootstrap.widgets.TbButton', array(

@@ -1,7 +1,7 @@
 <?php
 $this->breadcrumbs=array(
 	'Empleados'=>array('index'),
-	$model->idusuario,
+	$modele->idusuario,
 );
 
 $this->menu=array(
@@ -12,7 +12,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Ver Empleado #<?php echo $model->idusuario; ?></h1>
+<h1>Ver Empleado #<?php echo $modele->idusuario; ?></h1>
 
 <?php $this->widget('bootstrap.widgets.TbDetailView',array(
 	'data'=>$modelu,
