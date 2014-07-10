@@ -7,11 +7,25 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<?php echo $form->textFieldRow($model,'direccion',array('class'=>'span4','maxlength'=>100)); ?>
-
+  <div class="row">
+    <div class="span4">
+    	<?php echo $form->textFieldRow($model,'direccion',array('class'=>'span4','maxlength'=>100)); ?>
+    </div>
+  </div>
+  
 	<?php echo $form->hiddenField($model,'latitudlongitud',array('class'=>'span4','maxlength'=>100)); ?>
 
-	<?php echo $form->dropDownList($model,'barrioid', CHtml::listData(Barrio::model()->findAll(), 'idbarrio', 'nombre')); ?>
+  <div class="row">
+    <div class="span2">
+      <?php echo $form->labelEx($model,'barrioid'); ?>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span4">
+        <?php echo $form->dropDownList($model,'barrioid', CHtml::listData(Barrio::model()->findAll(), 'idbarrio', 'nombre'),array('class'=>'span5', "empty"=>"Seleccione Barrio")); ?>
+    </div>
+  </div><br>
 
 	<?php echo $form->hiddenField($model,'propiedadid',array('class'=>'span4')); ?>
 

@@ -75,7 +75,6 @@ class UbicacionController extends Controller
 		{
 			$model->attributes=$_POST['Ubicacion'];
 			if($model->save())
-//				$this->redirect(array('view','id'=>$model->idubicacion));
 				$this->redirect(array('propiedad/view','id'=>$model->propiedadid));
 		}
 

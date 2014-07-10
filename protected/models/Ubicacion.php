@@ -13,23 +13,9 @@
  * @property string $modified_date
  * @property string $created_by
  * @property string $modified_by
- *
- * The followings are the available model relations:
- * @property Barrio $barrio
- * @property Propiedad $propiedad
  */
 class Ubicacion extends CActiveRecord
 {
-	/**
-	 * Returns the static model of the specified AR class.
-	 * @param string $className active record class name.
-	 * @return Ubicacion the static model class
-	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
-	}
-
 	/**
 	 * @return string the associated database table name
 	 */
@@ -52,7 +38,7 @@ class Ubicacion extends CActiveRecord
 			array('created_by, modified_by', 'length', 'max'=>128),
 			array('created_date, modified_date', 'safe'),
 			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
+			// @todo Please remove those attributes that should not be searched.
 			array('idubicacion, direccion, latitudlongitud, barrioid, propiedadid, created_date, modified_date, created_by, modified_by', 'safe', 'on'=>'search'),
 		);
 	}
@@ -65,8 +51,6 @@ class Ubicacion extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'barrio' => array(self::BELONGS_TO, 'Barrio', 'barrioid'),
-			'propiedad' => array(self::BELONGS_TO, 'Propiedad', 'propiedadid'),
 		);
 	}
 
@@ -79,23 +63,30 @@ class Ubicacion extends CActiveRecord
 			'idubicacion' => 'Codigo',
 			'direccion' => 'Direccion',
 			'latitudlongitud' => 'Latitud / Longitud',
-			'barrioid' => 'Cod. Barrio',
-			'propiedadid' => 'Cod. Prop.',
-			'created_date' => 'Created Date',
-			'modified_date' => 'Modified Date',
-			'created_by' => 'Created By',
-			'modified_by' => 'Modified By',
+			'barrioid' => 'Barrio',
+			'propiedadid' => 'Propiedad',
+			'created_date' => 'Fecha Creacion',
+			'modified_date' => 'Fecha Modificada',
+			'created_by' => 'Usuario Creo',
+			'modified_by' => 'Usuario Modifico',
 		);
 	}
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 *
+	 * Typical usecase:
+	 * - Initialize the model fields with values from filter form.
+	 * - Execute this method to get CActiveDataProvider instance which will filter
+	 * models according to data in model fields.
+	 * - Pass data provider to CGridView, CListView or any similar widget.
+	 *
+	 * @return CActiveDataProvider the data provider that can return the models
+	 * based on the search/filter conditions.
 	 */
 	public function search()
 	{
-		// Warning: Please modify the following code to remove attributes that
-		// should not be searched.
+		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
 
@@ -114,21 +105,14 @@ class Ubicacion extends CActiveRecord
 		));
 	}
 
-	public function behaviors()
+	/**
+	 * Returns the static model of the specified AR class.
+	 * Please note that you should have this exact method in all your CActiveRecord descendants!
+	 * @param string $className active record class name.
+	 * @return Ubicacion the static model class
+	 */
+	public static function model($className=__CLASS__)
 	{
-		return array(
-			'CTimestampBehavior' => array(
-			'class' => 'zii.behaviors.CTimestampBehavior',
-			'createAttribute' => 'created_date',
-			'updateAttribute' => 'modified_date',
-			'setUpdateOnCreate' => true,
-		),
-			'BlameableBehavior' => array(
-			'class' => 'application.components.behaviors.BlameableBehavior',
-			'createdByColumn' => 'created_by',
-			'updatedByColumn' => 'modified_by',
-			),
-		);
+		return parent::model($className);
 	}
-	
 }
