@@ -47,6 +47,7 @@ class DestacadoController extends Controller
 		);
 	}
 
+
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
@@ -176,4 +177,21 @@ class DestacadoController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+public function renderButtons($data, $row) {
+   $this->widget('bootstrap.widgets.TbButtonGroup', array(
+      'size'=>'large',
+      'type'=>'inverse', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+      'buttons'=>array(
+         array('label'=>'Inverse', 'items'=>array(
+            array('label'=>'Action', 'url'=>'#'),
+            array('label'=>'Another action', 'url'=>'#'),
+            array('label'=>'Something else', 'url'=>'#'),
+            '---',
+            array('label'=>'Separate link', 'url'=>'#'),
+        )),
+      ),
+   ));
+}
+	
 }
