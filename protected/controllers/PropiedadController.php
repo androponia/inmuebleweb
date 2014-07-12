@@ -26,19 +26,8 @@ class PropiedadController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('admin','view'),
-				//'users'=>array('*'),
-				'roles'=>array('director'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				//'users'=>array('@'),
-				'roles'=>array('director'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				//'users'=>array('admin'),
+			array('allow',  
+				'actions'=>array('index','view','create','update','admin','delete'),
 				'roles'=>array('director'),
 			),
 			array('deny',  // deny all users
@@ -58,6 +47,28 @@ class PropiedadController extends Controller
 		));
 	}
 
+	/*
+	*procedimiento para mandar correo y no repetir codigo
+	*/
+	public function enviarcorreo ($dato1,$dato2,$dato3){
+				$mailer = Yii::createComponent('application.extensions.mailer.EMailer');
+				$mailer->IsSMTP();
+			    $mailer->IsHTML(true);
+			    $mailer->SMTPAuth = true;
+			    $mailer->SMTPSecure = "ssl";
+			    $mailer->Host = "smtp.gmail.com";
+			    $mailer->Port = 465;
+			    $mailer->Username = "inmuebleweb@gmail.com";
+			    $mailer->Password = "ceroundostres";
+			    $mailer->From = "Notificacion";
+			    $mailer->FromName = "inmuebleweb Administracion";
+			    $mailer->AddAddress("inmuebleweb@gmail.com");
+			    $mailer->Subject ="Se a Eliminado una Propiedad";
+			    $nom=Yii::app()->user->name;
+			    $mailer->Body='El empleado: '.Yii::app()->user->name.'<br /> A Eliminado la Propiedad de Codigo: '.$id;
+				$mailer->Send();
+	}
+
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
@@ -74,6 +85,26 @@ class PropiedadController extends Controller
 			$model->attributes=$_POST['Propiedad'];
 			if($model->save())
 			{
+				$dataProvider= new CActiveDataProvider('Propiedad');
+				$text=$this->renderPartial('/propiedad/create',	
+						array('dataProvider'=>$dataProvider,'model'=>$model),
+							true);
+				$mailer = Yii::createComponent('application.extensions.mailer.EMailer');
+				$mailer->IsSMTP();
+			    $mailer->IsHTML(true);
+			    $mailer->SMTPAuth = true;
+			    $mailer->SMTPSecure = "ssl";
+			    $mailer->Host = "smtp.gmail.com";
+			    $mailer->Port = 465;
+			    $mailer->Username = "inmuebleweb@gmail.com";
+			    $mailer->Password = "ceroundostres";
+			    $mailer->From = "Notificacion";
+			    $mailer->FromName = "inmuebleweb Administracion";
+			    $mailer->AddAddress("inmuebleweb@gmail.com");
+			    $mailer->Subject ="Se a Dado de Alta una Propiedad";
+			    //$mailer->MsgHTML($text);
+			    $mailer->Body='El empleado: '.Yii::app()->user->name.'<br /> A Dado de Alta la Propiedad de Codigo: '.$model->idpropiedad.'<br /><br />'.$text;
+				$mailer->Send();
 				$this->redirect(array('view','id'=>$model->idpropiedad));
 			}
 		}
@@ -116,6 +147,22 @@ class PropiedadController extends Controller
 	{
 		if(Yii::app()->request->isPostRequest)
 		{
+			$mailer = Yii::createComponent('application.extensions.mailer.EMailer');
+			$mailer->IsSMTP();
+		    $mailer->IsHTML(true);
+		    $mailer->SMTPAuth = true;
+		    $mailer->SMTPSecure = "ssl";
+		    $mailer->Host = "smtp.gmail.com";
+		    $mailer->Port = 465;
+		    $mailer->Username = "inmuebleweb@gmail.com";
+		    $mailer->Password = "ceroundostres";
+		    $mailer->From = "Notificacion";
+		    $mailer->FromName = "inmuebleweb Administracion";
+		    $mailer->AddAddress("inmuebleweb@gmail.com");
+		    $mailer->Subject ="Se a Eliminado una Propiedad";
+		    $nom=Yii::app()->user->name;
+		    $mailer->Body='El empleado: '.Yii::app()->user->name.'<br /> A Eliminado la Propiedad de Codigo: '.$id;
+			$mailer->Send();
 			// we only allow deletion via POST request
 			$this->loadModel($id)->delete();
 
