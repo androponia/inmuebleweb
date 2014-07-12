@@ -57,8 +57,6 @@ class HipotecaController extends Controller
 		if(isset($_POST['Hipoteca']))
 		{
 			$model->attributes=$_POST['Hipoteca'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idhipoteca));
 		}
 
 		$this->render('create',array(
