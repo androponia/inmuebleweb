@@ -233,24 +233,33 @@ class PropiedadController extends Controller
 	public function actionBuscar()
 	{
 		$nomBarrio=$_POST['buscadorProp'];
-		
+			
 		$modelb = new Barrio;
     	$modelb = Barrio::model()->findByAttributes(array('nombre'=>$nomBarrio));
-    	$idBarrio = $modelb->idbarrio;
-		
-		$ubicaciones = Ubicacion::model()->findAllByAttributes(array('barrioid'=>$idBarrio));
-		$propiedades=array();
-
-    	foreach($ubicaciones as $var)
-    	{
-    		$idProp = $var->propiedadid;
-    		$propiedades[] = Propiedad::model()->findAllByAttributes(array('idpropiedad'=>$idProp));
-    	}
     	
-    	$this->render('hola', array(
-					'propiedades'=>$propiedades,
-					'ubicaciones'=>$ubicaciones,
-				));
-	}
+    	if ($modelb != null){
+	    	$idBarrio = $modelb->idbarrio;
+				
+			$ubicaciones = Ubicacion::model()->findAllByAttributes(array('barrioid'=>$idBarrio));
+			$propiedades=array();
 
+	    	foreach($ubicaciones as $var)
+	    	{
+	    		$idProp = $var->propiedadid;
+	    		$propiedades[] = Propiedad::model()->findAllByAttributes(array('idpropiedad'=>$idProp));
+	    	}
+	    	
+	    	$this->render('hola', array(
+						'propiedades'=>$propiedades,
+						'ubicaciones'=>$ubicaciones,
+					));
+	    }
+
+	    else
+	    {
+	    	$this->render('chau');
+	    }
+
+
+	}
 }

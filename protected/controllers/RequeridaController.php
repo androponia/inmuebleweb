@@ -28,7 +28,8 @@ class RequeridaController extends Controller
 		return array(
 			array('allow',  
 				'actions'=>array('index','view','create','update','admin','delete'),
-				'roles'=>array('director'),
+				//'roles'=>array('director'),
+				'users'=>array('*'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -62,7 +63,43 @@ class RequeridaController extends Controller
 		{
 			$model->attributes=$_POST['Requerida'];
 			if($model->save())
+			{	///////////////////////////ENVIAR CORREO
+			//con index funciona
+			$dataProvider= new CActiveDataProvider('Requerida');
+			$text=$this->renderPartial('/requerida/create',	
+						array('dataProvider'=>$dataProvider,'model'=>$model),
+							true);
+			/*$this->render('index',array(
+					'dataProvider'=>$dataProvider,));*/
+///////////////////////////////////////
+			 $mailer = Yii::createComponent('application.extensions.mailer.EMailer');
+		     $mailer->IsSMTP();
+		     $mailer->IsHTML(true);
+		     $mailer->SMTPAuth = true;
+		     $mailer->SMTPSecure = "ssl";
+		     $mailer->Host = "smtp.gmail.com";
+		     $mailer->Port = 465;
+		     $mailer->Username = "inmuebleweb@gmail.com";
+		     $mailer->Password = "ceroundostres";
+		     //$mailer->Username = $model->email;
+		     //$mailer->Password = $model->password;
+		     $mailer->From = $model->email;
+		     $mailer->FromName = $model->nombre;
+
+		     $mailer->AddAddress("inmuebleweb@gmail.com");
+
+		     $mailer->Subject = "Un cliente ha solicitado esta propiedad";
+
+		     //asigno un archivo adjunto al mensaje
+			 //$mailer­>AddAttachment("ruta/archivo_adjunto.gif");
+		     //$mailer->Body = "ESTo es lo que necesito";
+
+		     //$mailer->MsgHTML($model->name.$model->body.$model->email);
+		     $mailer->MsgHTML($text);
+			 $mailer->Send();
+				
 				$this->redirect(array('view','id'=>$model->idrequerida));
+			}
 		}
 
 		$this->render('create',array(
