@@ -1,22 +1,27 @@
 <!-- CVarDumper::dump($ubicaciones,10,true);?> -->
-ID PROPIEDAD: <?php echo $propiedades[0][0]['idpropiedad'];?><br>
-DIRECCION: <?php echo $ubicaciones[0]['direccion'];?><br>
-PRECIO: <?php echo $propiedades[0][0]['precio'];?><br>
-HABITACIONES: <?php echo $propiedades[0][0]['canthab'];?><br>
-BAÑOS: <?php echo $propiedades[0][0]['cantbano'];?><br>
-GARAGE: <?php echo $propiedades[0][0]['garage'];?><br>
-JARDIN: <?php echo $propiedades[0][0]['jardin'];?><br>
-METROS TERRENO: <?php $propiedades[0][0]['terreno'];?><br>
-METROS CONSTRUIDOS: <?php echo $propiedades[0][0]['construido'];?><br>
-DESCRIPCION: </h6><?php echo $propiedades[0][0]['descripcion'];?><br><br><br>
+<?php 
 
-ID PROPIEDAD: <?php echo $propiedades[1][0]['idpropiedad'];?><br>
-DIRECCION: <?php echo $ubicaciones[1]['direccion'];?><br>
-PRECIO: <?php echo $propiedades[1][0]['precio'];?><br>
-HABITACIONES: <?php echo $propiedades[1][0]['canthab'];?><br>
-BAÑOS: <?php echo $propiedades[1][0]['cantbano'];?><br>
-GARAGE: <?php echo $propiedades[1][0]['garage'];?><br>
-JARDIN: <?php echo $propiedades[1][0]['jardin'];?><br>
-METROS TERRENO: <?php $propiedades[1][0]['terreno'];?><br>
-METROS CONSTRUIDOS: <?php echo $propiedades[1][0]['construido'];?><br>
-DESCRIPCION: </h6><?php echo $propiedades[1][0]['descripcion'];?><br><br><br>
+if(empty($propiedades))
+{
+	echo '"No hay inmuebles en ese barrio"';
+}
+else
+{
+
+	$i = 0;
+	foreach ($propiedades as $key){
+
+		echo 'ID PROPIEDAD: '.$key[0]['idpropiedad'].'<br>';
+		echo 'DIRECCION: '.$ubicaciones[$i]['direccion'].'<br>';
+		echo 'PRECIO: '.$key[0]['precio'].'<br>';
+		echo 'HABITACIONES: '.$key[0]['canthab'].'<br>';
+		echo 'BAÑOS: '.$key[0]['cantbano'].'<br>';
+		echo 'GARAGE: '.$key[0]['garage'].'<br>';
+		echo 'JARDIN: '.$key[0]['jardin'].'<br>';
+		echo 'METROS TERRENO: '.$key[0]['terreno'].'<br>';
+		echo 'METROS CONSTRUIDOS: '.$key[0]['construido'].'<br>';
+		echo 'DESCRIPCION: '.$key[0]['descripcion'].'<br><br><br>';
+		$i= $i+1;
+	}
+}
+?>

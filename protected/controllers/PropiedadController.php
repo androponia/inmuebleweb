@@ -239,7 +239,8 @@ class PropiedadController extends Controller
     	$idBarrio = $modelb->idbarrio;
 		
 		$ubicaciones = Ubicacion::model()->findAllByAttributes(array('barrioid'=>$idBarrio));
-		
+		$propiedades=array();
+
     	foreach($ubicaciones as $var)
     	{
     		$idProp = $var->propiedadid;
