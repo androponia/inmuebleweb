@@ -27,23 +27,37 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		/*$iddestacados=Destacado::model()->findAll();
-		$cont=0;
-		$resul=array();
-		foreach ($iddestacados as $des) {
-				if ($cont<7) {
-					$resul=$resul+$des;
-					$cont++;
-				}
-		};
+		
+		//Agarro los id de los 6 destacados
+		
+		$arrayIdDestacado=Destacado::model()->findAll(array('select'=>'iddestacado'));		
+		//echo '<br><br><br><br><br><pre>', print_r($arrayIdDestacado),'</pre>';
+		//Creo un array para cargarle las 6 propiedades buscadas con los id's destacado
+		
+		foreach($arrayIdDestacado as $val)
+		{
+			$idPropiedad[] = Destacado::model()->find(array(
+				'select'=>'idpropiedad',
+				'condition'=>'iddestacado='.$val->iddestacado,
+				));
+		}
+		//$idPropiedad tiene los 6 idpropiedad de los destacados
+		//echo '<br><br><br><br><br><pre>', print_r($idPropiedad),'</pre>';
 
-		foreach ($resul as $r) {
-			$ima=Imagen::model()->findAll($propiedad,r->idpropiedad;);
-
-		}*/
-		$this->render('index');
+		//Cargo las url de las imagenes de todas las propiedades, pero todas juntas hay que diferenciarlas por propiedad
+		
+		foreach($idPropiedad as $val)
+		{	
+			//$arrayFinal[]=$val->idpropiedad;
+			$urlImagenes[] = Imagen::model()->findAll(array(
+				'select'=>'archivo',
+				'condition'=>'propiedadid='.$val->idpropiedad,
+				));
+		}
+		
+		$this->render('index', array(
+					'arrayUrl'=>$urlImagenes
+			));
 	}
 
 	/**
