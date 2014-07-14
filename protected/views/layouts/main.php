@@ -25,10 +25,10 @@
     'collapse'=>true, // requires bootstrap-responsive.css    
     'items'=>array(
 
-    '<form class="navbar-form navbar-left">
-      <input type="text" id="buscador" class="form-control" placeholder="Buscar Propiedades">
-      <input type="submit" class="btn btn-default" id="btnBuscar" onclick="busqueda()" value="Buscar">
-     </form>',
+    '<form class="navbar-form navbar-left" action="propiedad/buscar" method="POST">
+      <input type="text" id="buscador" name="buscadorProp" class="form-control" placeholder="Buscar Propiedades">
+      <input type="submit" class="btn btn-default" id="btnBuscar" value="Buscar">
+    </form>',
     array(
           'class'=>'bootstrap.widgets.TbMenu',
           'htmlOptions'=>array('class'=>'nav navbar-nav navbar-right'),
@@ -82,9 +82,9 @@
 
     </div><!-- container -->
         
-    <div class="navbar navbar-default navbar-fixed-bottom"><!--Esto es el footer-->
+    <!--<div class="navbar navbar-default navbar-fixed-bottom">
         <center> <p style="margin-top: 8px;">CopyRight &copy; 2013 <a style="color: white" href="#">inmuebleweb.com</p> </center>
-    </div>
+    </div>-->
 
     <script type="text/javascript">
         var x = $(document);

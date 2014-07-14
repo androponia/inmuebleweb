@@ -27,8 +27,12 @@ class PropiedadController extends Controller
 	{
 		return array(
 			array('allow',  
-				'actions'=>array('index','view','create','update','admin','delete'),
+				'actions'=>array('admin','view','create','update','delete','buscar'),
 				'roles'=>array('director'),
+			),
+			array('allow',
+				'actions'=>array('buscar'),
+				'users'=>array('*'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -225,4 +229,27 @@ class PropiedadController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+	public function actionBuscar()
+	{
+		$nomBarrio=$_POST['buscadorProp'];
+		
+		$modelb = new Barrio;
+    	$modelb = Barrio::model()->findByAttributes(array('nombre'=>$nomBarrio));
+    	$idBarrio = $modelb->idbarrio;
+		
+		$ubicaciones = Ubicacion::model()->findAllByAttributes(array('barrioid'=>$idBarrio));
+		
+    	foreach($ubicaciones as $var)
+    	{
+    		$idProp = $var->propiedadid;
+    		$propiedades[] = Propiedad::model()->findAllByAttributes(array('idpropiedad'=>$idProp));
+    	}
+    	
+    	$this->render('hola', array(
+					'propiedades'=>$propiedades,
+					'ubicaciones'=>$ubicaciones,
+				));
+	}
+
 }
