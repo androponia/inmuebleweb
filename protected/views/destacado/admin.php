@@ -15,6 +15,13 @@ $this->menu=array(
 	'id'=>'destacado-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'pager'=>array(
+            'header'=>'',//text before it
+            'firstPageLabel'=>'Primera',
+            'lastPageLabel'=>'Ultima',
+            'nextPageLabel'=>'Siguiente',
+            'prevPageLabel'=>'Anterior',
+        ),
 	'columns'=>array(
 		'iddestacado',
 		'fechainicio',
