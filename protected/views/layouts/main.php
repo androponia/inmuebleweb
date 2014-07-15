@@ -67,13 +67,12 @@
                     array('label'=>'Calendario de Visitas', 'url'=>array('/visitas/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id)),
                     array('label'=>'Calendario de Visitas', 'url'=>array('/visitas/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('agente',Yii::app()->user->id)),
                     
-<<<<<<< HEAD
+
                     array('label'=>'Calculo de Hipoteca', 'url'=>array('#')),
                     array('label'=>'Contact', 'url'=>array('/site/contact')),
-=======
                     array('label'=>'Calculo de Hipoteca', 'url'=>array('/hipoteca/create'),'active'=>false),
                     array('label'=>'Contact', 'url'=>array('/site/contact'),'active'=>false),
->>>>>>> 0d647f46a87931512c94cd12c75d4530d5640819
+
                        
                     ),
                 )); ?>
