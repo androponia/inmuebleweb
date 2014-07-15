@@ -35,6 +35,24 @@
   background-color: rgba(100,100,100, .6);
 }
 
+.enlacePropiedad
+{
+  color: black;
+}
+
+.contPropInfo
+{
+  text-decoration: none;
+  color: black;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.contPropInfo:hover
+{
+  background-color: rgba(210,210,210, .9);
+  border-radius: 10px;
+}
 
 
   /*******************************/
