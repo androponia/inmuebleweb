@@ -54,9 +54,29 @@ class HipotecaController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
+			
+
 		if(isset($_POST['Hipoteca']))
 		{
 			$model->attributes=$_POST['Hipoteca'];
+
+
+	      $requestParams = array('LoanAmount' => $model->importedelprestamo,
+	      						'ResidualValue' => $model->valorresidual, 
+                             'InterestRate' => $model->tasadeinteres,
+                             'Months' => $model->meses);
+
+ 			$objClienteSOAP = new SoapClient('http://www.webservicex.net/FinanceService.asmx?WSDL');
+			 $response = $objClienteSOAP->LeaseMonthlyPayment($requestParams); 
+
+
+			 $this->render('calculo', array('calculo' => $response->LeaseMonthlyPaymentResult, 'LoanAmount' => $model->importedelprestamo,
+	      						'ResidualValue' => $model->valorresidual, 
+                             'InterestRate' => $model->tasadeinteres,
+                             'Months' => $model->meses));
+			 	
+			   
+			   
 		}
 
 		$this->render('create',array(
@@ -69,10 +89,18 @@ class HipotecaController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Hipoteca');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+
+
+		
+
+
+
+				$dataProvider=new CActiveDataProvider('Hipoteca');
+				$this->render('index',array(
+					'dataProvider'=>$dataProvider,
+				));
+
+
 	}
 
 	/**
@@ -100,4 +128,9 @@ class HipotecaController extends Controller
 			Yii::app()->end();
 		}
 	}
+public function calcularHipoteca()
+{
+
+		
+}
 }
