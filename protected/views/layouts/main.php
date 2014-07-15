@@ -25,7 +25,7 @@
     'collapse'=>true, // requires bootstrap-responsive.css    
     'items'=>array(
 
-    '<form class="navbar-form navbar-left" action="/yii/inmuebleweb/propiedad/buscar" method="POST">
+    '<form class="navbar-form navbar-left" action="/inmuebleweb/propiedad/buscar" method="POST">
       <input type="text" id="buscador" name="buscadorProp" class="form-control" placeholder="Buscar propiedades por barrio" required>
       <input type="submit" class="btn btn-default" id="btnBuscar" value="Buscar">
     </form>',
