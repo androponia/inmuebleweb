@@ -35,6 +35,13 @@ $('.search-form form').submit(function(){
 	'id'=>'imagen-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'pager'=>array(
+            'header'=>'',//text before it
+            'firstPageLabel'=>'Primera',
+            'lastPageLabel'=>'Ultima',
+            'nextPageLabel'=>'Siguiente',
+            'prevPageLabel'=>'Anterior',
+        ),
 	'columns'=>array(
 		'idimagen',
 		'archivo',

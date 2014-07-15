@@ -28,13 +28,19 @@ $('.search-form form').submit(function(){
 	'id'=>'propiedad-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'pager'=>array(
+            'header'=>'Paginas',//text before it
+            'firstPageLabel'=>'Primera',
+            'lastPageLabel'=>'Ultima',
+            'nextPageLabel'=>'Siguiente',
+            'prevPageLabel'=>'Anterior',
+        ),
 	'columns'=>array(
 		'idpropiedad',
 		'canthab',
 		'cantbano',
 		'terreno',
 		'construido',
-		'garage',
 		array(
     		'class'=>'CButtonColumn',
     		'template'=>'{view}{update}{delete}',

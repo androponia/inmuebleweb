@@ -26,9 +26,20 @@ class ImagenController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  
-				'actions'=>array('index','view','create','update','admin','delete'),
-				'roles'=>array('director','administrativo'),
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('admin','view'),
+				//'users'=>array('*'),
+				'roles'=>array('director'),
+			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('create','update'),
+				//'users'=>array('@'),
+				'roles'=>array('director'),
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('admin','delete'),
+				//'users'=>array('admin'),
+				'roles'=>array('director'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -56,35 +67,42 @@ class ImagenController extends Controller
 
         $model=new Imagen;
 
-//		$idimagen = Imagen::model()->findByAttributes(array('propiedadid'=>$idpropiedad,'orden'=>$orden));
+		$modeli = new Imagen;
+    	$modeli = Imagen::model()->findAllByAttributes(array('propiedadid'=>$idpropiedad, 'orden'=>$orden ));
+	
+		if($modeli == null)
+		{
+	        $model->orden = $orden;
+	        $model->propiedadid = $idpropiedad;
 
+	        if(isset($_POST['Imagen']))
+	        {
+	        	//$usuario = Usuario::model()->findByPk($id);
+	            $rnd = rand(0,9999);  // genera numero randomico entre 0-9999
+	            $model->attributes=$_POST['Imagen'];
+	 
+	            $uploadedFile=CUploadedFile::getInstance($model,'archivo');
+	            $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
+	            $model->archivo = $fileName;
+	 
+	            if($model->save())
+	            {
 
-if(Imagen::model()->exists('propiedadid = $idpropiedad AND orden = $orden'))
-{
-	echo ('La imagen ya fue creada.');
-	$this->redirect(array('propiedad/view','id'=>$model->propiedadid));
-}
-        $model->orden = $orden;
-        $model->propiedadid = $idpropiedad;
+//					$uploadedFile->saveAs('/var/www/inmuebleweb/images/'.$model->archivo);
+	//                $uploadedFile->saveAs(Yii::app()->baseUrl.'/images/'.$fileName); // carga imagen al servidor
+	                $uploadedFile->saveAs(Yii::app()->basePath.'/images/'.$fileName);  // imagen cargada al servidor
 
-        if(isset($_POST['Imagen']))
-        {$usuario = Usuario::model()->findByPk($id);
-            $rnd = rand(0,9999);  // genera numero randomico entre 0-9999
-            $model->attributes=$_POST['Imagen'];
- 
-            $uploadedFile=CUploadedFile::getInstance($model,'archivo');
-            $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
-            $model->archivo = $fileName;
- 
-            if($model->save())
-            {
-                $uploadedFile->saveAs(Yii::app()->basePath.'/images/'.$fileName);  // imagen cargada al servidor
-                $this->redirect(array('propiedad/view','id'=>$model->propiedadid));
-            }
+	                $this->redirect(array('propiedad/view','id'=>$model->propiedadid));
+	            }
+	        }
+	        $this->render('create',array(
+	            'model'=>$model,
+	        ));
         }
-        $this->render('create',array(
-            'model'=>$model,
-        ));
+		else
+		{
+			$this->redirect(array('propiedad/view','id'=>$idpropiedad));
+		}
 	}
 
 	/**
@@ -108,7 +126,10 @@ if(Imagen::model()->exists('propiedadid = $idpropiedad AND orden = $orden'))
             {
                 if(!empty($uploadedFile))  // check if uploaded file is set or not
                 {
-                    $uploadedFile->saveAs(Yii::app()->basePath.'/images/'.$model->archivo);
+
+//	                $uploadedFile->saveAs(Yii::app()->baseUrl.'/images/'.$fileName); // carga imagen al servidor
+
+                    $uploadedFile->saveAs('/var/www/inmuebleweb/images/'.$model->archivo);
                 }
                 $this->redirect(array('admin'));
             }

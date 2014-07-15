@@ -85,11 +85,12 @@
 	<div class="row">
 		<div class="span8">
 			<?php echo $form->labelEx($model,'clienteid'); ?>
-			<?php echo $form->dropDownList($model,'clienteid', CHtml::listData(Usuario::model()->findAll(), 'idusuario', 'nombre', 'apellido')); ?>
+			<?php echo $form->dropDownList($model,'clienteid', CHtml::listData(Usuario::model()->findAllByAttributes(array('tipousuarioid'=>4)), 'idusuario', 'nombre', 'apellido')); ?>
 			<?php echo $form->labelEx($model,'empleadoid'); ?>
-			<?php echo $form->dropDownList($model,'empleadoid', CHtml::listData(Usuario::model()->findAll(), 'idusuario', 'nombre', 'apellido')); ?>			
+			<?php echo $form->dropDownList($model,'empleadoid', CHtml::listData(Usuario::model()->findAllByAttributes(array('tipousuarioid'=>array(1,2,3))), 'idusuario', 'nombre', 'apellido')); ?>
 		</div>
 	</div>
+
 
 	<?php echo $form->hiddenField($model,'created_date',array('class'=>'span5')); ?>
 
@@ -106,5 +107,5 @@
 			'label'=>$model->isNewRecord ? 'Crear' : 'Actualizar',
 		)); ?>
 	</div>
-<?php $this->endWidget(); ?>
 
+<?php $this->endWidget(); ?>

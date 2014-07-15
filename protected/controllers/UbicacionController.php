@@ -26,8 +26,19 @@ class UbicacionController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  
-				'actions'=>array('index','view','create','update','admin','delete'),
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('admin','view'),
+				//'users'=>array('*'),
+				'roles'=>array('director'),
+			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('create','update'),
+				//'users'=>array('@'),
+				'roles'=>array('director'),
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('admin','delete'),
+				//'users'=>array('admin'),
 				'roles'=>array('director'),
 			),
 			array('deny',  // deny all users
@@ -57,19 +68,29 @@ class UbicacionController extends Controller
 
 		$model->propiedadid = $idpropiedad;
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Ubicacion']))
+		$modelu = new Ubicacion;
+    	$modelu = Ubicacion::model()->findAllByAttributes(array('propiedadid'=>$idpropiedad));
+	
+		if($modelu == null)
 		{
-			$model->attributes=$_POST['Ubicacion'];
-			if($model->save())
-				$this->redirect(array('propiedad/view','id'=>$model->propiedadid));
-		}
+			// Uncomment the following line if AJAX validation is needed
+			// $this->performAjaxValidation($model);
 
-		$this->render('create',array(
-			'model'=>$model,
-		));
+			if(isset($_POST['Ubicacion']))
+			{
+				$model->attributes=$_POST['Ubicacion'];
+				if($model->save())
+					$this->redirect(array('propiedad/view','id'=>$model->propiedadid));
+			}
+
+			$this->render('create',array(
+				'model'=>$model,
+			));
+		}
+		else
+		{
+			$this->redirect(array('propiedad/view','id'=>$model->propiedadid));
+		}
 	}
 
 	/**

@@ -7,7 +7,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Crear Propiedad','url'=>array('create')),
-	array('label'=>'Ver Propiedad','url'=>array('view','id'=>$model->idpropiedad)),
+	array('label'=>'Insertar Imagenes y Ubicacio a Propiedad','url'=>array('view','id'=>$model->idpropiedad)),
 	array('label'=>'Administrar Propiedades','url'=>array('admin')),
 );
 ?>

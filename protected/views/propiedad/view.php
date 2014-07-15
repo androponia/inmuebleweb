@@ -37,3 +37,7 @@ $this->menu=array(
 <h5>Ingresar ubicacion</h5>
 <?php echo CHtml::link('Ubicacion',array('/ubicacion/create/',
                                          'idpropiedad'=>$idpropiedad)); ?>
+
+<h3>Administrar Propiedades</h3>
+<?php echo CHtml::link('Administrar Propiedades',array('/propiedad/admin/',
+                                         'idpropiedad'=>$idpropiedad)); ?>

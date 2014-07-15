@@ -29,7 +29,7 @@
 	        <?php echo $form->error($model,'archivo'); ?>
 			<?php echo CHtml::image(Yii::app()->baseUrl.'/images/'.$model->archivo,CHtml::encode($model->archivo),array('width'=>200));?>
         </div>
-	</div>
+	</div><br>
 
 	<div class="form-actions">
 		<?php $this->widget('bootstrap.widgets.TbButton', array(

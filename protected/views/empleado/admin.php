@@ -29,6 +29,13 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$modelu->search(),
 	'filter'=>$modelu,
 	'template'=>"{items}\n{pager}",
+	'pager'=>array(
+            'header'=>'',//text before it
+            'firstPageLabel'=>'Primera',
+            'lastPageLabel'=>'Ultima',
+            'nextPageLabel'=>'Siguiente',
+            'prevPageLabel'=>'Anterior',
+        ),
 	'columns'=>array(
 		'idusuario',
 		'nombre',
