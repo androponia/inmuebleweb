@@ -13,26 +13,30 @@ Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'inmuebleWeb',
-	//'language'=>'en',
-	// preloading 'log' component
+	'language'=>'es',
+	'sourceLanguage'=>'es',
 	'preload'=>array('log'),
-	 'theme'=>'bootstrap', // requires you to copy the theme under your themes directory
+	'theme'=>'bootstrap', // requires you to copy the theme under your themes directory
 
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.widgets.bootstrap.*',
 	),
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
+
+
+        'cal',
 		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'root',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
-			 'generatorPaths'=>array(
+			'generatorPaths'=>array(
 		                'bootstrap.gii',
 
          ),
@@ -76,7 +80,7 @@ return array(
 			'connectionString' => 'mysql:host=127.0.0.1;dbname=dbinmweb',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => 'root',
 			'charset' => 'utf8',
 		),
 		
@@ -108,10 +112,7 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
-	),
-
-		
-		   
-		   
+		'pageSize' => 7,
+    ),
 		    
 );
