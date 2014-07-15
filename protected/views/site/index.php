@@ -37,10 +37,8 @@ $this->pageTitle=Yii::app()->name;
 					)); ?>
 				</div>
 				<div class="infoDestacada">
-					<center>
-						<label>Ubicacion: </label><br>
-						<label>Precio: </label>
-					</center>
+					<br>
+					<br>
 				</div>
 			</div>
 		</a>

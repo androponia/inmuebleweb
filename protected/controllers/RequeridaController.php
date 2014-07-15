@@ -29,10 +29,9 @@ class RequeridaController extends Controller
 			array('allow',  
 				'actions'=>array('index','view','update','admin','delete'),
 				'roles'=>array('director','administrativo','agente'),
-				
 			),
 			array('allow',  
-				'actions'=>array('create'),
+				'actions'=>array('create','view'),
 				'users'=>array('*'),
 			),
 			array('deny',  // deny all users
