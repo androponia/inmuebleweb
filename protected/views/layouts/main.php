@@ -25,7 +25,7 @@
     'collapse'=>true, // requires bootstrap-responsive.css    
     'items'=>array(
 
-    '<form class="navbar-form navbar-left" action="/yii/inmuebleweb/propiedad/buscar" method="POST">
+    '<form class="navbar-form navbar-left" action="/inmuebleweb/propiedad/buscar" method="POST">
       <input type="text" id="buscador" name="buscadorProp" class="form-control" placeholder="Buscar propiedades por barrio" required>
       <input type="submit" class="btn btn-default" id="btnBuscar" value="Buscar">
     </form>',
@@ -50,25 +50,30 @@
                     'type'=>'list', // '', 'tabs', 'pills' (or 'list')
                     'stacked'=>false, // whether this is a stacked menu
                     'items'=>array(
-                         array('label'=>'Home', 'url'=>array('/site/index'), 'active'=>true),
+                         array('label'=>'Home', 'url'=>array('/site/index')),
                   
-                    array('label'=>'Gestion de Inmuebles', 'url'=>array('/propiedad/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('director',Yii::app()->user->id),'active'=>false),
-                    array('label'=>'Gestion de Inmuebles', 'url'=>array('/propiedad/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id),'active'=>false),
+                    array('label'=>'Gestion de Inmuebles', 'url'=>array('/propiedad/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('director',Yii::app()->user->id)),
+                    array('label'=>'Gestion de Inmuebles', 'url'=>array('/propiedad/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id)),
 
-                    array('label'=>'Gestion de Portada', 'url'=>array('/destacado/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('director',Yii::app()->user->id),'active'=>false),
-                    array('label'=>'Gestion de Portada', 'url'=>array('/destacado/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id),'active'=>false),
+                    array('label'=>'Gestion de Portada', 'url'=>array('/destacado/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('director',Yii::app()->user->id)),
+                    array('label'=>'Gestion de Portada', 'url'=>array('/destacado/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id)),
 
-                    array('label'=>'Gestion de Empleado', 'url'=>array('/empleado/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('director',Yii::app()->user->id),'active'=>false),
+                    array('label'=>'Gestion de Empleado', 'url'=>array('/empleado/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('director',Yii::app()->user->id)),
                 
-                    array('label'=>'Gestion de Clientes', 'url'=>array('/cliente/admin'),'visible'=>Yii::app()->authmanager->checkAccess('director',Yii::app()->user->id),'active'=>false),
-                    array('label'=>'Gestion de Clientes', 'url'=>array('/cliente/admin'),'visible'=>Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id),'active'=>false),
+                    array('label'=>'Gestion de Clientes', 'url'=>array('/cliente/admin'),'visible'=>Yii::app()->authmanager->checkAccess('director',Yii::app()->user->id)),
+                    array('label'=>'Gestion de Clientes', 'url'=>array('/cliente/admin'),'visible'=>Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id)),
                    
-                    array('label'=>'Calendario de Visitas', 'url'=>array('/visitas/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('director',Yii::app()->user->id),'active'=>false),
-                    array('label'=>'Calendario de Visitas', 'url'=>array('/visitas/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id),'active'=>false),
-                    array('label'=>'Calendario de Visitas', 'url'=>array('/visitas/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('agente',Yii::app()->user->id),'active'=>false),
+                    array('label'=>'Calendario de Visitas', 'url'=>array('/visitas/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('director',Yii::app()->user->id)),
+                    array('label'=>'Calendario de Visitas', 'url'=>array('/visitas/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id)),
+                    array('label'=>'Calendario de Visitas', 'url'=>array('/visitas/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('agente',Yii::app()->user->id)),
                     
+<<<<<<< HEAD
+                    array('label'=>'Calculo de Hipoteca', 'url'=>array('#')),
+                    array('label'=>'Contact', 'url'=>array('/site/contact')),
+=======
                     array('label'=>'Calculo de Hipoteca', 'url'=>array('/hipoteca/create'),'active'=>false),
                     array('label'=>'Contact', 'url'=>array('/site/contact'),'active'=>false),
+>>>>>>> 0d647f46a87931512c94cd12c75d4530d5640819
                        
                     ),
                 )); ?>
