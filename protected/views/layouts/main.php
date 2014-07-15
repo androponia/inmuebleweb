@@ -72,7 +72,10 @@
                     array('label'=>'Calendario', 'url'=>array('/cal'), 'visible'=>Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id)),
                     array('label'=>'Calendario', 'url'=>array('/cal'), 'visible'=>Yii::app()->authmanager->checkAccess('agente',Yii::app()->user->id)),
 
-                    array('label'=>'Inmuebles Requeridos', 'url'=>array('/requerida/admin'), 'active'=>false),
+                    
+                    array('label'=>'Inmuebles Requeridos', 'url'=>array('/requerida/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('director',Yii::app()->user->id)),
+                    array('label'=>'Inmuebles Requeridos', 'url'=>array('/requerida/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('administrativo',Yii::app()->user->id)),
+                    array('label'=>'Inmuebles Requeridos', 'url'=>array('/requerida/admin'), 'visible'=>Yii::app()->authmanager->checkAccess('agente',Yii::app()->user->id)),
                     
                     array('label'=>'Calculo de Hipoteca', 'url'=>array('/hipoteca/create'),'active'=>false),
                     array('label'=>'Contact', 'url'=>array('/site/contact'),'active'=>false),
