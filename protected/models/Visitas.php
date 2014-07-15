@@ -129,4 +129,22 @@ class Visitas extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function behaviors()
+	{
+		return array(
+			'CTimestampBehavior' => array(
+			'class' => 'zii.behaviors.CTimestampBehavior',
+			'createAttribute' => 'created_date',
+			'updateAttribute' => 'modified_date',
+			'setUpdateOnCreate' => true,
+		),
+			'BlameableBehavior' => array(
+			'class' => 'application.components.behaviors.BlameableBehavior',
+			'createdByColumn' => 'created_by',
+			'updatedByColumn' => 'modified_by',
+			),
+		);
+	}
+
 }
