@@ -8,7 +8,7 @@ $this->pageTitle=Yii::app()->name;
 //echo $imagen;
 
 //Anda barbaro esto
-//$ruta=Yii::app()->baseUrl.'/images/'.$imagen;
+//$ruta=Yii::app()->basePath.'/../images/1.jpg';
 //echo $ruta;
 
 ?>
@@ -16,9 +16,13 @@ $this->pageTitle=Yii::app()->name;
 <div class="row divIndex">
 	<!--Recorro 6 veces para generar los 6 carouseles-->
 	<?php foreach ($arrayUrl as $key) {
-		$ruta1=Yii::app()->baseUrl.'/images/'.$key[0]->archivo;
-		$ruta2=Yii::app()->baseUrl.'/images/'.$key[1]->archivo;
-		$ruta3=Yii::app()->baseUrl.'/images/'.$key[2]->archivo;
+		$var1=Yii::app()->basePath.'/images/'.$key[0]->archivo;
+		$var2=Yii::app()->basePath.'/images/'.$key[1]->archivo;
+		$var3=Yii::app()->basePath.'/images/'.$key[2]->archivo;
+
+		$ruta1 = Yii::app()->assetManager->publish($var1);
+		$ruta2 = Yii::app()->assetManager->publish($var2);
+		$ruta3 = Yii::app()->assetManager->publish($var3);
 	?>
 	<div class="col-md-4 col-xs-12">
 		<a href="#">
@@ -45,4 +49,3 @@ $this->pageTitle=Yii::app()->name;
 		}
 	?>
 </div>
-
