@@ -65,6 +65,7 @@ class ClienteController extends Controller
 	        $modelu->attributes=$_POST['Usuario'];
 	 
 	        // valida usuario
+	        $modelu->password = sha1($modelu['password']);
 	        $modelu->tipousuarioid= 4;
 	        $valid=$modelu->validate();
 	        if($valid)
