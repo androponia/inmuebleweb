@@ -36,6 +36,13 @@
 
 	<div class="row">
 		<div class="span4">
+			<?php echo $form->textFieldRow($modelu,'username',array('class'=>'span5','maxlength'=>60)); ?>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="span4">
 			<?php echo $form->passwordFieldRow($modelu,'password',array('class'=>'span5','maxlength'=>60)); ?>
 		</div>
 	</div>

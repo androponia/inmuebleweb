@@ -37,7 +37,15 @@
 
 	<div class="row">
 		<div class="span4">
+			<?php echo $form->textFieldRow($modelu,'username',array('class'=>'span5','maxlength'=>60)); ?>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="span4">
 			<?php echo $form->passwordFieldRow($modelu,'password',array('class'=>'span5','maxlength'=>60)); ?>
+	
 		</div>
 	</div>
 
@@ -61,7 +69,7 @@
 
 	<div class="row">
 		<div class="span4">
-			<?php echo $form->dropDownList($modelu,'tipousuarioid',array(1=>"Administrativo",2=>"Agente"),array('empty'=>'Seleccione Tipo de Usuario','class'=>'span5')); ?>
+			<?php echo $form->dropDownList($modelu,'tipousuarioid',array(2=>"Administrativo",3=>"Agente"),array('empty'=>'Seleccione Tipo de Usuario','class'=>'span5')); ?>
 		</div>
 	</div><br>
 

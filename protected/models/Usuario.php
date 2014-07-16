@@ -11,24 +11,14 @@
  * @property string $password
  * @property string $telefono
  * @property string $celular
- * @property string $rol
+ * @property integer $tipousuarioid
+ * @property string $username
  *
  * The followings are the available model relations:
- * @property Cliente $cliente
- * @property Empleado $empleado
+ * @property Tipousuario $tipousuario
  */
 class Usuario extends CActiveRecord
 {
-	/**
-	 * Returns the static model of the specified AR class.
-	 * @param string $className active record class name.
-	 * @return Usuario the static model class
-	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
-	}
-
 	/**
 	 * @return string the associated database table name
 	 */
@@ -45,13 +35,13 @@ class Usuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, apellido, email, password, telefono, celular, rol', 'required'),
-			array('nombre, apellido, email, password', 'length', 'max'=>60),
+			array('nombre, apellido, email, password, telefono, celular, tipousuarioid, username', 'required'),
+			array('tipousuarioid', 'numerical', 'integerOnly'=>true),
+			array('nombre, apellido, email, password, username', 'length', 'max'=>60),
 			array('telefono, celular', 'length', 'max'=>45),
-			array('rol', 'length', 'max'=>128),
 			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('idusuario, nombre, apellido, email, password, telefono, celular, rol', 'safe', 'on'=>'search'),
+			// @todo Please remove those attributes that should not be searched.
+			array('idusuario, nombre, apellido, email, password, telefono, celular, tipousuarioid, username', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,8 +53,7 @@ class Usuario extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'cliente' => array(self::HAS_ONE, 'Cliente', 'idusuario'),
-			'empleado' => array(self::HAS_ONE, 'Empleado', 'idusuario'),
+			'tipousuario' => array(self::BELONGS_TO, 'Tipousuario', 'tipousuarioid'),
 		);
 	}
 
@@ -81,18 +70,26 @@ class Usuario extends CActiveRecord
 			'password' => 'Password',
 			'telefono' => 'Telefono',
 			'celular' => 'Celular',
-			'tipusuarioid' => 'Rol',
+			'tipousuarioid' => 'Tipousuarioid',
+			'username' => 'Username',
 		);
 	}
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 *
+	 * Typical usecase:
+	 * - Initialize the model fields with values from filter form.
+	 * - Execute this method to get CActiveDataProvider instance which will filter
+	 * models according to data in model fields.
+	 * - Pass data provider to CGridView, CListView or any similar widget.
+	 *
+	 * @return CActiveDataProvider the data provider that can return the models
+	 * based on the search/filter conditions.
 	 */
 	public function search()
 	{
-		// Warning: Please modify the following code to remove attributes that
-		// should not be searched.
+		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
 
@@ -103,11 +100,22 @@ class Usuario extends CActiveRecord
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('telefono',$this->telefono,true);
 		$criteria->compare('celular',$this->celular,true);
-		$criteria->compare('tipousuarioid',$this->tipousuarioid,true);
+		$criteria->compare('tipousuarioid',$this->tipousuarioid);
+		$criteria->compare('username',$this->username,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
 
+	/**
+	 * Returns the static model of the specified AR class.
+	 * Please note that you should have this exact method in all your CActiveRecord descendants!
+	 * @param string $className active record class name.
+	 * @return Usuario the static model class
+	 */
+	public static function model($className=__CLASS__)
+	{
+		return parent::model($className);
+	}
 }
